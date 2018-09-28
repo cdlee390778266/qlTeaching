@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tbBox{ margin-top:10px;}
+.tb .cptt{ display:block; margin:0 15px; text-align:left; width:240px; line-height:24px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tb a:hover{ color:#06c;}
+.tb td:last-child a{ display:inline-block; height:24px; line-height:24px; padding:0 15px; border-radius:2px;}
+.tb td:last-child a:hover{ background:#2E77BF; color:#FFF;}
+.tab01{ border-bottom:1px solid #DDD;}
+.tab01 ul{ width:600px;}

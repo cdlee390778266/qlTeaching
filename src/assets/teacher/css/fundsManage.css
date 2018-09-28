@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+.nickName,.userName{ display:inline-block; width:60px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.compName{ margin:15px 0;}
+.compName label{ color:#004d99; font-size:15px; margin-left:5px;}
+.compName select{ height:32px; line-height:32px; padding-left:6px;}
+.tb tbody td{ font-size:13px;}
+/* .tb tr td:last-child{ text-align:left !important;} */
+.tb tr td:last-child span{ margin:0 2px; font-size:12px;}
+.handleBtns{ width:500px;/* margin-bottom:5px;*/}
+.handleBtns p{ display:inline-block; font-weight:bold; float:left;}
+.handleBtns p.ck{ position:relative; top:5px; margin-right:8px;}
+.handleBtns p.ck span{ font-size:15px;}
+.handleBtns p.closePrice input{ width:140px; height:30px; line-height:30px; padding-left:10px; margin:0 5px;}
+tr td:last-child span{ display:inline-block; height:24px; line-height:24px;}
+.sch{ display:block; width:100px; margin:0 2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.cls{ display:block; width:80px; margin:0 2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#sdAccount td:last-child p{ clear:both; background:#6FF; border-bottom:1px solid #ddd;}
+#sdAccount td:last-child p span{ display:inline-block; float:left;}
+#sdAccount .teachername{ width:60px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#sdAccount .money{ display:inline-block; width:90px; padding-right:5px;}

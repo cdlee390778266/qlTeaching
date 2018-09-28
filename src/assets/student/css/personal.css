@@ -1,0 +1,179 @@
+.page1{ height:30px; line-height:30px; text-align:right; text-align:right; background:#f5f5f5;}
+.page1 a{ display:inline-block; margin-right:5px; margin-top:4px; height:16px; line-height:16px;}
+.page1 a span{ display:inline-block; padding:2px 5px; text-align:center; font-weight:600; color:#888;}
+.page1 a span:hover,.page1 a.current span{ color:#397cbf;}
+.prevPage{ width:14px; background: url(../images/pageTurning.png) no-repeat; background-position:0 2px;}
+.prevPage:hover{ background-position:0 -14px;}
+.nextPage{ width:14px; background: url(../images/pageTurning.png) no-repeat; background-position:-16px 2px;}
+.nextPage:hover{ background-position:-16px -14px;}
+/*评论区*/
+.Editor{}
+.issue #myEditor{ width:750px; height:100px;}
+.replay_box { width:870px; margin:15px 0;}
+.replay_box .info dl dt { width:80px; padding:0; border:none; float:left;}
+.replay_box .info dl dt .hd-img{ width:50px; margin:0 auto;}
+.replay_box .info dl dd { width:790px; padding-bottom:10px;}
+.replay_box .info dl dd h5 { padding:0;}
+.replay_box .info dl dd p img { max-width:24px;	max-height:24px; position:relative; top:5px; margin:0 5px;}
+.replay_box h3.title .fr { margin-right:10px;}
+.replay_box h3.title .fr a { display:inline-block; margin:0 5px;}
+.replay_box h3.title { height:40px; line-height:40px; background:#f0f0f0;}
+.replay_box h3.title span{ margin-left:10px;}
+.replay_box h3.title .fr .selected { color:#222;}
+.replay_box .replays .status-meta { height:40px; line-height:40px; background:#f5f5f5;}
+.replay_box .replays .status-meta a{ padding-left:10px;}
+.replay_box .replays .status-meta p.fr{ line-height:40px;}
+.replay_box .replays .status-meta .time { display:inline-block; position:relative; left:70px;}
+.replay_box .replays .time { color:#999;}
+.re_replays { border-left:3px solid #eee; margin:15px; padding-left:15px;}
+.re_replays dl { border:none;}
+.re_replays dt { width:50px; float:left;}
+.re_replays .hd-img { border:1px solid #f00 !important;}
+.re_replays dd { float:left; border:none !important;}
+.re_replays .time { font-size:12px;}
+.status-meta a:hover { color:#025491;}
+.status-meta .fl a { padding-left:0;}
+.stock_down { padding-bottom:10px;}
+.stock_down dl { width:235px; margin-right:15px; float:left; padding-left:2px;}
+.stock_down dl dt { line-height:26px;}
+.stock_down dl:last-child { margin-right:0;}
+.stock_down dl.dl01 { color:#009933; border-bottom:2px solid #009933;}
+.stock_down dl.dl02 { color:#aaa; border-bottom:2px solid #aaa;}
+.stock_down dl.dl03 { color:#c00; border-bottom:2px solid #aaa;}
+.stock_down dl dd b, .stock_down dl dd span { display:inline-block; float:left;}
+.stock_down dl dd b { display:inline-block; padding-right:5px; font-size:26px; line-height:40px;}
+.stock_down dl dd span { width:70px; font-size:12px; padding-left:5px;}
+.personal .stock_down dl { width:313px;}
+.tb tr td {	position:relative;}
+.tb th { font-weight:600;}
+.tb tr td a { line-height:22px;}
+.tb tr td .comName{ display:block; margin:0 10px; width:260px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tb tr td a:hover { color:#06C;}
+.textarea4{ width:860px;}
+/*我的战绩hover 浮层*/
+.tb td .fl_char {position:absolute;background:#fff;width:700px;z-index:999;border:4px solid #ddd;border-radius:3px;left:160px;top:0;display:none;box-shadow: 2px 4px 4px #ddd;background:#f5f5f5;}
+.tb td .fl_char .char { width:410px; text-align:center; margin:10px; margin-right:0;}
+.tb td .fl_char .char img { margin-left:5px;}
+.tb td .fl_char .ranking_box {color:#444;width:260px;margin:10px;margin-right:0;border-radius:2px;}
+.tb td .fl_char .ranking_box table { background:#f5f5f5; border:1px solid #ddd;}
+.tb td .fl_char .ranking_box table td {padding:2px 5px;font-size:12px;line-height:20px;}
+.tb td .fl_char .ranking_box table th {border:none;background:#6097bf;color:#fff;border-bottom:1px solid #ccc;}
+.tb td .fl_char .ranking_box table td { border:none; border-bottom:1px solid #eee;}
+.ranking a{ display:inline-block; width:100px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+/*关注*/
+.pers_info dl dd h5 span{ display:inline-block; padding:5px; float:left;}
+.pers_info dl dd{ position:relative;}
+.pers_info dl dd .attBtn{display:inline-block;background:url(../images/add_normal.png) no-repeat;background-position:0 center;color:#777;padding-left:20px;float:right;}
+.pers_info dl dd .attBtn:hover{background:url(../images/add.png) no-repeat;background-position:0 center;color:#06c;}
+.pers_info dl dd .attBtn01{position:absolute; top:0; right:0;display:inline-block;background: url(../images/icon03.png) no-repeat;padding-left: 20px;background-position: 0 5px;margin-left: 30px;}
+/*我的战绩*/
+.gains th p {display:inline-block;text-align:center;margin:0 auto;}
+.gains th p span,.gains th p a{ display:inline-block; height:24px; line-height:24px; float:left;}
+.gains th p a{margin-left:5px;border:none;}
+.combat_gains .row {text-align:left;height:40px;margin:10px 0;}
+.combat_gains .row label {font-size:14px;}
+.combat_gains .row select {margin-left:10px;margin-right:30px;height:24px;line-height:24px;}
+.combat_gains .promptmsg { margin:20px 0;}
+.combat_gains .promptmsg p {text-align:left;margin:5px 0;border-bottom:1px dashed #ccc;padding-bottom:5px;}
+.combat_gains .promptmsg p:first-child {background:#e0e0e0;padding-top:5px;padding-left:15px;border-bottom:none;}
+.combat_gains .promptmsg p b {font-weight:500;color:#025491;}
+.combat_gains .promptmsg p span { margin:0 5px;}
+.combat_gains .tb th { background:#f4f3f3;}
+.combat_gains .tb td { font-size:12px; padding:10px 5px; }
+.assetAll .currency a {display:inline-block;height:30px;line-height:30px;margin-left:10px;border:1px solid #ccc;padding:0 10px;}
+.assetAll .currency a:hover, .assetAll .currency a.selected {background:#09C;color:#fff;}
+.curtb {width:100%;background:#f0f0f0;margin:15px 0;}
+.curtb td { border-bottom:1px solid #ccc;}
+.curtb thead { background:#3674b3;}
+.curtb th {color:#eee;height:30px;line-height:30px;font-size:14px;font-weight:bold;}
+.curtb .percent {margin-top:15px;width:98%;height:12px;background-color:#f2f2f2;overflow:hidden;}
+.curtb .percent .bar {height:8px;background-color:#3674b3;margin-top:5px;}
+.curtb .percent .cur {width:8px;height:20px;margin-top:-14px;}
+.curtb td span {display:inline-block;height:26px;line-height:26px;color:#fff;font-weight:600;padding:0 10px;}
+.curtb td p {text-align:right;line-height:30px;margin-right:15px;font-weight:600;font-size:12px;color:#666;padding-bottom:5px;}
+.cur_red {background:#cc1414;}
+.cur_yellow {background:#ff9900;}
+.cur_blue {background:#73bfe5;}
+.basicInfo {padding:10px 30px;width: 100%;height: 40px;background:#eee;color:#0088cc;line-height: 40px;font-size: 16px;border-bottom-color:#f2f2f2;border-bottom-width: 1px;}
+.basicInfo b {font: 18px/40px "微软雅黑";font-size-adjust: none;font-stretch: normal;}
+.moreRecord {background: url("../images/bg_md_unlogin_btn_02.jpg") no-repeat left top;font: 14px/39px "微软雅黑";left: 282px;top: 370px;width: 142px;height: 39px;text-align: center;color:#fff;text-decoration: none;display: block;position: absolute;font-size-adjust: none;font-stretch: normal;}
+.tips {padding: 0px 0px 0px 40px;height: 23px;color:#757575;line-height: 23px;font-size: 12px;background-color:#ebebeb;}
+.recordBox {height: 520px;border-top-color:#ebebeb;border-top-width: 1px;border-top-style: solid;position: relative;}
+.recordInfo {display: none;position: absolute;}
+.recordInfo a.icon {background: url(../images/bg_idx_icon.jpg) no-repeat left top;left: -18px;top: 9px;width: 12px;height: 12px;display: block;position: absolute;}
+.recordInfo p {color:#000;line-height: 22px;font-size: 12px;padding-left:10px;}
+.recordInfo p img {margin: 0px 0px 0px 10px;vertical-align: middle;}
+.recordInfo p span {color:#969696;}
+.recordInfo p b {color:#0048ff;font-size: 14px;margin-right: 2px;}
+.recordInfo p i {margin: 0px 2px;color:#cc00ff;font-style: normal;}
+.recordInfo p.title {margin: 0px 0px 3px;color:#000;height:30px;line-height: 20px;text-indent: 0px;font-size: 14px;border-bottom-color:#b2b2b2;border-bottom-width: 1px;border-bottom-style: dashed;}
+.recordInfo p.title b {margin: 0px 5px 0px 0px;color:#4a4a4a;font-weight: bold;}
+.recordInfo p.title i {margin: 0px 5px;color:#000;font-size: 20px;font-style: normal;}
+.recordInfo .upLevel {background: url("../images/bg_upLevel.jpg") no-repeat left top;margin: 5px 0px 0px;width: 136px;height: 23px;display: block;}
+.lt, .rt, .lb, .rb {background:#f2f2f2;padding:10px;}
+.lt {left: 30px;width:260px;top: 15px;}
+.rt {top: 15px;width: 260px;right: 30px;}
+.lb {top: 240px;left: 30px;width:260px;}
+.rb {top: 240px;width: 260px;right: 30px;}
+.recordChart {left: 340px;top: 25px;width: 320px;height: 320px;position: absolute;}
+.djBtn {left: 373px;top: 228px;width: 137px;height: 30px;display: block;position: absolute;}
+/*我的竞赛*/
+.tabBox .nav{ background:#e4ebf2; padding:10px 0; margin-bottom:15px;}
+.tabBox .nav li{ display:inline-block; float:left;}
+.tabBox .nav li a{ display:inline-block; height:24px; line-height:24px; padding:0 20px; color:#1f5c99; font-size:16px; font-weight:bold; border-right:1px dashed #aaa;}
+.tabBox .nav li:last-child a{ border-right:none;}
+.tabBox .nav li a:hover,.tabBox .nav li.selected a{ color:#e57300;}
+.tabBox .nav li a.vain{ color:#666; cursor:default;}
+.tabBox .nav li a.vain:hover{ color:#666;}
+.compet h3{	height:40px; line-height:40px; font-size:16px;}
+.compet_status{ background:#f5f5f5; margin-bottom:10px; margin-top:10px;}
+.compet_status label{ width:120px; text-align:center; font-size:15px; font-weight:bold; background:url(../images/tt01.png) no-repeat; color:#fff;}
+.compet_status label,.compet_status p{ display:inline-block; height:38px; line-height:38px; float:left;}
+.compet_status p{ margin-right:10px; position:relative;}
+.compet_status p input[type=radio]{ display:inline-block; width:24px; height:40px; opacity:0; position:absolute; z-index:99;}
+.compet_status p input[type=checkbox]{ display:inline-block; width:24px; height:40px; opacity:0; position:absolute; z-index:99;}
+.compet_status p span{ margin-left:30px; margin-right:10px; font-weight:bold;}
+.compet_status p i{ display:inline-block; position:absolute; z-index:0; width:24px; height:30px;}
+.compet_status .rd i{ background:url(../images/icon_gray.png) no-repeat; background-position:0 -240px; top:3px;}
+.compet_status .rd i.selected{ background:url(../images/icon_blue.png) no-repeat; background-position:0 -240px;}
+.compet_status .cb i{ background:url(../images/icon_gray.png) no-repeat; background-position:0 -370px; top:3px;}
+.compet_status .cb i.selected,.compet_status .cb i:hover{  background:url(../images/icon_blue.png) no-repeat; background-position:0 -370px;}
+.compet .tzzh{ margin-top:10px; padding:0; height:40px; overflow:hidden;}
+.compet .tzzh a{ display:inline-block; width:180px; height:40px; line-height:40px; text-indent:-9999px;}
+.compet .tzzh a:first-child{ background:url(../images/tzwt.png) no-repeat; background-position:0 0;}
+.compet .tzzh a:last-child{ display:inline-block; width:180px; background:url(../images/tzwt.png) no-repeat; background-position:-218px top; margin-left:15px;}
+.compet .tzzh a:last-child:hover{ background:url(../images/tzwt.png) no-repeat; background-position:-218px bottom;}
+.tabContain>div{ border:1px solid #ddd; margin:15px 0; display:none;}
+.tabContain .stayOpen{ height:100px; line-height:100px; padding:10px; text-align:center;}
+.compet .tb a { cursor:default;}
+.compet .tb a:hover { color:#666;}
+.compet .tb .btn-compet, .compet .tb .btn-rules, .compet-yet { cursor:pointer;}
+.compet .tb .btn-compet:hover, .compet .tb .btn-rules:hover, .compet-yet:hover { color:#06c;}
+.compet .btn-compet { color:#09c;}
+
+/*个人中心--点击头像进去的页面 开始*/
+.personal .student_info dl{ padding:10px 0;}
+.personal .student_info dl dt, .personal .student_info dl dd{ float:left;}
+.personal .student_info dl dt img{ margin-left:10px;}
+.personal .student_info dd{ width:854px;}
+.personal .student_info .left{ width:300px; margin-left:20px;}
+.personal .student_info .left h4{ display:inline-block; width:300px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;line-height:30px; margin-bottom:5px;}
+.personal .student_info .left p{ font-size:12px; line-height:22px;}
+.personal .student_info .right{ width:500px; position:relative;}
+.personal .student_info .right .attent{ position:absolute; right:0; top:0;}
+.personal .student_info .right .description{ min-height:60px; margin-top:34px; padding:5px 10px; background:#F7F7F7; color:#666;}
+.personal .student_info .right .description p{ text-align:left;}
+.personalContainer { margin:15px 0; background:#fff;}
+.personalContainer .lxf_tab{ padding-top:10px;}
+.personalContainer .info>dl dt { width:100px; padding-bottom:5px; float:left;}
+.personalContainer .info>dl dt img{ width:50px; height:50px; overflow:hidden;}
+.personalContainer .info>dl dd{ width:875px; float:right;}
+.replays dl{ border:1px solid #ddd !important;}
+.replays dl dt{}
+.replays dl dd{ width:760px !important;}
+.personalContainer .info .attent{ position:relative;}
+.attent a {display:inline-block;height:24px;line-height:24px;text-align:center;font-size:12px;padding:0 4px;color:#0873c0;border-radius:3px;margin-left:2px;}
+.attent a:hover { color:#03c;}
+.attent a.icon03 { padding-left:15px; color:#999; background-position:2px 6px; cursor:default;}
+.pers_info dl:last-child{ border-bottom:none;}
+.pers_info dd p span{ margin-top:5px; margin-right:15px;}

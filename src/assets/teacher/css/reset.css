@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,p,table,thead,tbody,tr,th,td,img,input,textarea,select,option,a,ul,li,dl,dt,dd,h1,h2,h3,h4,header,section,footer{ margin:0; padding:0;}
+html,body{width:100%;overflow-x:hidden;}
+body{ font-family:'Microsoft YaHei', '微软雅黑', Arial, sans-serif; font-size:14px; background:#fff;color:#444;}
+ul{ list-style:none;}
+a{ text-decoration:none; color:#444; outline:none;}
+img{ border:none;}
+h1,h2,h3,h4,h5{ font-style:normal;}
+h1{ font-size:1.5em;}
+h2{ font-size:1.2em;}
+h3,h3 span{ font-size:14px;}
+p{ line-height:24px;}
+u,i{ font-style:normal;}
+u{ text-decoration:none;}
+textarea,select,input{ background:none; outline:none; font-family:'微软雅黑'; border:1px solid #DDD;}
+select option{ height:20px; line-height:20px; padding-left:10px;}
+select:hover{ color:#000 !important; background:#f0f0f0 !important;}
+textarea{ overflow:auto; padding:5px; resize:none;}
+.blue{ color:#2d70b3;}
+.gray{ color:#888;}
+textarea{ resize:none;}
+.textarea1,.textarea2,.textarea3,.textarea4{ height:96px; margin:10px 0; border:1px solid #ddd;}
+.textarea1{ width:736px;}
+.textarea2{ width:652px;}
+.textarea3{ width:810px;}
+.textarea4{ width:884px;}
+.sroll{ overflow-x:scroll; border-left:1px solid #ccc; border-right:1px solid #ccc;}
+/*timer*/
+
+.bd{border:1px solid #f0f0f0; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+.pr{ position:relative;}
+.pa{ position:absolute;}
+.fl{ float:left;}
+.fr{ float:right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden} /*所有主流浏览器都支持 :after 伪元素。*/ 
+.clearfix{*+height:1%;} 
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;} 
+.clearfix{*zoom:1;} /*只针对IE6/7*/
+.left{ text-align:left;}
+.center{ text-align:center;}
+.right{ text-align:right;}
+/*
+table th{ font-size:14px;}
+table td{ font-size:13px;}
+*/
+.bluetd td{ background:#D2E5F7 !important;}
+.show{ display:block}
+.hide{ display:none;}
+.desb{ background:#EEE !important;}
+.scroll_tb{ overflow-x:scroll;}

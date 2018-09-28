@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+.show_search .filter{ margin:15px 0;}
+.show_search .filter ul li { display:inline-block; float:left; position:relative; z-index:1; background:url(../images/tree_arrow.png) no-repeat; background-position:100% center; padding-right:12px;}
+.show_search .filter ul li:last-child { background:none;}
+.show_search .filter ul li a { display:inline-block; width:44px; height:30px; line-height:30px; padding:0 24px 0 5px; text-align:center; color:#666; border:1px solid #DDD; font-weight:bold; background:#FFF url(../images/arrow_down.png) no-repeat;background-position:90% center;}
+.show_search .filter ul li .selected, .show_search .filter ul li a:hover { background:#297acc url(../images/arrow_down_w.png) no-repeat; border:1px solid #297acc; color:#FFF; background-position:90% center;}
+.show_search .filter ul div {width:200px; min-height:30px; max-height:230px; overflow-y:scroll; padding:5px 0 15px; text-align:left; background:#FFF; background:#FFF;position:absolute; top:32px; z-index:999 !important; display:none;-webkit-box-shadow:4px 4px 20px  rgba(0,0,0,0.5);-moz-box-shadow:4px 4px 20px  rgba(0,0,0,0.5);box-shadow:4px 4px 20px  rgba(0,0,0,0.5);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+}
+.show_search .filter ul div p{ line-height:26px; background:#F7F7F7;}
+.show_search .filter ul div span { display:block;/* width:180px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;*/ height:24px; line-height:24px; margin:0; padding:0 10px;}
+.show_search .filter ul div span:hover { background:#09F; color:#FFF;}
+.show_search .filter .btns a { display:inline-block; width:50px; height:30px; line-height:30px; margin-bottom:0; margin-right:5px; background:#136FB9; color:#FFF; text-align:center; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;}
+.show_search .filter .btns a:hover { background:#F90; color:#FFF;}
+.case_box{ margin-bottom:15px;}
+.case_box .btns .confirm{ display:inline-block; background:#09F; color:#FFF; text-align:center; padding:0;}
+.case_box .btns .cancel{ display:inline-block; background:#06c; color:#FFF; text-align:center; padding:0; padding-right:15px;}
+.case_box{ margin-top:10px;}
+.case_box .select_scheme{ border:1px solid #DDD; padding:5px 0;}
+
+/*li div浮动及清除浮动li*/
+.select_scheme .itemName,.select_scheme .items{ float:left;}
+.select_scheme .itemName{ width:90px;}
+.select_scheme .items{ width:720px;}
+.select_scheme ul li:after{content:".";display:block;height:0;clear:both;visibility:hidden} /*所有主流浏览器都支持 :after 伪元素。*/ 
+.select_scheme ul li{ padding-bottom:5px; border-bottom:1px solid #FFF; *+height:1%;} 
+.select_scheme ul li:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;} 
+.select_scheme ul li{*zoom:1;} /*只针对IE6/7*/
+.select_scheme ul li:last-child{ border-bottom:none;}
+.select_scheme .itemName{ display:inline-block; text-align:center;}
+.select_scheme .scheme .itemName a{display:inline-block; width:40px; height:34px; line-height:34px; color:#fff; text-align:right; margin-top:5px; padding-right:25px;-webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; background:#549AD8 url(../images/arrow_down_w.png) no-repeat; background-position:93% 5px;}
+.select_scheme .scheme .itemName a:hover{ background:#ff8315 url(../images/arrow_down_w.png) no-repeat; background-position:93% 5px;}
+.select_scheme .items span{ display:inline-block; margin:5px 5px 0 0; padding:6px 10px; text-align:left; border:1px solid #DDD; background:#FFF;}
+
+/*龙虎榜选择地区浮层*/
+.caseflt{ width:710px; display:none; text-align:left;}
+.caseflt .top{ margin:10px 20px;}
+.caseflt .top p{ display:inline-block; float:left;}
+.caseflt .top input{ height:30px; line-height:30px;}
+.caseflt p{ display:inline-block; height:24px; line-height:24px; float:left; position:relative;}
+.caseflt p i,.caseflt p span{ display:inline-block; float:left;}
+.caseflt span{ width:110px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-right:10px;}
+.caseflt i{ display:inline-block; width:24px; height:24px; background:url(../images/area_ckbox.png) no-repeat;}
+.caseflt i.selected{ background-position:0 bottom;}
+.caseflt p input{ position:absolute; display:inline-block; width:24px; height:24px; left:0; top:0; opacity:0;}
+.caseflt .detail{ height:270px; overflow-y:scroll; margin:0 25px 25px 25px; border:1px solid #DDD; padding:10px 5px; background:#FFF;}
+.caseflt .detail p{ margin:5px;}

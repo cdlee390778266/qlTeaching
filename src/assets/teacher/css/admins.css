@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.userName{ display:inline-block; width:130px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.facultySelt{ width:100%; height:auto; margin-top:15px;}
+.facultySelt .faculty{ margin:15px 0;}
+.facultySelt .selArea{ display:inline-block; height:40px; line-height:40px;}
+.facultySelt .selArea label{ color:#004d99; font-weight:bold; padding:0 10px;}
+.facultySelt .selArea select{ background:#fff; color:#666;}
+.facultySelt .selArea label:first-child{ padding-left:2px;}
+
+/*修改权限浮层*/
+.flt .remark{ color:#f00;}
+.resetPwdFlt{ width:400px; display:none;}
+.resetPwdFlt label{ display:inline-block; height:36px; line-height:36px;}
+.resetPwdFlt input{ display:block; width:350px; height:40px; line-height:40px; padding:0 10px;}
+

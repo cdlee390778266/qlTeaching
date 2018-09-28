@@ -1,0 +1,203 @@
+/*我的练习*/
+/*public*/
+.noMessage{ border:1px solid #EEE; margin:15px auto; padding:10px 0;}
+.compet h3,.security h3{ height:32px; line-height:32px; font-weight:bold; border:1px solid #ddd; margin-bottom:10px;}
+.compet h3 b,.security h3 b{ display:inline-block; width:140px; height:32px; line-height:32px; padding-left:15px; font-size:15px; color:#fff; background:url(../images/tt_bg.png) no-repeat;}
+.menu{ width:160px; background:#fff; border:1px solid #ddd;}
+.menu_01>li{background:url(../images/menu_01.png) no-repeat;background-position:8px 13px;padding-left:30px;border-top:1px solid #ddd;}
+.menu_01>li:first-child{ border-top:none;}
+.menu_01 li.selected{background:url(../images/menu_01_on.png) no-repeat !important;background-position:8px 13px !important;padding-left:30px;}
+.menu_01 li.selected>a { color:#2d70b3;}
+.menu_01>li a { display:block; line-height:34px;}
+.menu_02{padding-bottom:10px;position:relative;left:-20px;}
+.menu_02>li{background:url(../images/menu_02.png) no-repeat;background-position:5px center;}
+.menu_02>li a{display:block;line-height:24px;margin:5px 0;padding-left:20px;color:#666;}
+.menu_02>li a:hover,.current{background:#0CF url(../images/menu_02_on.png) no-repeat;background-position:5px center;color:#fff !important;}
+
+/*创建练习*/
+.create_practice,.set_practice{ width:540px; text-align:left; padding:10px; display:none;}
+.create_practice label,.set_practice label{ display:inline-block; padding:10px;}
+.create_practice input[type=text],
+.set_practice input[type=text]{ border:1px solid #ccc; width:200px; height:28px; line-height:28px; padding:0 5px;}
+.create_practice select,.set_practice select{ border:1px solid #ccc; height:30px; line-height:30px; padding:0 5px;}
+.create_practice p span,.set_practice p span{ color:#f00; padding:0 10px; display:none;}
+.create_practice .center,.set_practice .center{ margin:15px auto;}
+.practice_init{ width:540px; text-align:left; display:none;}
+.practice_init label{ display:inline-block; padding:10px 15px;}
+.practice_init input[type=text]{ border:1px solid #ccc; width:220px; height:28px; line-height:28px; padding:0 5px;}
+.practice_init h3 span{ color:#fff;}
+.practice_init .center{ margin:15px auto;}
+.money{ width:100px; height:26px; line-height:26px; padding:0 5px;}
+.set_practice h3 span{ color:#fff;}
+#edit_money{ width:100px; height:28px; line-height:28px; padding-left:5px; border:1px solid #ccc;}
+.create_practice h3{ margin-bottom:15px;}
+.create_practice .center{ border-top:1px solid #DDD; padding-top:10px;}
+.initial_money{ width:124px !important; height:28px; line-height:28px; padding-left:5px; border:1px solid #DDD;}
+
+/* 投资组合 */
+.compet .tzzh{ height:36px;}
+.compet .tzzh a{ display:inline-block; width:180px; height:40px; line-height:40px; text-indent:-9999px;}
+.compet .tzzh a:first-child{ background:url(../images/tzwt.png) no-repeat; background-position:0 0;}
+.compet .tzzh a:last-child{ display:inline-block; width:180px; background:url(../images/tzwt.png) no-repeat; background-position:-218px top; margin-left:15px;}
+.compet .tzzh a:last-child:hover{ background:url(../images/tzwt.png) no-repeat; background-position:-218px bottom;}
+.tabContain>div{ border:1px solid #ddd; margin:15px 0; display:none;}
+.tabContain .stayOpen{ height:100px; line-height:100px; padding:10px; text-align:center;}
+.compet .tb a { cursor:default;}
+.compet .tb a:hover { color:#666;}
+.compet .tb .btn-compet, .compet .tb .btn-rules, .compet-yet { cursor:pointer;}
+.compet .tb .btn-compet:hover, .compet .tb .btn-rules:hover, .compet-yet:hover { color:#06c;}
+.compet .btn-compet { color:#09c;}
+.compet_tb tr{ height:50px;}
+.compet_tb tr td{ text-align:center; border-bottom:1px dashed #eee;}
+.compet_tb tr td a{ color:#2163a6;}
+.compet_tb td:first-child{ text-align:left;}
+.compet_tb td:first-child a{ display:block; width:200px; padding-left:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.compet_tb .btn-compet,.compet_tb .compet-yet,.compet_tb .compet-over{ font-weight:bold;}
+.compet_tb .btn-compet{ color:#093;}
+.compet_tb td .compet-yet{ color:#d92b2b;}
+.compet_tb .compet-over{ color:#999 !important;}
+.compet{ margin:15px 0;}
+.compet .search { right:0; top:10px; }
+.compet .row .page { margin-top:0;}
+.portfTb tr td:first-child a {	cursor:pointer; }
+.portfTb th{ height:30px; font-weight:bold;}
+.portfTb td{ border-right:1px solid #DDD; border-bottom:1px solid #DDD; border-top:none; height:32px; line-height:32px; padding:5px 0; color:#777; font-size:13px;}
+.portfTb td:first-child a:hover { color:#06c;}
+.portfTb input { margin-right:5px; position:relative; top:2px;}
+.portfTb a { display:inline-block; padding:0 2px; position:relative; color:#09c;}
+.portfTb a:hover { color:#06c;}
+.searchCode{ margin:5px; float:right;}
+.searchCode input,.searchCode a{ display:inline-block; border:1px solid #ccc; float:left;}
+.searchCode input{ padding:0 10px; margin-right:0 !important; background:#fff;}
+.searchCode a{ display:inline-block; height:28px; line-height:28px; padding:0 5px; border-left:none;}
+.searchCode .searchBtn{ width:30px; background:url(../images/serch.png) no-repeat; background-position: center center;}
+.searchCode .addCodeBtn{ padding:0 10px;}
+.searchCode .addCodeBtn:hover{ color:#06c;}
+.searchCode #refresh{ display:inline-block; width:30px; height:28px; background:url(../images/renovate.png) no-repeat; background-position:2px center; margin-left:5px; padding-left:24px; border-left:1px solid #CCC;}
+.sltCont{ display:inline-block; margin-left:11px;}
+.sltCont input{ margin-right:2px; position:relative; top:1px;}
+.deleteAll{ display:inline-block; width:60px; margin-left:8px; background:url(../images/delete.png) no-repeat; background-position:0 center; padding-left:12px;}
+.deleteAll:hover{background:url(../images/delete_on.png) no-repeat; background-position:0 center; padding-left:12px; color:#F00;}
+
+/*委托下单*/
+.security{ float:right; width:820px;/* border:1px solid #ddd;*/}
+.security .tt{ color:#333;}
+.security .tt .btn-refresh{ margin-right:10px;}
+.security .tt .btn-refresh:before{ background-position:0 6px;}
+.security .tt input,.security .tt select{ margin-top:5px;}
+.security .row { height:40px; line-height:40px;}
+.security .row span, .security .row a { display:inline-block; color:#333; font-weight:bold;}
+.security .row a { position:relative; top:5px; right:5px;}
+.security .secur_tb { margin-bottom:10px;}
+.security .secur_tb .btn { background:#EEE !important; color:#333 !important; border:1px solid #CCC; border-radius:3px;}
+.security .secur_tb div { background:#E5F2FF; border:1px solid #DDD;}
+.security .secur_tb div.fl{ height:360px;/* margin-left:10px;*/}
+.security .secur_tb div.fl table td { padding:8px;}
+.security .secur_tb div.fr{ height:360px;/* margin-right:10px;*/}
+.security .secur_tb div.fr table { border-bottom:1px solid #DDD;}
+.security .secur_tb div.fr table:last-child{ border-bottom:none;}
+.security .secur_tb div.fr table td { padding:2px;}
+.security .secur_tb div.fr table tr:hover { background:#99CDFF;}
+.security .secur_tb div.fr table td span { font-size:12px;}
+.security .secur_tb .disabled { background:#EEE !important;	color:#222;}
+.security .secur_tb .txt { font-size:12px; border:1px solid #CCC;}
+.security .secur_tb div table { padding:10px;}
+.security .secur_tb div table td { color:#333;}
+.security .secur_tb div table td:first-child { text-align:center;}
+.security .secur_tb div table input.txt0{width:180px;height:18px;line-height:18px;padding:5px;background:#fff;border:1px solid #ccc;}
+.security .secur_tb div table select{width:192px;height:32px;line-height:32px;background:#fff;border:1px solid #ccc;}
+.security .secur_tb .w2-1 { width:400px;}
+.security select.txt0 { width:172px !important;}
+.security .txt0 { width:180px !important;}
+.security .txt1 { width:160px !important;}
+.security .txt2 { width:130px !important; padding-left:5px;}
+.security .w3 span { padding-left:10px;}
+.security .w3 select { width:172px !important;}
+.security .w3-1 { width:270px;}
+.security .w3-2 { width:550px;}
+.buy_marketPrice, .sale_marketPrice { margin:0 5px;}
+.security .reason{ background:#F5F5F5; padding:10px; border:1px solid #DDD;}
+.security .reason .btns{ display:inline-block; margin:0 2px; float:left;}
+.security .reason .btns a{ height:24px; line-height:24px; color:#FFF;}
+.security .reason p{ display:inline-block; margin:5px; float:right;}
+.security .reason p{ text-align:right; color:#999;}
+.security textarea{width:776px;height:40px; margin:10px 0; border:1px solid #DDD;padding:10px;font-size:14px;background:#fff;border-radius:3px;color:#444;line-height:20px;margin-top:5px;resize:none;}
+.security .reason label{ display:block; height:30px; line-height:30px;}
+.security .words{ color:#f00;}
+.security .btn{ border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+/*practice*/
+.practice_box{}
+.practice_box .createTop{ margin-top:15px;}
+.practice_box .createTop .btn01 { width:120px; height:36px; line-height:36px; font-size:15px; font-weight:bold; color:#3078bf; margin-left:0;}
+.practice_box .createTop .btn01:hover{ color:#FFF;}
+.practice_box .createTop label,.practice_box .createTop select{ color:#555; font-size:15px; font-weight:bold;}
+.practice_box .createTop label{ display:inline-block; margin-left:10px;}
+.practice_box .createTop select{ height:36px; line-height:36px; border:1px solid #ccc; padding-left:10px; border-radius:2px; color:#3078bf;}
+.practice { width:493px; margin-top:10px;}
+.practice .name{ height:34px; line-height:34px; background:#f5f5f5; color:#333; border-left:1px solid #ddd; border:1px solid #ddd; border-bottom:none; font-size:15px;}
+.practice .matchInfo{ border:1px solid #DDD; border-top:none;}
+.practice .name { padding-left:20px;}
+.practice .matchInfo { padding:10px 0; background:url(../images/prac_bg.jpg) no-repeat;}
+.practice .matchInfo p { line-height:18px; margin:5px 20px; color:#555;}
+.practice .matchInfo .btn02 { display:inline-block; text-align:center; width:100px; height:36px; line-height:36px; color:#555; cursor:pointer; font-weight:600; border:1px solid #CCC; border-radius:2px;}
+.practice .matchInfo .btn02:hover { border:1px solid #7AA6D2; background:#FFF; color:#206AB5;}
+.practice .time { color:#f00;}
+.scrtt{ margin:10px 0;}
+.scrtt .fl{ margin-left:10px;}
+.scrtt label{ font-weight:bold; margin:0 5px;}
+.scrtt select{ height:30px; line-height:30px; border:1px solid #ddd;}
+.scrtt input{ width:60px; height:26px; line-height:20px; border:1px solid #ddd;}
+.btn-export{ display:inline-block; width:50px; height:26px; line-height:26px; text-align:center; background:url(../images/icon_blue.png) no-repeat; background-position:0 -450px; padding-left:15px; font-weight:bold; margin-left:10px;}
+.btn-export:hover{ color:#1b7dbf;}
+.status{ background:#fff; border-bottom:1px solid #ccc;}
+.status h2,.status>a.btn-refresh{ display:inline-block; height:40px; line-height:40px;}
+.status h2{ color:#333; margin-left:15px; float:left;}
+.status select{ display:inline-block; height:28px; line-height:28px; margin-top:5px; margin-left:2px; border:1px solid #ddd;}
+.status .btn-refresh{ margin-left:20px; float:right;}
+.status .btn-refresh:before{ background-position:0 6px;}
+.status div{display:inline-block; margin-right:15px; float:right;}
+.status div label{ display:inline-block; height:40px; line-height:40px; font-weight:bold; margin-left:30px; float:left;}
+.status select{ display:inline-block; float:left;}
+.status p{ display:inline-block; float:left;}
+.security .secur{ border-left:1px solid #ddd; border-top:1px solid #ddd; margin-bottom:10px;}
+.security .secur td,.security .secur th{ height:32px; line-height:32px; border-bottom:1px solid #DDD; font-size:13px; text-align:center;}
+.security .secur th{ line-height:28px; font-weight:bold; color:#0f5499; background:#f0f0f0; border-bottom:1px solid #ddd; border-right:1px solid #ddd;}
+.security .secur td{ border-right:1px solid #DDD;}
+#orderTb tbody tr td:last-child a{ color:#246bb3; font-weight:bold;}
+#orderTb tbody tr td:last-child a:hover{ color:#09f; text-decoration:underline;}
+#orderTb tbody tr td:last-child span{ color:#999;}
+.reMore:hover{ color:#2163a6; text-decoration:underline;}
+.btns{ text-align:center;}
+.scroll_tb{ border:1px solid #DDD;}
+.scroll_tb .secur{ border:none;}
+.tb th,.tb td{ padding:0;}
+/*查看下单明细浮层*/
+.reasonFlt{ width:500px; display:none;}
+.reasonFlt .details p{ margin:20px 30px; text-indent:2em;}
+.reasonFlt .btns{ margin-bottom:15px;}
+/*撤单浮层*/
+.revokeConfirm{ width:300px; display:none;}
+.revokeConfirm .details p{ height:80px; line-height:80px;text-align:center; font-size:18px;}
+/*查看详情浮层*/
+.orderReason{ width:500px; display:none;}
+.orderReason .details{ height:140px; overflow-y:scroll; border:1px solid #EEE;}
+.orderReason .details p{ line-height:24px; margin:10px; word-wrap:break-word; overflow:hidden;}
+#yzzz{ display:none;}
+/*删除提示*/
+.prompt p{ margin:8px 0;}
+.prompt .center{ padding-bottom:15px;}
+/*买入提示*/
+.tradeFlt{ width:260px; display:none;}
+.tradeFlt .detail{ margin:15px;}
+.tradeFlt .detail i{ display:inline-block; width:18px; height:18px; background:url(../images/fail.png) no-repeat; position:relative; top:3px; margin-right:6px;}
+.tradeFlt p{ line-height:24px; margin:10px; word-wrap:break-word;}
+.tradeFlt p b{ color:#C00; font-size:14px; font-weight:bold;}
+.tradeFlt p span{ display:inline-block; padding:0 5px;}
+.tradeFlt p span:hover{ background:#eee;}
+.tradeFlt .center{ font-size:15px;}
+
+/*空提示*/
+.nullFlt{ width:240px; display:none;}
+.nullFlt p{ text-align:center; height:40px;line-height:40px;font-size: 16px; margin-top:15px;}
+.nullFlt p i { display:inline-block; width:16px; height:16px; position:relative; top:2px;}
+.nullFlt .center{ margin:15px auto;}

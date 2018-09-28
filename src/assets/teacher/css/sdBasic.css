@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+.tbBox{ border:1px solid #e5e5e5; border-top:none; margin:10px 0; padding-bottom:10px;}
+.title{ border-top:1px solid #e5e5e5; margin-top:10px; margin-bottom:5px;}
+.title:first-child{ margin-top:0;}
+.bsTb label{ width:80px; font-weight:bold; margin-right:5px; background:#f5f5f5; color:#444; border:1px solid #eee; float:left;}
+.bsTb label,.bsTb input[type=text],.bsTb i{ display:inline-block; height:32px; line-height:32px; padding:0 10px;}
+.bsTb label{ margin-left:10px;}
+.bsTb input[type=text],.bsTb select{ margin-left:5px;background:#fff; border:1px solid #C8E0D1; -webkit-box-shadow:1px 2px 3px #eee inset; -moz-box-shadow:1px 2px 3px #eee inset; box-shadow:1px 2px 3px #eee inset;}
+.bsTb input[type=text]{ width:190px;}
+.bsTb .readonly{ box-shadow:none; background:#f7f7f7; border:1px solid #eee;}
+.bsTb select{ display:inline-block; width:212px; height:34px; line-height:34px; padding:0 5px;}
+.bsTb #sex span{ display:inline-block; padding-left:4px; margin-right:15px;}
+.bsTb u,.bsTb i{ display:inline-block; font-style:normal; color:#333;}
+.bsTb u{ display:none;}
+.bsTb i{ width:170px; border:1px solid #eee;}
+.bsTb .head-pic{ text-align:center;}
+.bsTb .head-pic{ margin:0 auto;}
+.bsTb .head-pic img{ max-width:90px; max-height:90px; border-radius:90px; overflow:hidden;}
+.bsTb .head-pic p{ text-align:center;}
+.bsTb .head-pic p input{ text-align:center;}
+.bsTb .sex{ position:relative; width:210px; height:32px; margin-left:122px; border:1px solid #C8E0D1; -webkit-box-shadow:1px 2px 3px #eee inset; -moz-box-shadow:1px 2px 3px #eee inset; box-shadow:1px 2px 3px #eee inset;}
+.bsTb .sex input{ margin-top:10px; margin-left:10px;}
+.bsTb .sex span{ margin:5px;}
+.basicTxt{ display:inline-block; width:190px; padding:0 10px; height:32px; line-height:32px; border:1px solid #C8E0D1; margin-left:5px; background:#f5f5f5;}
+#Sdbasic td{ padding-bottom:10px;}
+#Sdacc label{ margin-bottom:5px;}
+#Sdacc td{ padding-bottom:0px;}
+.tabNav ul{ width:500px;}
+.btns{ text-align:center; margin-top:15px;}
+.btns input{ display:inline-block; width:70px; height:34px; line-height:34px; cursor:pointer; background:#e5e5e5; color:#333; font-size:15px; border-radius:3px; text-align:center; margin:0 5px; border:1px solid #ddd;}
+.btns input:hover{ background:#1369BF; color:#fff; border:1px solid #1369BF;}
+.tab01{ border-bottom:1px solid #DDD;}
+.tab01 ul{ width:600px;}

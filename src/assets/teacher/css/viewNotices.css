@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+.faculty{ margin:15px 0;}
+.notice_top{ height:32px; line-height:32px; padding:5px 10px; background:#6E97C3;}
+.notice_top a{ display:inline-block; height:30px; line-height:30px; padding:0 15px; background:#FFF; border-radius:2px; margin-right:5px;}
+.notice_top a:hover{ color:#0064b5;}
+.cont .tb{ margin:5px auto 10px; border:none !important;}
+.cont .tb th,.cont .tb td{ margin:5px auto 10px; border:none !important;}
+
+/*通知头部*/
+.subjectTip{ margin:10px 0; padding:10px; background:#F7F7F7; border:2px solid #CFDCEA;}
+.subjectTip h4{ line-height:32px; color:#222;}
+.subjectTip p span{ color:#444; font-size:12px;}
+.subjectTip b{ color:#5FA207;}
+
+/*通知正文*/
+#qm_con_body{ border:2px solid #CFDCEA; padding:20px; min-height:100px; margin-bottom:15px; word-break:break-all;}
+
+/*通知附件*/
+.attachment{ border:2px solid #d6e2f1;}
+.attachment h4{ height:32px; line-height:32px; font-size:14px; background:#d6e2f1;}
+.attachment h4 span{ background:url(../images/mail_icon.png) no-repeat; background-position:0 -168px; padding-left:24px; margin-left:10px;}
+.attachment p{ margin:10px 0;}
+.attachment ul{ margin:15px;}
+.attachment ul li{ margin-top:10px;}
+.attachment ul li i,.attachment ul li a{ margin-left:10px;}
+.attachment ul li i{ color:#888;}
+.attachment ul li a{ color:#377DC7;}
+.attachment ul li a:hover{ text-decoration:underline;}
+

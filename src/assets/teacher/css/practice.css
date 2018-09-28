@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tbBox{ margin-top:10px;}
+.tb a:hover{ color:#06c;}
+.rmb,.hkd{ display:inline-block; margin:0 5px;}
+.permission,.prohibit{ display:inline-block; width:60px; text-align:center; height:24px; line-height:24px;}
+.tb .cptt{ display:block; width:284px; line-height:24px; margin:0 15px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tab01{ border-bottom:1px solid #DDD;}

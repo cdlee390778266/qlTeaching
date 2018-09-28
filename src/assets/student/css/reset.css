@@ -1,0 +1,48 @@
+body,div,p,table,thead,tbody,tr,th,td,img,input,textarea,select,option,a,ul,li,dl,dt,dd,h1,h2,h3,h4,header,section,footer{ margin:0; padding:0;}
+html,body{width:100%;overflow-x:hidden;}
+body{font-family:'Microsoft YaHei', '微软雅黑', Arial, Lucida Grande, Tahoma, sans-serif;font-size:14px; background:#fff;/*url(../images/body_bg.jpg) no-repeat; background-position:center 0; */color:#555;}
+ul{ list-style:none;}
+a{ text-decoration:none; color:#555;}
+img{ border:none;}
+h1,h2,h3,h4,h5{ font-style:normal;}
+h1{ font-size:1.5em;}
+h2{ font-size:1.1em;}
+h3,h3 span{ font-size:14px;}
+p{ line-height:22px;}
+textarea,select,input{ background:none; outline:none; font-family:'微软雅黑';}
+select{ color:#444; padding-left:2px;}
+textarea{ overflow:auto; padding:5px;}
+.blue{ color:#2d70b3;}
+.gray{ color:#888;}
+.textarea1,.textarea2,.textarea3,.textarea4{ height:66px; margin:10px 0; border:1px solid #ccc; resize:none;}
+.textarea1{ width:742px;}
+.textarea2{ width:650px;}
+.textarea3{ width:810px;}
+.textarea4{ width:884px;}
+.mrt15{ margin-top:15px;}
+.mrb15{ margin-bottom:15px;}
+/*timer*/
+.Wdate{ width:120px !important; padding-left: 10px;}
+.bd{border:1px solid #f0f0f0; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+.pr{ position:relative;}
+.pa{ position:absolute;}
+.fl{ float:left;}
+.fr{ float:right;}
+.cl{ clear:both;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden} /*所有主流浏览器都支持 :after 伪元素。*/ 
+.clearfix{*+height:1%;} 
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;} 
+.clearfix{*zoom:1;} /*只针对IE6/7*/
+.left{ text-align:left;}
+.center{ text-align:center;}
+.right{ text-align:right;}
+.nobd{ border:none !important;}
+
+/*滚动条美化*/
+/*
+::-webkit-scrollbar{ width:15px; height:8px; cursor:pointer;}
+::-webkit-scrollbar-track { background-color: #DDD;}  滚动条的滑轨背景颜色 
+::-webkit-scrollbar-thumb { background-color: rgba(25, 95, 166, 0.6);}  滑块颜色 
+::-webkit-scrollbar-button {background-color: #AAA;}  滑轨两头的监听按钮颜色 
+::-webkit-scrollbar-corner {background-color: #4D4D4D;}  横向滚动条和纵向滚动条相交处尖角的颜色 
+*/

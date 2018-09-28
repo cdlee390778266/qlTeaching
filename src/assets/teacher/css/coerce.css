@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+.tabBox{ margin:15px 0; border-bottom:1px solid #DDD;}
+.tab{ height:38px;}
+.tab li{ display:inline-block; float:left;}
+.tab li a{ display:inline-block; width:82px; text-align:center; height:37px; line-height:37px; border:1px solid #DDD; border-left:none; border-bottom:none; font-weight:bold; font-size:14px; background:#F5F5F5;}
+.tab .selected a{ background:#4B86C1; border:1px solid #4B86C1; border-left:none; color:#FFF;}
+.tab li:first-child a{ border-left:1px solid #DDD !important;}
+.tab li:first-child.selected a{ border-left:1px solid #4B86C1 !important;}
+.compName{ margin:15px 0;}
+.compName label{ color:#004d99; font-size:15px; margin-left:5px;}
+.compName select{ height:32px; line-height:32px; padding-left:6px;}
+.faculty{ margin:10px 0;}
+.handleBtns p{ display:inline-block; font-weight:bold;}
+.handleBtns p.ck{ position:relative; top:5px; margin-right:8px;}
+.handleBtns p.ck span{ font-size:15px;}
+.handleBtns p.closePrice input{ width:80px; height:30px; line-height:30px; padding-left:5px; margin-left:10px;}
+.userName{ display:inline-block; width:80px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}

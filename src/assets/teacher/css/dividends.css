@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.userName{ display:inline-block; width:100px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.faculty{ margin:10px 0;}
+.date label{ display:inline-block; font-size:14px; text-align:center; font-weight:bold;}
+.date span{ display:inline-block; margin:0 10px;}
+.date input{ height:30px; line-height:30px; text-align:center;}
+label{ padding:0 5px;}
+.confirm{ width:50px; height:34px; line-height:34px; text-align:center;}
+#dividends{ margin-top:10px;}
+#bonus td{ padding:5px; color:#333;}
+#bonus td:first-child{ border-left:1px solid #CCC;}
+#bonus td:last-child{ border-right:1px solid #CCC;}
+#bonus tr:first-child td{ background:#608FBF; color:#FFF; text-align:center; font-size:15px; border:none;}
+#bonus tr:first-child td input{ border:none; margin:2px 5px;}
+#bonus tr:last-child td{ border-bottom:none; padding-bottom:10px;}
+#bonus td input{ height:30px; line-height:30px; padding-left:10px; margin:0 8px;}
+#bonus td input[type="text"]{ background:#FFF;}
+#bonus .td1{ width:50px; text-align:center; font-weight:bold; padding-left:15px;}
+#bonus .td2 label{ display:inline-block; width:60px; text-align:right; margin-left:5px;}
+#bonus .td2 span:first-child{ margin-right:30px;}
+#bonus .tr2 td{ padding-top:10px;}
+#form1>p{ padding:8px 0; border:1px solid #CCC; border-top:1px solid #DDD;}
+#secName{ display:inline-block; width:70px;}
+#searchTxt{width:150px;}

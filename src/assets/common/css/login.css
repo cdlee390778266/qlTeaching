@@ -1,0 +1,23 @@
+@charset "utf-8";
+.login-box{ font-family:"Microsoft Yahei"; width:100%; height:100%; font-size:14px; margin:0; background:#2B65E3 url(../images/login_bg.jpg) top center no-repeat;vertical-align:middle;color:#333; position: absolute;top: 0;left: 0;right: 0;bottom: 0}
+.contain{width:440px; position:absolute; left:80%; top:50%; margin-left:-200px; margin-top:-270px; background:#fff; padding-bottom:20px;-moz-border-radius:.5em; -webkit-border-radius:.5em; border-radius:.5em; -moz-box-shadow:2px 2px 15px #444; -webkit-box-shadow:2px 2px 15px #444; box-shadow:2px 2px 15px #444;filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;}
+.login h1{ background:url(../images/logo90x40.png) no-repeat; background-position:80px 0; padding-left:90px; font-size:20px; height:50px; line-height:40px; color:#333; border-bottom:1px solid #ccc; text-align:center;}
+.login .log{ width:300px; margin:15px auto;}
+.login-label{ display:inline-block; width:40px; height:34px; margin-top:6px; float:left; border-right:1px solid #eee;}
+.login-label,.name-label,.go{ background:url(../images/login_icon.png) no-repeat;}
+.name{ border:1px solid #ccc; border-bottom:none;}
+.pwd{ border:1px solid #ccc;}
+.name-label{background-position:8px 0;}
+.pwd-label{ background-position:8px -30px;}
+#user,#password{ width:240px; height:40px; line-height:40px; border:none; padding-left:10px; font-size:16px; float:right;-webkit-appearance: textfield;}
+#user:-webkit-autofill ,#password:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
+.selected .name-label{background-position:8px -90px;}
+.selected .pwd-label{background-position:8px -120px;}
+.login p{ position:relative;}
+.login p i{ display:inline-block; height:40px; line-height:40px; position:absolute; left:200px; color:#f00; display:none;}
+.login .remark{ margin:10px 0}
+.login .remark span{ color:#444;}
+.login .remark .regBtn{ display:inline-block; padding-right:24px; background:url(../images/login_icon.png) no-repeat; background-position:right -65px; color:#555; font-weight:bold;}
+.login .remark .regBtn:hover{ color:#3c7fc6; background-position:right -155px;}
+.submit{ display:inline-block; width:300px; height:42px; line-height:42px; cursor: pointer; margin:15px 0; background:#2294e5; border:1px solid #1f84cc; color:#fff; border-radius:2px; font-size:18px;}
+.submit:hover{ background:#06c; border:1px solid #0068b3;}

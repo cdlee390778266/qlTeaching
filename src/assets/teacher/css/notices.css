@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+#send{ display:none;}
+.faculty{ margin:15px 0;}
+.tab{ position:relative; height:37px; border-bottom:1px solid #ddd; margin-bottom:0 !important;}
+.tab li{ display:inline-block; height:37px; float:left; border:1px solid #DDD; border-left:none; border-bottom:none;}
+.tab li:first-child{ border-left:1px solid #DDD;}
+.tab li a{ display:inline-block; width:130px; height:36px; line-height:36px; font-weight:bold; background:#F5F5F5; color:#444; font-size:14px; text-align:center;}
+.tab li a i{ font-weight:normal; font-size:14px; font-family:Verdana, Geneva, sans-serif;}
+.tab li.selected{ background:#FFF;}
+.tab li.selected a{ color:#0064B5; background:#FFF;}
+.search{ top:0; right:0;}
+.cont{ border:1px solid #ddd; border-top:none;}
+.notice_top{ padding:10px 10px 0 10px;}
+.cont .tb{ margin:10px auto 0; border:none !important;}
+.cont .tb th,.cont .tb td{ margin:5px auto 10px; border:none !important;}
+.cont .tb td{ color:#666;}
+.cont .tb td a{ color:#333 !important;}
+.mtt a:before{ display:inline-block; width:16px; height:24px; float:left; content:'';}
+.attch a:before{ background:url(../images/atta.png) no-repeat; background-position:0 center;}
+
+/*icons*/
+.mail,.new,.read,.succeed,.fail{ display:block; width:480px; height:24px; line-height:24px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:left; margin:0 auto; padding-left:24px; color:#333;}
+.mail{background:url(../images/mail_icon.png) no-repeat; background-position:0 0;}
+.new{ background:url(../images/mail_icon.png) no-repeat; background-position:0 -24px; font-weight:bold;}
+.read{ background:url(../images/mail_icon.png) no-repeat; background-position:0 -48px;}
+.succeed{ background:url(../images/mail_icon.png) no-repeat; background-position:0 -72px;}
+.fail{ background:url(../images/mail_icon.png) no-repeat; background-position:0 -96px;}

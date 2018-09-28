@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*公共样式*/
+.compBox{ margin:10px 0; border:1px solid #DDD;} 
+.txt{ width:440px; font-size:14px; height:40px; line-height:40px;}
+.show_search .filter{ margin-bottom:10px;}
+.compSelect label{ margin-left:10px;}
+.compSelect input{ width:720px;}
+/*比赛基本信息*/
+.compBox label{ display:inline-block; padding-right:5px; font-size:14px; font-weight:bold;}
+.p01{ height:32px; line-height:32px; margin:10px 0;}
+.p01 label{ margin-left:10px;}
+.p01:last-child{ margin-top:0;}
+.p01 label,.p01 i,.p01 input{ float:left;}
+.p01 label i{ padding:0 2px;}
+.p01 input{ height:32px; line-height:32px; padding-left:8px;}
+#textCount{ color:#F00; margin:0 2px; font-weight:bold;}
+.atta{ background:#f7f7f7; padding:10px 0; line-height:32px; border-top:1px solid #DDD;}
+.addAtta{ width:70px; height:36px; line-height:36px; text-align:center; background:#2d75bd url(../images/atta_w.png) no-repeat; background-position:2px center; border:1px solid #2b6fb3; color:#FFF; margin:0 10px; padding-left:12px; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; position:relative;}
+.addAtta:hover{ background:#45a3e5 url(../images/atta_w.png) no-repeat; background-position:2px center; border:1px solid #419ad9;}
+.addAtta input{ width:80px; height:32px; opacity:0; position:absolute; z-index:99; left:0;}
+.atta .files{ width:720px; line-height:32px; margin-left:10px;}
+.atta .files p{ display:inline-block; line-height:30px; font-size:13px; margin:0 10px; float:left;}
+.atta .files p i{ margin:0 5px;}
+.atta .files p i,.atta div p a{ color:#777;}
+.atta .files p a:hover{ color:#06c; text-decoration:underline;}
+.compSelect{ padding:15px 0; margin:0 !important;}
+.slt{ margin:10px 0;}
+/*选择参赛学生*/
+.selectNav{ margin:10px 0;}
+.selectNav ul{ width:600px; margin:0 auto;}
+.selectNav li{ width:120px; float:left; margin:10px 15px 0 15px; position:relative;}
+.selectNav li p{ text-align:center;}
+.selectNav li i,.selectNav li input{ display:inline-block; width:40px; height:40px;}
+.selectNav li i{ background:url(../images/circle.png) no-repeat; background-position:center bottom; margin-left:0;}
+.selectNav li input{ position:absolute; left:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity: 0; opacity: 0; cursor:pointer;}
+.selectNav li a{ font-weight:bold; font-size:15px; color:#666;}
+.selectNav li.selected i{ background:url(../images/circle.png) no-repeat; background-position:center top;}
+.selectNav li.selected a{ color:#CC3E3E;}
+/*手动添加账号*/
+.tabContent{ background:#f8f8f8; border-top:1px dashed #ddd;}
+.range h4{ padding:5px 10px; font-size:15px;}
+.comp2 .range{ display:none; padding-top:10px;}
+.comp2 .range:first-child p{ display:inline-block; margin:0 auto; height:50px; line-height:50px; font-size:16px; font-weight:bold; color:#888; text-align:center; margin:10px;}
+.range .all{ display:inline-block; width:40px; height:50px; background:url(../images/icon10.png) no-repeat; margin-right:10px;}
+.comp2 .range:first-child p i,.comp2 .range:first-child p span{ float:left;}
+.comp2 .range .fl h4{ display:inline-block;}
+.comp2 .range .comprd{ margin-left:10px;}
+.comp2 .range table{ margin:10px 0;}
+.comp2 .range h3{ display:inline-block; color:#333; font-size:18px;}
+.showSelected{ width:160px; margin-top:5px;}
+.area,.sch,.col,.dpt,.maj,.cls{ display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin:0 auto;}
+.area{ width:80px;}
+.sch{ width:150px;}
+.col{ width:150px;}
+.dpt{ width:90px;}
+.maj{ width:110px;}
+.cls{ width:90px;}
+.nickName,.userName{ display:inline-block; width:120px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+/*已选择班级*/
+.showDetails{ margin:10px 0; background:#fff;}
+.showDetails h4{ padding:10px 15px; background:#f7f7f7; border-bottom:1px solid #ddd;}
+.showDetails p{ min-height:40px; line-height:24px; margin:10px;}
+.showDetails p a{ display:inline-block; font-size:12px; text-align:center; padding:2px 16px 2px 6px; margin:5px; margin-right:0; border:1px solid #ccc; background:#FFF url(../images/del_a.png) no-repeat; background-position:right -10px;}
+.showDetails p a:hover{ color:#BF4C4C; background:#FFF url(../images/del_a.png) no-repeat; background-position:right -40px; border:1px solid #CC5252;}
+.showDetails p i{ color:#999;}
+/*创建按钮*/
+.creatBtns{ text-align:center; margin:15px 0;}
+.creatBtns p{ display:inline-block;}
+.creatBtns p a{ display:inline-block; height:36px; line-height:36px; font-size:15px; background:#F2F2F2; padding:0 12px; margin:0 10px; border:1px solid #ddd; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+.creatBtns a:first-child{ background:#2E77BF; font-weight:bold; color:#fff; border:1px solid #2E77BF;}
+.creatBtns a:hover{ background:#00aeef; color:#fff; border:1px solid #09c;}
+/*编辑器*/
+#editor{ width:836px !important;}
+/*分页*/
+.page{ padding-bottom:15px;}

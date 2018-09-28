@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.tt b{ float:left;}
+#span_schoolname,#span_collegeName,#span_departmentName,#span_professionalname{display:inline-block; max-width:240px; height:24px; line-height:24px; float:left; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#span_schoolname a,#span_collegeName a,#span_departmentName a{ display:inline-block; max-width:150px; height:24px; line-height:24px; float:left; font-weight:500; color:#444; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.arrow_r{ margin:0;}
+.tt a:hover{ color:#06c !important;}
+
+/* 双击修改 */
+.tb td{ border-bottom:1px solid #ddd;border-right:1px solid #ddd; color:#444; text-align:center;}
+.tb td input{ font-family:'微软雅黑',Verdana, Geneva, sans-serif; outline:none; height:24px; line-height:24px; text-align:center; background:#1470cc; color:#fff; border:1px solid #2e85c7;}
+.tb .college a,.tb .dpm a{ display:block; width:254px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tb .college input{ width:160px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tb .dpm input,.tb .spt input,.tb .class input{ width:150px;}
+
+/*浮层*/
+.flt{ width:340px;display:none;}
+.flt .details p{ margin:10px; margin-bottom:0;}
+.flt .details p label{ margin-bottom:2px; font-size:15px; color:#333;}
+.flt .details input{ height:36px; line-height:36px; font-size:16px; color:#06c;}
+.flt .details select{ height:36px; line-height:36px; margin-left:10px; padding-left:5px;}
+.flt .details .txt{ width:270px; padding:0 10px; border:1px solid #A2C6E8;}
+.flt .remark{ display:none; color:#f00;}

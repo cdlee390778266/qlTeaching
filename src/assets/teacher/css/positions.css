@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
+.faculty{ margin:10px 0;}
+.tabNav{ height:40px;}
+.tabNav ul{ display:inline-block; position:absolute; top:2px;}

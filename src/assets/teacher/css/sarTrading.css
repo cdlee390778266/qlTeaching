@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.tabBox{ margin:15px 0; border-bottom:1px solid #DDD;}
+.tab{ height:38px;}
+.tab li{ display:inline-block; float:left;}
+.tab li a{ display:inline-block; width:82px; text-align:center; height:37px; line-height:37px; border:1px solid #DDD; border-left:none; border-bottom:none; font-weight:bold; font-size:14px; background:#F5F5F5;}
+.tab .selected a{ background:#4B86C1; border:1px solid #4B86C1; border-left:none; color:#FFF;}
+.tab li:first-child a{ border-left:1px solid #DDD !important;}
+.tab li:first-child.selected a{ border-left:1px solid #4B86C1 !important;}
+.compBox{ margin:0; border:1px solid #ddd;} 
+.tt p.fr{ color:#999; font-size:14px; margin-top:15px;}
+.txt2{ width:220px;}
+.txt3{ width:140px;}
+.delistBtn{ width:60px; height:32px; line-height:32px; text-align:center; font-size:15px; margin-left:15px;}
+.tab01{ margin:15px 0; border-bottom:1px solid #ddd;}
+.tbBottom .fl{ margin-left:5px;}
+
+/*比赛基本信息*/
+.comp1{}
+.comp1 p{ height:30px; line-height:30px; margin:10px 0;}
+.comp1 p:last-child{ border-bottom:none;}
+.comp1 label,.comp1 i,.comp1 span,.comp1 input{ float:left;}
+.comp1 p label{ display:inline-block; font-size:14px; text-align:center; font-weight:bold; margin-left:10px;}
+.comp1 p label:first-child{ width:120px;}
+.comp1 p label i{ padding:0 2px;}
+.comp1 p label:last-child{ width:80px !important;}
+.comp1 .Wdate{ padding:5px 15px; }
+.comp1 span{ display:inline-block; border:1px solid #ddd; background:#fff; text-align:center;}
+.comp1 input{ height:30px; line-height:30px; padding-left:8px; border:1px solid #ccc; background:#fff;}
+.comp1 input:hover{ border:1px solid #62b651;}
+.datetimepicker{ background:#fff url(../images/icon_normal.png) no-repeat !important; background-position:6px -337px !important; padding-left:50px !important;}
+.div1{ margin:10px 0;}
+.for{ display:inline-block; width:28px; height:24px; background:url(../images/for.png) no-repeat; background-position:0 4px; margin:0 5px;}
+.search .outPut{ display:inline-block; width:70px; text-align:center;}
+.search .outPut:hover{ background:#06c; color:#fff; border:1px solid #06c;}
+.stockName{ display:inline-block; width:120px; height:30px; line-height:30px;}

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*公共样式*/
+.compBox{ margin:10px 0; border:1px solid #ddd;} 
+.tt p.fr{ color:#999; font-size:14px; margin-top:15px;}
+.txt1,.comp1 .txt2{ font-size:14px;}
+.txt1{ width:500px;}
+.txt2{ width:240px;}.permit{ height:30px; line-height:30px; margin:5px;}
+.txt3{ width:120px; margin-right:5px;}
+.time .txt3{ text-align:center;}
+.range .row{ background:#FFF; padding:10px;}
+.permit label{ display:inline-block; height:28px; line-height:28px;}
+.permit i{ padding:0 2px; margin-left:5px;}
+.permit p{ display:inline-block; width:50px; margin:0 !important; height:18px; line-height:18px; float:left;}
+select:hover,.comp1 input:hover{ border:1px solid #62b651;}
+.userName{ display:inline-block; width:160px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+/*比赛基本信息*/
+.comp1{ padding-bottom:10px;}
+.comp1>p{ padding:6px;}
+.comp1 p{ height:32px; line-height:32px; margin:5px;}
+.comp1 p:last-child{ border-bottom:none;}
+.comp1 label,.comp1 i,.comp1 span,.comp1 input,.comp1 select{}
+.comp1 label{ display:inline-block; min-width:60px;  font-size:14px; font-weight:bold; margin-left:5px;}
+.comp1 i{ padding:0 5px; color:#AAA; font-weight:bold; font-size:16px;}
+.comp1 .red{ color:#F00;}
+.date span{ padding:0 5px;}
+.comp1 .erro img,.comp1 .pass img{ position:relative; left:4px; top:4px; margin-right:2px;}
+.comp1 .erro .remark{ color:#f00; margin-left:6px;}
+.comp1 input[type="text"],.comp1 input[type="number"]{ margin-left:5px;}
+.comp1 input{ height:30px; line-height:30px; padding-left:8px;}
+.comp1 select{ width:252px; height:32px; line-height:32px; padding-left:5px; border:1px solid #ccc; background:#fff; text-align:center;}
+.comp1 #num{ padding:0 10px; border-bottom:1px solid #ddd; color:#333;}
+.page{ margin-right:5px;}
+#tranOverTime{ width:100px; text-align:center; background:#FFF url(../images/icon_normal.png) no-repeat; background-position:5px -362px; margin-right:5px;}
+
+/*选择参赛学生*/
+.selectNav{ padding-bottom:15px; text-align:center; width:480px; margin:0 auto;}
+.selectNav li{ width:120px; float:left; margin:15px 20px 0 20px; position:relative;}
+.selectNav li p{ text-align:center;}
+.selectNav li i,.selectNav li input{ display:inline-block; width:40px; height:40px;}
+.selectNav li i{ background:url(../images/circle.png) no-repeat; background-position:center bottom; margin-left:0;}
+.selectNav li input{ position:absolute; left:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity: 0; opacity: 0; cursor:pointer;}
+.selectNav li a{ font-weight:bold; font-size:15px; color:#666;}
+.selectNav li.selected i{ background:url(../images/circle.png) no-repeat; background-position:center top;}
+.selectNav li.selected a{ color:#CC3E3E;}
+.show_search{ background:none !important;}
+#allStd,#partStd{ background:#f8f8f8; border-top:1px solid #DDD;}
+#allStd span{ font-size:16px; position:relative; top:-16px; font-weight:bold; color:#2298D2;}
+.range h4{ font-size:15px; color:#333;}
+.comp2 .range{ display:none; padding:10px 0;}
+.comp2 .range:first-child p{ width:246px; height:50px; line-height:50px; font-size:16px; font-weight:bold; color:#888; text-align:center; margin:0 auto; padding-bottom:15px;}
+.range .all{ display:inline-block; width:40px; height:50px; background:url(../images/icon10.png) no-repeat; background-position:center center; margin-right:10px;}
+.comp2 .range:first-child p i,.comp2 .range:first-child p span{ float:left;}
+.comp2 .range .fl h4{ display:inline-block;}
+.comp2 .range .comprd{ margin-left:10px;}
+.comp2 .range h3{ display:inline-block; color:#333; font-size:18px;}
+.tab01 a{ border-bottom:none !important;}
+.clsTb .area,.clsTb .sch,.clsTb .col,.clsTb .dpt,.clsTb .maj,.tb .cls{ display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin:0 auto;}
+.clsTb .area{ width:80px;}
+.clsTb .sch{ width:160px;}
+.clsTb .col{ width:150px;}
+.clsTb .dpt{ width:90px;}
+.clsTb .maj{ width:110px;}
+.clsTb .cls{ width:90px;}
+.studentTb .sch,.studentTb .col,.studentTb .dpt,.studentTb .maj,.tb .cls{ display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin:0 auto;}
+.studentTb .sch{ width:200px;}
+.studentTb .col{ width:180px;}
+.studentTb .dpt{ width:120px;}
+.studentTb .maj{ width:140px;}
+.studentTb .cls{ width:120px;}
+
+.creatBtns{ text-align:center; margin:15px 0; padding-top:5px;}
+.creatBtns p{ display:inline-block;}
+.creatBtns p a{ display:inline-block; font-size:16px; background:#F0F0F0; padding:6px 15px; margin:0 5px; border:1px solid #EEE; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+.creatBtns a:first-child{ background:#2E77BF; font-weight:bold; color:#fff; border:1px solid #2E77BF;}
+.creatBtns a:hover{ background:#368dd9; color:#fff; border:1px solid #3385cc;}
+.aboutComp{ width:816px; height:120px; padding:10px; border:none;}

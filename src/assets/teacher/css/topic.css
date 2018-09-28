@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+.faculty{ margin:10px 0;}
+.detail{ border:1px solid #DDD; margin-bottom:10px;}
+h1{ line-height:30px; font-size:18px; padding:20px 0; text-align:center; color:#333; background:#F7F7F7;}
+.info{ text-align:center; padding-bottom:10px; border-top:1px dashed #ddd; color:#777;}
+.info{ background:#F7F7F7; height:36px; line-height:36px;}
+.info span{ margin:0 10px;}
+.cover{ padding:0; margin:20px 0; text-align:center;}
+.topic-content{ padding:2em; padding-top:0; font-size:14px; word-wrap:break-word; overflow:hidden;}
+.topic-content p{ text-indent:2em; margin:15px 0;}
+
+/*添加投资报告*/
+.atta{ padding:10px 0; line-height:32px; border-top:1px dotted #ccc;}
+.addAtta{ width:70px; height:36px; line-height:36px; text-align:center; background:#2d75bd url(../images/atta_w.png) no-repeat; background-position:2px center; border:1px solid #2b6fb3; color:#FFF; margin:0 10px; padding-left:12px; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; position:relative;}
+.addAtta:hover{ background:#45a3e5 url(../images/atta_w.png) no-repeat; background-position:2px center; border:1px solid #419ad9;}
+.addAtta input{ width:80px; height:32px; opacity:0; position:absolute; z-index:99; left:0;}
+.atta .files{ width:840px; line-height:32px;}
+.atta .files p{ display:inline-block; line-height:30px; font-size:13px; margin:0 10px; float:left;}
+.atta .files p i{ font-style:normal; margin:0 5px;}
+.atta .files p i,.atta div p a{ color:#777;}
+.atta .files p a:hover{ color:#06c; text-decoration:underline;}

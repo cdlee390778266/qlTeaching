@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.faculty{ margin:10px 0;}
+.faculty .row{ margin-bottom:10px;}
+.handleBtns{ width:400px; margin-bottom:5px;}
+.handleBtns p{ display:inline-block; font-weight:bold; float:left;}
+.handleBtns p label,.handleBtns p select{ display:inline-block; height:30px;}
+.handleBtns p label{ margin-left:10px; line-height:30px;}
+.handleBtns p select{ padding:0 10px; margin:0 5px; line-height:26px;}
+.handleBtns p.ck{ width:80px; position:relative; top:5px; margin-right:8px;}
+.handleBtns p.ck span{ font-size:15px;}
+.handleBtns p.closePrice input{ width:80px; height:30px; line-height:30px; padding-left:5px; margin-left:10px;}
+.handleBtns p a{ display:inline-block; margin-right:5px; height:30px; line-height:30px; padding:0 15px; background:#f5f5f5; border:1px solid #ddd; border-radius:2px; font-weight:bold;}
+.handleBtns p a:hover{ background:#06c; border:1px solid #06c; color:#fff;}
+.logtitle{ display:inline-block; width:280px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.nickName{ display:inline-block; width:120px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#sdAccount tr td:nth-child(3) a{ text-align:left;}
+.attch a:before{ display:inline-block; width:16px; height:16px; content:'';}
+.attch .file:before{ background:url(../images/atta.png) no-repeat; background-position:0 0; position:relative; top:2px;}

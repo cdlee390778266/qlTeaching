@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/*公共样式*/
+.compBox{ margin:10px 0; border:1px solid #ddd;} 
+.comp1 p{ line-height:24px; margin:10px 0; word-wrap:break-word; overflow:hidden;}
+.comp1 p:last-child{ border-bottom:none;}
+.comp1 label{ font-size:14px; font-weight:bold; margin-left:20px;}
+.comp1 label i{ padding:0 2px;}
+.tb{ margin:10px auto;}
+.tb th,.tb td{ font-size:14px;}
+.tt a.fr{ font-size:15px;}
+
+
+/*比赛基本信息*/
+.matchTitle{ text-align:center; font-size:16px; line-height:30px; padding-bottom:10px; border-bottom:2px dotted #eee; margin:15px auto;}
+.machInfo{ height:30px; line-height:30px; text-align:center; color:#888;}
+.machInfo span{ margin:0 10px;}
+.comp1 .sponsor{ margin:15px; font-size:15px; background:#EEE; padding:5px 0;}
+.comp1 .sponsor b{ margin-left:10px;}
+.comp1>div p{ margin:15px; color:#666;}
+.comp1 .erro img,.comp1 .pass img{ position:relative; left:4px; top:4px; margin-right:2px;}
+.comp1 .erro .remark{ color:#f00; margin-left:6px;}
+.comp1 .date span{ display:inline-block; margin:0 10px;}
+.time{ text-align:center; width:850px; margin:10px 10px 10px 0;}
+.time dl{ height:80px; float:left; border:1px solid #DEDEDE; border-left:none;}
+.time dl:first-child{ border-left:1px solid #DEDEDE;}
+.time dl dt,.time dl dd{ text-align:center;}
+.time dl dt{ margin-top:5px; height:40px; line-height:40px; font-size:13px; font-weight:bold;}
+.time dl dd{ font-size:13px;}
+.time dl dd i{ margin:0 2px; color:#555;}
+
+#regTime{ width:194px;}
+#macthTime{ width:194px; background:#F5F5F5;}
+#trdTime{ width:140px;}
+#trdOverTime{ width:160px; background:#F5F5F5;}
+#holTime{ width:146px;}
+.tabContent{ background:#f8f8f8; border-top:1px dashed #ddd;}
+.range h4{ padding:5px 10px; font-size:15px; color:#333;}
+.comp2 .range .fl h4{ display:inline-block;}
+.comp2 .range .comprd{ margin-left:10px;}
+.comp2 .range table{ margin:10px 0;}
+.comp2 .range h3{ display:inline-block; color:#333; font-size:18px;}
+.containt{ line-height:26px;}
+.regNames{ margin:15px auto; padding:0 10px;}
+.regNames dl{ margin:10px 0; padding-bottom:10px; border-bottom:1px dashed #CCC;}
+.regNames dl:last-child{ border-bottom:none;}
+.regNames dt{ margin-bottom:5px;}
+.regNames dt h3{ color:#0064B5;}
+.regNames dl dd{ line-height:40px; margin-top:10px;}
+.regNames dl dd span{ display:inline-block; min-width:100px; height:32px; line-height:32px; padding:0 10px; background:#F7F7F7; color:#444; text-align:center; margin:0 5px 5px 0;}
+.regNames dl dd b{ font-weight:500; color:#333;}
+.regNames dl dd i{ margin-left:2px;}
+.schTotal{ color:#444; font-weight:500;}

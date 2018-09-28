@@ -1,0 +1,48 @@
+/*我的竞赛*/
+.compet h3{	height:40px; line-height:40px; font-size:16px;}
+.compet .tzzh{ margin-top:10px; padding:0; height:40px; overflow:hidden;}
+.compet .tzzh a{ display:inline-block; width:180px; height:40px; line-height:40px; text-indent:-9999px;}
+.compet .tzzh a:first-child{ background:url(../images/tzwt.png) no-repeat; background-position:0 0;}
+.compet .tzzh a:last-child{ display:inline-block; width:180px; background:url(../images/tzwt.png) no-repeat; background-position:-218px top; margin-left:15px;}
+.compet .tzzh a:last-child:hover{ background:url(../images/tzwt.png) no-repeat; background-position:-218px bottom;}
+.tabContain>div{/* border:1px solid #ddd;*/ margin:15px 0;}
+.tabContain .stayOpen{ height:100px; line-height:100px; padding:10px; text-align:center;}
+
+.tb{ border-left:1px solid #DDD;}
+.compet_tb{ border-bottom:1px solid #ddd;}
+.compet_tb td{ height:50px; line-height:50px;}
+.compet_tb .matchTitle a{ display:inline-block; width:180px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;}
+.compet_tb td a:hover{ color:#09c;}
+.compet_tb .btn-rules:hover{ color:#09c;}
+.compet_tb .btn-compet{ font-weight:bold; color:#09c;}
+.compet_tb .btn-compet:hover{ color:#F00;}
+.compet_tb .compet-over{ color:#999;}
+.compet_tb .compet-yet,.compet_tb .compet-over{ cursor:default; text-decoration:none !important;}
+.compet_tb tr:last-child td{ border-bottom:none;}
+.tb td .sponsor{ display:inline-block; width:100px; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tb .date{ font-size:13px; line-height:18px;}
+
+/*比赛确认浮层*/
+.competition{ width:260px; display:none;}
+.competition p{ line-height:40px; margin:15px auto; text-align:center; font-size:15px;}
+/*比赛规则浮层*/
+.compet-rules{ width:800px; height:522px; text-align:left; overflow-y:hidden; display:none;}
+.compet-rules p{ padding:0 10px; line-height:24px; color:#555;}
+.compet-rules p strong{ color:#333;}
+.compet-rules .top{ margin:10px;}
+.compet-rules .tbContain{ height:186px; margin:10px auto;}
+.compet-rules .top p span{ display:inline-block; margin-right:110px;}
+.compet-rules .top p span i{ margin:0 12px; font-style:normal;}
+.compet-rules .top p span i:last-child{ margin-right:0;}
+.compet-rules .top p:first-child span:last-child{ margin-right:0;}
+.compet-rules .details{ width:752px; height:100px; overflow-x:hidden; padding:5px; margin:0 15px 15px 15px; overflow-y:scroll; word-wrap:break-word; overflow:hidden; border:1px solid #DDD;}
+.compet-rules .details p{ line-height:22px; margin:5px 0;}
+.compet-rules table{ background:#F5F5F5; margin:5px auto; height:181px; border-left:1px solid #DDD; border-top:1px solid #DDD;}
+.compet-rules table th,.compet-rules table td{ text-align:center; font-size:12px;border-right:1px solid #DDD; border-bottom:1px solid #DDD; height:26px; line-height:26px;}
+.compet-rules table th,.compet-rules table td{ height:24px; padding:0 5px;}
+.compet-rules table span{ display:inline-block; width:32px; padding:2px 5px; background:#fff; margin:0 5px;}
+.compet-rules h4{ margin:5px 15px; padding-left:5px; color:#1973b3;}
+.compet-rules h3:first-child{ margin-bottom:10px;}
+.compet-rules .issue-btn{ text-align:center;}
+/* 资产概括开始 */
+.assetGen .promptmsg{ border:1px solid #f00;}

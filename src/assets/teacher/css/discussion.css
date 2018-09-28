@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tbBox{ border:1px solid #e5e5e5; margin-top:10px;}
+.tt01{ background:#DCECF1; height:36px; line-height:36px; margin-bottom:15px;}
+.tt01 .calendar{ margin-top:2px; margin-right:2px;}
+.tt01 .fl span{ display:inline-block; font-weight:bold; margin:0 10px;}
+.tt01 .fl a{ display:inline-block; padding-right:15px; margin-right:20px;}
+.tt01 .fl a.selected{ color:#DE1B61; background:url(../images/desc.png) no-repeat; background-position:right center;}
+
+.discInfo dl{ border-bottom:1px dashed #ddd; padding:20px 0;}
+.discInfo dt{ width:100px; float:left;}
+.discInfo dt .hd-img{ text-align:center;}
+.discInfo dt .hd-img img{ width:70px; height:70px; border-radius:70px;}
+.discInfo dt p{ width: 90px; height:32px; line-height:32px; text-align:center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.discInfo dd{ width:700px; margin-left:15px; float:left;}
+.discInfo dd .details{ height:76px; word-wrap:break-word; overflow:hidden; color:#444;}
+.discInfo dd .details>p{ color:#444;}
+.discInfo .status-meta{ color:#999; margin-top:5px;}
+.discInfo .status-meta span{ display:inline-block; margin-right:15px; font-size:13px;}
+.discInfo .status-meta a{ display:inline-block; margin-left:15px; color:#999;}
+
+.deleteBtn{ display:inline-block; line-height:24px; background:url(../images/icon_normal.png) no-repeat; background-position:0 -239px; padding-left:24px; color:#666; visibility:hidden;}
+.deleteBtn:hover{ background:url(../images/icon_on.png) no-repeat; background-position:0 -241px; color:#06c;}
+.disc{ margin-top:10px;}
+
+/*日历*/
+.calendar input,.calendar a{ display:inline-block; border:1px solid #ccc; float:left;}
+.calendar input{ width:160px !important; height:30px; line-height:30px; background:#fff; padding:0 10px; background:#fff url(../images/icon_normal.png) no-repeat; background-position:5px -337px;}
+.calendar a{ height:30px; border-left:none;}
+.calendar .searchBtn{ width:30px; background:#fff url(../images/icon_normal.png) no-repeat; background-position:1px -21px;}
+.calendar .searchBtn:hover{ background:url(../images/icon_on.png) no-repeat; background-position:1px -21px;}
+.discInfo dl:hover{ background:#F5F5F5;}
+.discInfo dl:hover .repTitle{ background:#FFF; border:1px solid #EEE;}
+
+/*清浮动*/
+.discInfo dl:after,.info dl:after{content:".";display:block;height:0;clear:both;visibility:hidden} /*所有主流浏览器都支持 :after 伪元素。*/ 
+.discInfo dl,.info dl{*+height:1%;} 
+.discInfo dl:after,.info dl:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;} 
+.discInfo dl,.info dl{*zoom:1;} /*只针对IE6/7*/
+.tab01{ border-bottom:1px solid #DDD;}
+
+/*评论开始*/
+.replay_box{ margin:10px 0; display:none;}
+.replay_box .repTitle{ height:40px; line-height:40px; border:1px solid #eee; background:#f0f0f0;}
+.replay_box .repTitle span{ margin-left:10px; color:#222;}
+.replay_box .info{ border-bottom:1px solid #eee;}
+
+.replay_box .info{ border:1px solid #eee; margin-top:15px;}
+.replay_box .info h3 a{ color:#0f5499; font-size:13px;}
+.replay_box .info dl{ margin:0; border-bottom:1px solid #EEE; background:#FFF;}
+.replay_box .info dl dt{ width:80px; text-align:center; float:left;}
+.replay_box .info dl dt img{ width:50px; height:50px; border-raidus:50px;}
+.replay_box .info dl dt p{ width:80px;}
+.replay_box .info dl dd{ width:590px; float:right;}
+.replay_box .info dl dd img{ max-width:32px;}
+.replay_box .info dl dd .discuss{ margin:5px 0;}
+.replay_box .info .reply{ margin:10px; padding-left:10px; border-left:2px solid #eee;}
+.replay_box .info .reply h3{ line-height:24px; margin-bottom:5px;}
+.replay_box .info .reply .time{ margin-top:5px; font-size:13px; color:#999;}
+.replay_box .info .status-meta{ background:#f8f8f8;}
+.replay_box .info .status-meta p{ height:40px; line-height:40px;}
+.replay_box .info .status-meta .time{ margin-left:10px; font-size:13px; color:#999;}
+.replay_box .info .btns a:last-child{ margin-right:10px;}
+.replay_box .readMoreBtn:hover{ color:#06c;}
+
+/*评论结束*/
+
+/*浮层*/
+.deleteDisc{ width:320px; display:none;}
+.deleteDisc .fltAccount{ margin:15px 0; text-align:center;}

@@ -1,0 +1,143 @@
+/*公共样式*/
+.main h3{ padding:5px 0; margin-bottom:10px; background:#f5f5f5}
+.main h3 .fl{ color:#222; font-size:15px}
+.main h3 span.fr{ margin-right:10px}
+.main h3 .search{ margin:0; width:205px}
+.main h3 .search input{ border:1px solid #ddd; background:#fff; font-size:14px}
+.main h3 .btn-search{ width:32px; height:30px; line-height:30px; color:#fff; margin:0; background:#FFF url(../images/serch.png) no-repeat; background-position:center center; border:1px solid #ddd; border-left:none; text-indent:-99999px}
+.main h3 .btn-search:hover{ background:#FFF url(../images/serch_on.png) no-repeat; background-position:center center}
+.nickName,.studentName{ display:inline-block; width:110px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+
+/*我的战绩*/
+.tabbar a{ font-size:15px}
+.gains th{ background:#eaf1fb}
+.gains th p {display:inline-block;text-align:center;margin:0 auto}
+.gains th p span,.gains th p a{ display:inline-block; height:24px; line-height:24px; float:left}
+.gains th p a{ margin-left:5px; border:none}
+.combat_gains .div1{background:#f5f5f5;text-align:left;height:34px}
+.div1 .fr{ height:30px; line-height:30px; color:#333; margin-right:10px}
+.cpTitle{ margin-bottom:15px}
+.choiceRace{ height:36px}
+.choiceRace label,.choiceRace input,.btn_search{ display:inline-block; height:34px; line-height:34px; border:1px solid #DDD}
+.choiceRace label{ width:100px; background:#EEE; border:1px solid #DDD; color:#222; text-align:center; font-size:15px; font-weight:bold}
+.choiceRace input{ border-left:none}
+.choiceRace #title{ width:820px; font-size:15px; padding-left:10px; background:#FFF; color:#555; font-weight:bold; background:url(../images/arrow_down.png) no-repeat; background-position:99% center}
+.choiceRace .refreshBtn{ border:1px solid #DDD}
+.refreshBtn{ display:inline-block; width:42px; height:32px; line-height:32px; text-align:center; padding-left:18px; background:url(../images/renovate.png) no-repeat; background-position:2px center; border-radius:2px}
+.refreshBtn:hover{ background:#f2f2f2 url(../images/renovate.png) no-repeat; color:#09f; background-position:2px center}
+.combat_gains .row label { font-size:14px}
+.combat_gains .row select {margin:3px 0 0 5px;height:26px;background:#FFF;border:1px solid #CCC}
+.assetGen .tt{ text-align:left; margin-bottom:15px}
+/*
+.combat_gains .tb th { background:#3674B3}
+*/
+.combat_gains .tb td { font-size:13px; padding:5px}
+.currency{ display:inline-block; height:30px; line-height:30px; padding:0 10px}
+.assetAll .currency a {display:inline-block;height:24px;line-height:24px;margin-left:10px;border:1px solid #ccc;padding:0 10px;margin-top:6px}
+.assetAll .currency a:hover, .assetAll .currency a.selected {background:#09C;border:1px solid #09C;color:#fff}
+.curtb {width:100%;background:#F7F7F7;margin:15px 0;text-align:center}
+.curtb td { border-bottom:1px solid #ddd}
+.curtb td:first-child{ border-left:1px solid #ddd}
+.curtb td:last-child{ border-right:1px solid #ddd}
+.curtb thead { background:#3674b3}
+.curtb th {color:#FFF;height:32px;line-height:32px;font-size:14px;font-weight:bold}
+.curtb .percent {margin-top:20px; margin-left:20px;width:550px;height:12px;position:relative}
+.curtb .percent .bar {height:4px;background-color:#BBB;margin-top:5px;z-index:1}
+.curtb .percent .cur {width:10px;height:10px;top:-3px;border-radius:12px;position:absolute;z-index:99}
+.curtb td span {display:inline-block;height:26px;line-height:26px;color:#fff;font-weight:600;padding:0 10px}
+.curtb td p {text-align:right;line-height:24px;margin-right:40px;font-weight:600;font-size:12px;color:#666;padding-bottom:5px}
+.cur_red { background:#cc1414}
+.cur_yellow { background:#ff9900}
+.cur_blue { background:#5cace5}
+#lvvalue1,#lvvalue2{margin-right:15px; color:#06c; font-weight:bold}
+
+/*叠加指数 多选*/
+.earnings{ position:relative}
+.earnings .row>div{ display:inline-block; float:left}
+.earnings .row>div:last-child{ margin-left:15px}
+
+.exponent_box { display:inline-block}
+.exponent_box div { display:inline-block; float:left}
+.earnings .row{ height:30px}
+.earnings select{ height:40px; line-height:40px; border:1px solid #ddd}
+.e_overlay { position:relative; height:30px; line-height:30px; margin-left:10px}
+.e_overlay label { display:inline-block; width:70px; font-weight:bold; color:#333; line-height:30px; float:left}
+
+
+/*我的战绩 综合评分图表*/
+.w708 {	width:1000px; text-align:left}
+.plateBox {margin:15px 0px 0px;border:1px solid #d1d1d1;width:1000px;overflow:hidden;position:relative;background-color:#fff}
+#playerStatus {height:520px;overflow:hidden;margin:15px 0}/*图表外框*/
+.plateBox .title {font:22px/35px "微软雅黑";margin:18px 0px 0px 45px;color:#ff6000;font-size-adjust:none;font-stretch:normal}
+.plateBox a.more {top:28px;right:28px;color:#65aaff;font-size:12px;display:block;position:absolute}
+#randomBox {left:0px;top:0px;width:3530px;height:520px;overflow:hidden;display:none;position:absolute}
+.myPlayer {width:1000px;display:none;position:relative}
+.randomPlayer {width:1000px;height:520px;float:left;position:relative;text-align:left}
+.randomPlayer .adsInfo {font:24px/86px "微软雅黑";width:100%;height:86px;text-align:center;color:#ff6000;float:left;font-size-adjust:none;font-stretch:normal}
+.randomPlayer .adsInfo b {margin:0px 5px;color:rgb(0, 114, 255)}
+.randomPlayer .ads {width:100%;height:489px;float:left;position:relative}
+.randomPlayer .ads a {left:274px;top:237px;width:159px;height:32px;display:block;position:absolute}
+.basicInfo {height:40px;line-height:40px;padding:0 30px;background:#eee;color:#1470cc;font-size:16px;border-bottom-color:#f2f2f2;border-bottom-width:1px}
+.basicInfo b {font:18px/40px "微软雅黑";font-size-adjust:none;font-stretch:normal}
+.randomPlayer .record {padding:10px 30px;height:35px;background:#f5f5f5}
+.randomPlayer .record .small {margin:0px 0px 0px 10px;color:#737373;line-height:35px;font-size:12px}
+.randomRecentBargainsBox {height:63px;padding-top:14px;border-top-color:#e3e3e3;border-top-width:1px;border-top-style:solid;position:relative;background-color:#f2f2f2}
+.randomRecentBargainsBox .title {font:bold 12px/24px "宋体";margin:0px;left:42px;top:-13px;color:#000;position:absolute;font-size-adjust:none;font-stretch:normal}
+.randomRecentBargains {padding:0px 0px 0px 42px;width:310px;height:16px;color:#767676;line-height:16px;font-size:12px;float:left}
+.randomRecentBargains .price {margin:0px 0px 0px 5px;width:40px;text-align:right;display:inline-block}
+.randomRecentBargains .type {margin:0px 0px 0px 10px;display:inline-block}
+.randomRecentBargains .volume {margin:0px 0px 0px 10px;width:80px;display:inline-block}
+.randomRecentBargains .stockname {margin:0px 0px 0px 10px;width:80px;color:#767676;text-decoration:none;display:inline-block}
+.record {font:16px/35px "微软雅黑";padding:20px 0px 0px 20px;color:#000;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:dashed;font-size-adjust:none;font-stretch:normal}
+.record b {margin:0px 5px 0px 0px;color:#4a4a4a;font-size:18px;font-weight:normal}
+.record i {margin:0px 5px;color:#000;font-size:18px;font-style:normal}
+.plateBox .msg {font:24px/55px "微软雅黑";margin:5px 0px 0px;padding:0px 20px 0px 40px;height:55px;color:#ff6000;font-size-adjust:none;font-stretch:normal}
+.plateBox .msg a {color:#0072ff;text-decoration:underline}
+.plateBox .small {font:16px/24px "微软雅黑";font-size-adjust:none;font-stretch:normal}
+.rules {top:30px;right:17px;color:#737373;font-size:12px;display:block;position:absolute}
+.moreRecord {background:url(../images/md_unlogin_btn.png) no-repeat left top;font:15px/40px "微软雅黑";left:440px;top:454px;width:142px;height:40px;text-align:center;color:#fff;text-decoration:none;display:block;position:absolute; z-index:999;font-stretch:normal}
+.moreRecord:hover{ background:url(../images/md_unlogin_btn_on.png) no-repeat}
+.tips {padding:0px 0px 0px 40px;height:23px;color:#757575;line-height:23px;font-size:12px;background-color:#ebebeb}
+.recordBox {height:540px;border-top-color:#ebebeb;border-top-width:1px;border-top-style:solid;position:relative}
+.recordInfo {display:none;position:absolute}
+.recordInfo a.icon {background:url(../images/bg_idx_icon.jpg) no-repeat left top;left:-18px;top:10px;width:12px;height:12px;display:block;position:absolute}
+.recordInfo p {color:#000;line-height:22px;font-size:12px;padding-left:10px}
+.recordInfo p img {margin:0px 0px 0px 10px;vertical-align:middle}
+.recordInfo p span {color:#969696}
+.recordInfo p b {color:#0048ff;font-size:14px;margin-right:2px}
+.recordInfo p u{ text-decoration:none}
+.recordInfo p i {margin:0px 2px;color:#cc00ff;font-style:normal}
+.recordInfo p.title {margin:0px 0px 3px;color:#000;height:30px;line-height:20px;text-indent:0px;font-size:14px;border-bottom-color:#b2b2b2;border-bottom-width:1px;border-bottom-style:dashed}
+.recordInfo p.title b {margin:0px 5px 0px 0px;color:#4a4a4a;font-weight:bold}
+.recordInfo p.title i {margin:0px 5px;color:#000;font-size:20px;font-style:normal}
+.recordInfo .upLevel {background:url(../images/bg_upLevel.jpg) no-repeat left top;margin:5px 0px 0px;width:136px;height:23px;display:block}
+.lt, .rt, .lb, .rb { padding:10px 0}
+.lt { top:20px; left:45px; width:260px}
+.rt { top:20px; width:260px; right:30px}
+.lb { top:220px; left:45px; width:260px}
+.rb { top:220px; width:260px; right:30px}
+.recordChart { left:340px; top:10px; width:320px; height:320px; position:absolute}
+.djBtn { left:373px; top:228px; width:137px; height:30px; display:block; position:absolute}
+
+/** 资产概括 **/
+.promptRefresh{ background:#EDF0F3; color:#222; margin-bottom:10px}
+.promptRefresh p{ height:40px; line-height:40px; padding-left:10px}
+.promptRefresh p .datetime{ color:#F00}
+.moneyStatus{ margin-bottom:15px}
+.moneyStatus dl{ width:490px; text-align:left; border:1px solid #eee;/*url(../images/zzbg.png) no-repeat; background-position:center 46px;*/}
+.moneyStatus dl dt{ height:40px; line-height:40px; font-weight:bold; background:#F2F2F2}
+.moneyStatus dl dt span{ margin-left:20px; font-size:15px; color:#444}
+.moneyStatus dl dd{ width:470px; margin:6px auto; text-align:left}
+.moneyStatus dl dd p{ height:30px; line-height:30px; border-bottom:1px solid #EEE}
+.moneyStatus dl dd p:last-child{ border-bottom:none}
+.moneyStatus dl dd b{ display:inline-block; width:70px; text-align:right; margin-right:10px; color:#666}
+
+/*期货 资产概括*/
+.data{ border:1px solid #DDD; border-left:none; margin-bottom:15px}
+.data td{ border-bottom:1px solid #DDD; border-left:1px solid #DDD; height:38px; line-height:38px; padding:0 10px; text-align:left}
+.data tr:last-child td{ border-bottom:none}
+.data label{ margin-right:5px; color:#0056a1; font-weight:bold}
+
+/***资产分布 **/
+.pieChart{border:1px solid #ddd; height:310px; background:#FFF}
+.currency{ margin-top:6px; border:1px solid #ddd !important}

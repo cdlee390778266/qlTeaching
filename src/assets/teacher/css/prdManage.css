@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+.compName{ margin:15px 0;}
+.compName label{ color:#004d99; font-size:15px; margin-left:5px;}
+.compName select{ height:32px; line-height:32px; padding-left:6px;}
+
+.faculty{ margin:10px 0;}
+.handleBtns input,.handleBtns select{ width:120px; padding:0 5px; margin:0 10px;}
+.handleBtns input{ height:30px; line-height:30px;}
+.handleBtns select{ height:32px; line-height:32px;}
+

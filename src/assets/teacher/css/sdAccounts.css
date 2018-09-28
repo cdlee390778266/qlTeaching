@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+.topBtn{ background:#F5F5F5;}
+.nickName,.userName{ display:inline-block; width:120px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.sdtName{display:inline-block; width:60px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.faculty{ margin:10px 0;}
+.topBtn{ height:40px; line-height:40px;}
+.topBtn a{ display:inline-block; height:30px; line-height:30px; padding:0 8px; margin-top:5px; margin-left:5px; border-radius:3px; background:#1E80C5; color:#FFF;}
+.topBtn .fr{ margin-right:15px; margin-top:7px;}
+.topBtn .fr p{ margin:0 6px;}
+#sdAccount .restore{ color:#06c; font-weight:bold;}
+.tipOff{ margin-top:4px;}
+
+/* 浮层 */
+.flt .remark{ color:#f00;}
+.resetPwdFlt{ width:400px; display:none;}
+.resetPwdFlt label{ display:inline-block; height:36px; line-height:36px; font-size:15px; color:#666;}
+.resetPwdFlt input{ display:block; width:346px; height:36px; line-height:36px; padding:0 10px; color:#666;}
+
+/*注册学生账号*/
+.importFlt{ width:650px; display:none;}
+.importFlt .details{ margin:15px;}
+.importFlt h4{ height:40px; line-height:40px; background:#F5F5F5; position:relative; border-bottom:1px solid #ddd; padding-left:6px;}
+.importFlt h4 i{ font-weight:500;}
+.importFlt .case{ border:1px solid #DDD;}
+.importFlt .case{ margin:8px 0; background:#FFF;}
+.importFlt label{ display:inline-block; width:90px; height:32px; line-height:32px; color:#222; margin-left:15px;}
+.importFlt .txt1,.importFlt .numInput{ width:184px; height:32px; line-height:32px; padding-left:5px; font-size:15px;}
+.importFlt .txt1{ background:#FFF;}
+.importFlt .sl{ width:610px;}
+.importFlt .sl span{ display:inline-block; width:300px;}
+.importFlt .sl span label{ width:36px;}
+.importFlt .sl span select{ height:34px; line-height:34px; background:#FFF; border:1px solid #DDD; padding-left:6px;}
+.schSel{ width:245px;}
+.clsSel{ width:240px;}
+.importFlt .sl span label,.importFlt .sl span select{ display:inline-block; float:left;}
+.case1 span.fl,.case1 span.fr{ width:302px;}
+.case1 p{ margin:10px 5px;}
+.case1 p:first-child{ padding-top:10px;}
+.case1 p:last-child{ padding-bottom:10px;}
+#import01,.case2 p span,#batchImport,#downLoad,#reg,.src i{display:inline-block; height:34px; line-height:34px;}
+#import01{  background:#1E80C5; color:#fff; width:80px; text-align:center;}
+#import01:hover{ background:#1B73B3;}
+#downLoad{ width:58px; text-align:center; margin-left:10px;}
+#reg{ margin-left:5px;}
+.src{ position:relative; display:inline-block; width:420px; margin-left:15px;}
+.src i{ width:70px; background:#1E80C5; color:#FFF; text-align:center;}
+.src u{ display:inline-block; width:330px; height:32px; line-height:32px; padding-left:10px; border:1px solid #ddd; color:#555; font-size:13px;}
+.case2 p{ margin:15px 0;}
+.case2 p span{ position:relative;}
+.case2 p u{ position:relative; z-index:1;}
+#batchImport{ width:410px; overflow:hidden; position:absolute; left:0; top:0; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity: 0; z-index:99;}
+.case2 p input{ font-weight:bold;}
+.case2 p input:hover{ cursor:pointer;}
+.case2 p a{ background:#1E80C5;}
+.case2 p a:hover{ background:#1B73B3;}
+
+/*更改班级*/
+.changeClsFlt{ width:550px;}
+.changeClsFlt .before,.changeClsFlt .after{ padding:5px; padding-top:0;}
+.changeClsFlt select,.changeClsFlt ul{ border:1px solid #DDD;}
+.changeClsFlt select{ color:#222; padding-left:10px;}
+.changeClsFlt select.school{ width:514px; margin:5px; height:34px; line-height:34px;}
+.changeClsFlt select.clsSel{ width:232px; height:34px; line-height:34px; margin-bottom:0px; border-bottom:none;}
+.changeClsFlt ul{ width:220px; height:264px; overflow-y:scroll; padding:5px; margin-bottom:5px;}
+.changeClsFlt ul li{ height:24px; line-height:24px; font-size:13px; border-bottom:1px solid #F0F0F0;}
+.changeClsFlt ul li:hover{ background:#3d85cc; color:#FFF;}
+.changeClsFlt ul li p{ margin-top:2px;}
+.mid p{ width:40px; text-align:center;}
+.mid a{ display:inline-block; width:30px; height:24px; line-height:24px; margin:5px 0; color:#444;}
+.codes span{ margin:0 4px;}
+#right_arrow{ background:#FFF url(../images/changeArrow.png) no-repeat; background-position:center 0;}
+#left_arrow{ background:#FFF url(../images/changeArrow.png) no-repeat; background-position:center -24px;}
+#right_arrow:hover{ background:#FFF url(../images/changeArrow.png) no-repeat; background-position:center -48px;}
+#left_arrow:hover{ background:#FFF url(../images/changeArrow.png) no-repeat; background-position:center -72px;}
+
+/*注册账号*/
+.repeatAccount{ border:1px solid #CCC; width:528px; position:relative;}
+.repeatAccount .details p{ background:#427AB5; color:#FFF; height:36px; line-height:36px; margin-bottom:10px;}
+.repeatAccount .details p b{ margin-left:10px;}
+.repeatAccount .repAcc{ display:inline-block; width:476px !important; word-wrap:break-word; overflow:hidden; height:140px; line-height:24px; border:1px solid #DDD; padding:10px; overflow-y:scroll;}
+.repeatAccount .repAcc span{ display:inline-block; width:100px;}
+
+/*批量注册*/
+.batchReg{ border:1px solid #CCC; width:458px; position:relative;}
+.batchReg .details p{ background:#427AB5; color:#FFF; height:36px; line-height:36px; margin-bottom:10px;}
+.batchReg .details p b{ margin-left:10px;}
+.batchReg .repAcc{ display:inline-block; width:410px !important; height:140px; line-height:24px; border:1px solid #DDD; padding:10px; overflow-y:scroll; white-space:pre-wrap;}
+.batchReg .repAcc span{ display:inline-block; width:100px;}
+.flt{ padding-bottom:5px !important;}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.inner{ width:100%; margin:10px 0;}
+.inner li{ display:inline-block; width:33.2%; text-align:center; float:left; border-right:1px solid #FFF;}
+.inner li span{ display:inline-block; width:100%; height:80px; line-height:80px; background:#63ACD0; color:#FFF; font-size:16px; font-weight:bold;}
+.inner li .span01{ background:#72C6D4;}
+.inner li .span02{ background:#448CD2;}
+.inner li .span03{ background:#207CC5;}
+.handleBtns .addSch{ display:inline-block; margin-right:5px; padding:0 15px; background:#F5F5F5; border:1px solid #DDD; border-radius:2px; font-weight:bold;}
+.facultySelt{ width:100%; height:auto; margin-top:15px;}
+.facultySelt .faculty{ margin:15px 0;}
+.faculty .schoolTb input{ width:95%; height:30px; line-height:30px; margin:0 auto; text-align:center; border:1px solid #90DECA;}
+/*浮层*/
+.flt .details p{ line-height:32px; margin:10px;}
+.flt .details p label{ font-weight:bold;}
+.flt .details select{ width:112px; height:32px; line-height:32px; margin-left:5px; padding-left:5px; color:#666;}
+.flt .details .txt{ padding-left:10px;}
+.flt .remark{ display:none; margin-left:5px;}
+.flt i{ color:#f00; font-weight:bold;}
+.flt .txt{ width:320px;}
+.flt input{ height:32px; line-height:32px; color:#555;}
+.addSchFlt{ width:380px;}
+#schTitle span{ color:#f00; font-weight:bold;}
+#schTitle{ margin-top:5px;}
+#schTitle span{ display:none;}
+.authorise{ width:330px;}
+.authorise .details input,.authorise .wdateBox label,.authorise .wdateBox i{ display:inline-block; height:30px; line-height:30px;}
+.authorise .details .txt{ width:136px;}
+.authorise label i{ font-weight:bold; color:#f00; margin-right:6px;}
+#selWdate{ margin-left:5px;}
+.setBtn,.edit{ position:relative; top:5px;}
+.college a{display:inline-block; width:190px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:center;}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+label{ margin-left:15px;}
+.ckmd>dl dt{ height:36px; line-height:36px; margin-bottom:10px; background:#E8EDF1;}
+.ckmd>dl dt label{ width:120px; font-size:15px; font-weight:bold;}
+.acc input{ height:32px; line-height:32px; background:#FFF; color:#555; font-size:15px; margin-left:10px;}
+#accExec{ width:160px; padding-left:24px;}
+#name{ width:240px; padding:0 10px;}
+.acc i{ display:inline-block; height:32px; line-height:32px; position:relative; left:30px; font-size:16px; color:#0064B5;}
+#modle,#mark{ margin:10px 0;}
+.acc dl,#mark>dl,#modle>dl{ margin:10px 0;border:1px solid #DDD; margin-bottom:10px; padding-bottom:10px;}
+#mark .ck,#modle dd .ck{ width:140px; float:left; margin:5px 10px;}
+#mark dl .ck input,#modle dl .ck input{ width:130px;}
+#tsBtn{ width:200px;}
+#ctBox{ width:700px; display:none; border:2px solid #CCC; background:#FFF; position:absolute; z-index:999; box-shadow:3px 3px 6px #BBB; }
+#ctBox dl{ border-bottom:1px solid #ccc; padding:8px 10px 0 10px;}
+#ctBox dl dt{ width:120px; height:30px; line-height:30px; padding-right:5px; margin-right:5px; text-align:center; border-right:1px solid #CCC; background:none; color:#2d70b3; font-weight:bold; float:left;}
+#ctBox dl dd{ width:540px; float:left;}
+#ctBox dl .ck{ width:90px; margin-left:5px; float:left;}
+#ctBox dl .ck input{ width:90px;}
+.showSelected{ width:160px; margin-top:5px;}
+.class{ background:#ddd; height:40px; line-height:40px;}
+.class span{ margin-left:15px; font-size:15px;}
+.range label{ height:30px; line-height:30px;}
+.nock{ background:url(../images/nock.png) no-repeat; background-position:0 center;}
+.creatBtns{ text-align:center; margin:20px 0; padding-bottom:15px;}
+.creatBtns p{ display:inline-block;}
+.creatBtns p input{ display:inline-block; font-size:16px; background:#F0F0F0; padding:6px 15px; margin:0 5px; border:1px solid #EEE; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+.creatBtns input:first-child{ background:#2E77BF; font-weight:bold; color:#FFF; border:1px solid #2E77BF;}
+.creatBtns input:hover{ background:#368dD9; color:#FFF; border:1px solid #3385CC;}
+
+/*手动添加账号*/
+.area,.sch,.col,.dpt,.maj,.cls{ display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin:0 auto;}
+.area{ width:80px;}
+.sch{ width:150px;}
+.col{ width:150px;}
+.dpt{ width:90px;}
+.maj{ width:110px;}
+.cls{ width:90px;}
