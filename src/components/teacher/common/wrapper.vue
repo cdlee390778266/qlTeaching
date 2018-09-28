@@ -296,5 +296,7 @@
 <style lang="scss">
 	@import "../../../assets/teacher/css/reset.css";
 	@import "../../../assets/teacher/css/common.css";
-	
+	.filter li:hover  .menu{
+		display: block !important;
+	}
 </style>

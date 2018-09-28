@@ -3,9 +3,9 @@
 		<div class="section">
           <div class="total">
             <ul class="inner clearfix">
-              <li><span class="span01"></span></li>
-              <li><span class="span02"></span></li>
-              <li><span class="span03"></span></li>
+              <li><span class="span01">已添加学校数目：5</span></li>
+              <li><span class="span02">已添加班级数目：4</span></li>
+              <li><span class="span03">管理学生数：12</span></li>
             </ul>
           </div>
           <div class="show_search clearfix">
