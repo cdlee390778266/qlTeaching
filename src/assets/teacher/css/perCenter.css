@@ -83,7 +83,7 @@ dt .search{ position:relative; top:4px;}
 #spec{ text-align:left; width:95px; padding-left:13px; background-position:78px center !important;}
 .addMore{ background:#ECF3F7 url(../images/addMore.png) no-repeat !important;}
 .addMore:hover{background:#ECF3F7 url(../images/addMore_on.png) no-repeat !important; cursor:pointer;}
-.minus{ background:#ECF3F7 url(../images/minus.png) no-repeat !important;}
-.minus:hover{background:#ECF3F7 url(../images/minus_on.png) no-repeat !important; cursor:pointer;}
+.minus{ background:#ECF3F7  !important;}
+.minus:hover{background:#ECF3F7  !important; cursor:pointer;}
 
 

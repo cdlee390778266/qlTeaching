@@ -20,11 +20,32 @@ const Dividends  = () => import(/* webpackChunkName: "teacher" */ '../components
 const Coerce  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/coerce.vue')
 const FundsManage  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/FundsManage.vue')
 const Notices  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/notices.vue')
+const NoticeInfo  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/noticeInfo.vue')
 const CreateNotices  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/createNotices.vue')
 const SynGrade  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/synGrade.vue')
 const Rankinglist  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/rankinglist.vue')
 const PerCenter  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/perCenter.vue')
 const Interaction  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/interaction.vue')
+const InteractionInfo  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/interactionInfo.vue')
+const SdBasic  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/sdBasic.vue')
+
+/*学生端*/
+const Student  = () => import(/* webpackChunkName: "student" */ '../components/student/common/wrapper.vue')
+const StuHome  = () => import(/* webpackChunkName: "student" */ '../components/student/home/home.vue')
+const Index  = () => import(/* webpackChunkName: "student" */ '../components/student/home/index.vue')
+const Collect  = () => import(/* webpackChunkName: "student" */ '../components/student/home/collect.vue')
+const Discussion  = () => import(/* webpackChunkName: "student" */ '../components/student/home/discussion.vue')
+const Atme  = () => import(/* webpackChunkName: "student" */ '../components/student/home/atme.vue')
+const Friends  = () => import(/* webpackChunkName: "student" */ '../components/student/home/friends.vue')
+const Fans  = () => import(/* webpackChunkName: "student" */ '../components/student/home/fans.vue')
+const Competition  = () => import(/* webpackChunkName: "student" */ '../components/student/competition/competition.vue')
+const Practice  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/practice.vue')
+const Portfolio  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/portfolio.vue')
+const StuRankinglist  = () => import(/* webpackChunkName: "student" */ '../components/student/rankinglist/rankinglist.vue')
+const Record  = () => import(/* webpackChunkName: "student" */ '../components/student/record/record.vue')
+const StuNotices  = () => import(/* webpackChunkName: "student" */ '../components/student/notices/notices.vue')
+const BasicInfo  = () => import(/* webpackChunkName: "student" */ '../components/student/basicInfo/basicInfo.vue')
+const StuInteraction  = () => import(/* webpackChunkName: "student" */ '../components/student/interaction/interaction.vue')
 
 Vue.use(Router)
 
@@ -127,6 +148,12 @@ const router = new Router({
           meta: { title: '通知消息'}
         },
         {
+          path: 'noticeInfo/:msgId',
+          name: 'noticeInfo',
+          component: NoticeInfo,
+          meta: { title: '消息详情'}
+        },
+        {
           path: 'createNotices',
           name: 'createNotices',
           component: CreateNotices,
@@ -157,8 +184,126 @@ const router = new Router({
           meta: { title: '互动天地'}
         },
         {
+          path: 'interactionInfo/:id',
+          name: 'interactionInfo',
+          component: InteractionInfo,
+          meta: { title: '学生日志'}
+        },
+        {
+          path: 'sdBasic/:id',
+          name: 'sdBasic',
+          component: SdBasic,
+          meta: { title: '学生账户'}
+        },
+        {
           path: '**',
           redirect: '/teacher/compInfo'
+        },
+      ]
+    },
+    {
+      path: '/student',
+      name: 'student',
+      component: Student,
+      children: [
+        {
+          path: 'home',
+          name: 'home',
+          component: StuHome,
+          children: [
+            {
+              path: 'index',
+              name: 'index',
+              component: Index,
+              meta: { title: '首页'}
+            },
+            {
+              path: 'collect',
+              name: 'collect',
+              component: Collect,
+              meta: { title: '首页'}
+            },
+            {
+              path: 'discussion',
+              name: 'discussion',
+              component: Discussion,
+              meta: { title: '首页'}
+            },
+            {
+              path: 'atme',
+              name: 'atme',
+              component: Atme,
+              meta: { title: '首页'}
+            },
+            {
+              path: 'friends',
+              name: 'friends',
+              component: Friends,
+              meta: { title: '首页'}
+            },
+            {
+              path: 'fans',
+              name: 'fans',
+              component: Fans,
+              meta: { title: '首页'}
+            },
+            {
+              path: '**',
+              redirect: '/student/home/index'
+            },
+          ]
+        },
+        {
+          path: 'competition',
+          name: 'competition',
+          component: Competition,
+          meta: { title: '我的竞赛'}
+        },
+        {
+          path: 'practice',
+          name: 'practice',
+          component: Practice,
+          meta: { title: '我的练习'}
+        },
+        {
+          path: 'portfolio',
+          name: 'portfolio',
+          component: Portfolio,
+          meta: { title: '我的练习'}
+        },
+        {
+          path: 'rankinglist',
+          name: 'rankinglist',
+          component: StuRankinglist,
+          meta: { title: '龙虎榜'}
+        },
+        {
+          path: 'record',
+          name: 'record',
+          component: Record,
+          meta: { title: '我的战绩'}
+        },
+        {
+          path: 'notices',
+          name: 'notices',
+          component: StuNotices,
+          meta: { title: '我的通知'}
+        },
+        {
+          path: 'basicInfo',
+          name: 'basicInfo',
+          component: BasicInfo,
+          meta: { title: '基本信息'}
+        },
+        {
+          path: 'interaction',
+          name: 'interaction',
+          component: StuInteraction,
+          meta: { title: '互动天地'}
+        },
+        {
+          path: '**',
+          redirect: '/student/home/index'
         },
       ]
     },

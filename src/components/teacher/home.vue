@@ -8,45 +8,7 @@
               <li><span class="span03">管理学生数：12</span></li>
             </ul>
           </div>
-          <div class="show_search clearfix">
-                <div class="filter clearfix">
-                    <ul class="fl" id="filterList">
-                        <li><a href="javascript:void(0)">大区</a>
-                            <div class="menu" id="pop大区">
-                                <span>全部</span></div>
-                        </li>
-                        <li><a href="javascript:void(0)">省级</a>
-                            <div class="menu" id="pop省级">
-                                <span>全部</span></div>
-                        </li>                        
-                    </ul>
-                    <div class="btns fl">
-                        <a href="javascript:void(0)" class="filSearch">搜索</a> <a href="javascript:void(0)"
-                            class="filReset">重置</a>
-                    </div>
-                    <div class="fr">
-                        <a href="javascript:void(0)" class="btn_show fr icon10">展开</a>
-                    </div>
-                </div>
-            </div>
-            <div class="case_box clearfix hide">
-                <div class="select_scheme">
-                    <ul class="scheme">
-                        <li>
-                            <div class="itemName" data-type="大区">
-                                <a href="javascript:void(0)">大区</a></div>
-                            <div class="items" id="大区">
-                                <span data-seq="0">全部</span></div>
-                        </li>
-                        <li>
-                            <div class="itemName" data-type="省级">
-                                <a href="javascript:void(0)">省级</a></div>
-                            <div class="items" id="省级">
-                                <span data-seq="0">全部</span></div>
-                        </li>                        
-                    </ul>
-                </div>
-            </div>
+          <ql-filter></ql-filter>
           <div class="row clearfix">
             <div class="handleBtns fl"> <a href="javascript:void(0)" class="delete">删除</a><a href="javascript:void(0)" class="addSch" id="addSch">添加学校</a> </div>
             <div class="selArea fl"> <span>
@@ -80,9 +42,7 @@
                   <th>操作</th>
                 </tr>
               </thead>
-              <tbody>
-                
-              </tbody>
+              <tbody><tr data-seq="8" data-area="6" data-province="9" data-school="成都乾隆金融学校2" class=""> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>1</td>    <td class="college"><a href="college.aspx?AppID=8&amp;backUrl=index.aspx" title="成都乾隆金融学校2">成都乾隆金融学校2</a></td>    <td>1</td>    <td>1</td>    <td>1</td>    <td>1</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="2018-09-29">过期</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(8,10000,'2018-09-29')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(8,6,'9','成都乾隆金融学校2')"></a></td> </tr><tr data-seq="7" data-area="1" data-province="2" data-school="浙江大学" class="" style="background: rgb(242, 242, 242);"> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>2</td>    <td class="college"><a href="college.aspx?AppID=7&amp;backUrl=index.aspx" title="浙江大学">浙江大学</a></td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="2018-09-20">过期</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(7,10000,'2018-09-20')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(7,1,'2','浙江大学')"></a></td> </tr><tr data-seq="6" data-area="1" data-province="2" data-school="金华广播电视大学" class=""> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>3</td>    <td class="college"><a href="college.aspx?AppID=6&amp;backUrl=index.aspx" title="金华广播电视大学">金华广播电视大学</a></td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="">正常</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(6,10000,'')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(6,1,'2','金华广播电视大学')"></a></td> </tr><tr data-seq="5" data-area="1" data-province="10" data-school="上海乾隆财经大学" class="" style="background: rgb(242, 242, 242);"> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>4</td>    <td class="college"><a href="college.aspx?AppID=5&amp;backUrl=index.aspx" title="上海乾隆财经大学">上海乾隆财经大学</a></td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="">正常</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(5,10000,'')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(5,1,'10','上海乾隆财经大学')"></a></td> </tr><tr data-seq="4" data-area="6" data-province="9" data-school="成都乾隆财经大学" class=""> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>5</td>    <td class="college"><a href="college.aspx?AppID=4&amp;backUrl=index.aspx" title="成都乾隆财经大学">成都乾隆财经大学</a></td>    <td>2</td>    <td>3</td>    <td>3</td>    <td>3</td>    <td>10000</td>    <td>11</td>    <td class="status" data-date="">正常</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(4,10000,'')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(4,6,'9','成都乾隆财经大学')"></a></td> </tr></tbody>
             </table>
           </div>
           <div class="tbBottom clearfix">
@@ -90,15 +50,13 @@
             <!--分页开始-->
            <div class="page clearfix">
                 <div class="pageGro cb clearfix">
-                    <div class="pageTotal">
-                        <span>共0条记录，每页10条，共0页</span></div>
-                    <div class="pageUp">
+                    <div class="pageTotal"><span>共5条记录，每页20条，共1页</span></div>
+                    <div class="pageUp" onclick="pageUp()">
                         上一页</div>
                     <div class="pageList">
-                        <ul>
-                        </ul>
+                        <ul><li class="on">1</li></ul>
                     </div>
-                    <div class="pageDown">
+                    <div class="pageDown" onclick="pageDown()">
                         下一页</div>
                 </div>
             </div>
@@ -212,7 +170,11 @@
 	</div>
 </template>
 <script>
+	import qlFilter from './common/filter'
 	export default {
+		components: {
+			qlFilter
+		},
 		data() {
 			return {
 				
@@ -222,5 +184,4 @@
 </script>
 <style scoped lang="scss">
 	@import "../../assets/teacher/css/index.css";
-	@import "../../assets/teacher/css/filter.css";
 </style>

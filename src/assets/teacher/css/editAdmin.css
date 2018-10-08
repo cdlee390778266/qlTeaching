@@ -22,7 +22,7 @@ label{ margin-left:15px;}
 .class{ background:#ddd; height:40px; line-height:40px;}
 .class span{ margin-left:15px; font-size:15px;}
 .range label{ height:30px; line-height:30px;}
-.nock{ background:url(../images/nock.png) no-repeat; background-position:0 center;}
+.nock{ background-position:0 center;}
 .creatBtns{ text-align:center; margin:20px 0; padding-bottom:15px;}
 .creatBtns p{ display:inline-block;}
 .creatBtns p input{ display:inline-block; font-size:16px; background:#F0F0F0; padding:6px 15px; margin:0 5px; border:1px solid #EEE; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
