@@ -1,44 +1,84 @@
 <template>
 	<div>
-        <div class="tabBox">
-            <ul class="nav clearfix" id="matchtype">
-            	<li seq="0" class="selected"><a href="javascript:void(0)">全部</a></li>
-            	<li seq="1"><a href="javascript:void(0)">沪深证券(非B股)</a></li>
-            	<li seq="2"><a href="javascript:void(0)">沪B股</a></li>
-            	<li seq="3"><a href="javascript:void(0)">深B股</a></li>
-            	<li seq="4"><a href="javascript:void(0)">融资融券</a></li>
-            	<li seq="5"><a href="javascript:void(0)">港股</a></li>
-            	<li seq="6"><a href="javascript:void(0)">金融期货</a></li>
-            	<li seq="7"><a href="javascript:void(0)">商品期货</a></li>
-            	<li seq="8"><a href="javascript:void(0)">期权</a></li>
-            	<li seq="9"><a href="javascript:void(0)" class="vain">外汇</a></li>
-            </ul>
-        </div>
-        <div class="practice_box">
-            <div class="createTop">
-                <input type="button" value="创建练习" class="btn01" id="btn_create">
-                <label>练习状态：</label>
-                <select><option data-seq="0">全部</option><option data-seq="6">未开始</option><option data-seq="7">进行中</option><option data-seq="8">已结束</option></select>
+        <div class="main content clearfix">
+            <div class="compet">
+              <h3><b>当前练习：</b>测试3</h3>
+              <div class="tzzh">
+                <a href="javascript:void(0);" class="selected">投资组合</a>
+                <router-link to="/student/practice/security/">委托下单</router-link>
             </div>
+              <div class="tt clearfix">
+                <h2 class="fl"><span>自选商品</span></h2>
+                <div class="searchCode fl">
+                  <input type="text" id="market" style="display:none;">
+                  <input type="text" placeholder="代码/名称/拼音" class="plInput" id="searchTxt">
+                  <a href="javascript:void(0)" class="searchBtn" id="searchSecurity"></a> <a href="javascript:void(0)" class="addCodeBtn">添加</a>
+                  <a href="javascript:void(0)" id="refresh">刷新</a>
+                </div>
+          </div>
+              <div class="zxzq">
+                <table cellpadding="0" cellspacing="0" width="100%" class="tb portfTb">
+                  <thead>
+                    <tr bgcolor="#eee">
+                      <th width="90">商品代码</th>
+                      <th width="100">商品名称</th>
+                      <th width="90">最新</th>
+                      <th width="90">涨跌</th>
+                      <th width="90">涨幅%</th>
+                      <th width="90">成交量</th>
+                      <th width="90">均价</th>
+                      <th width="90">昨收</th>
+                      <th width="90">今开</th>
+                      <th width="90">最高</th>
+                      <th>最低</th>
+                    </tr>
+                  </thead>
+                  <tbody><tr><td><input type="checkbox" class="nowcheck" name="zxzq" value="1" data-seq="231" data-market="0"><a>000001</a></td><td>上证指数</td><td class="font_green">2565.860</td><td class="font_green">-17.600</td><td class="font_green">-0.68</td><td>436260</td><td class="font_green">856.256</td><td class="font_green">2583.460</td><td class="font_green">2574.040</td><td class="font_green">2589.570</td><td class="font_green">2565.620</td></tr><tr><td><input type="checkbox" class="nowcheck" name="zxzq" value="1" data-seq="230" data-market="1"><a>002635</a></td><td>安洁科技</td><td class="font_green">10.550</td><td class="font_green">-0.550</td><td class="font_green">-4.95</td><td>39011</td><td class="font_green">10.739</td><td class="font_green">11.100</td><td class="font_green">10.810</td><td class="font_green">10.930</td><td class="font_green">10.540</td></tr><tr><td><input type="checkbox" class="nowcheck" name="zxzq" value="1" data-seq="229" data-market="1"><a>000001</a></td><td>平安银行</td><td class="font_red">10.010</td><td class="font_red">0.150</td><td class="font_red">1.52</td><td>486408</td><td class="font_red">9.989</td><td class="font_red">9.860</td><td class="font_red">9.970</td><td class="font_red">10.060</td><td class="font_red">9.870</td></tr><tr><td><input type="checkbox" class="nowcheck" name="zxzq" value="1" data-seq="228" data-market="1"><a>200011</a></td><td>深物业B </td><td class="font_green">5.360</td><td class="font_green">-0.010</td><td class="font_green">-0.19</td><td>223</td><td class="font_green">5.359</td><td class="font_green">5.370</td><td class="font_green">5.350</td><td class="font_green">5.390</td><td class="font_green">5.350</td></tr></tbody>
+                </table>
+                <div class="row mrt15">
+                  <div class="fl">
+                    <span class="sltCont"><input type="checkbox" value="全选" class="selectAll">全选</span>
+                    <a href="javascript:void(0)" class="deleteAll">删除</a>
+                  </div>
+                  <div class="fr">
+                    <!--分页开始-->
+                    <div class="page clearfix">
+                      <div class="pageGro cb clearfix">
+                        <div class="pageTotal"><span>共4条记录，每页10条，共1页</span></div>
+                        <div class="pageUp" onclick="pageUp()">上一页</div>
+                        <div class="pageList">
+                          <ul><li class="on">1</li></ul>
+                        </div>
+                        <div class="pageDown" onclick="pageDown()">下一页</div>
+                      </div>
+                    </div>
+                    <!--分页结束--> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cl"></div>
         </div>
-        <div class="clearfix" id="matchRecord">
-        	<div class="practice fl" id="practice53">
-        		<h3 class="name">测试4</h3>
-        		<div class="matchInfo clearfix">
-        			<div class="fl">
-        				<p>创 建 人： <span title=""></span></p>
-        				<p>创建时间：<span class="createTime">2018/09/13</span> </p>
-        				<p>练习周期：<span class="startTime">2018/09/13</span>~<span class="overTime">2018/09/30</span></p><p>银行资金：<span class="money">100000</span><span class="unit">港元</span></p>
-        				<p>练习状态：进行中</p><p>包含市场：<span class="stock">深B股</span></p>
-        			</div>
-        			<div class="fr">
-        				<p><a href="practice/portfolio.aspx?AppID=53" class="btn02">进入练习</a></p>
-        				<p><a href="javascript:void(0);" class="btn02 btn_remove" data-seq="53">删除练习</a></p>
-        				<p><a href="javascript:void(0);" class="btn02 btn_set" data-seq="53">设置练习</a></p>
-        			</div>
-        		</div>
-        	</div>
+
+        <!--删除提示 浮层开始-->
+        <div class="flt prompt">
+        <h3><span>删除提示</span><a href="javascript:void(0)" class="closed"></a></h3>
+        <p><i class="icon06"></i><span>确定删除吗？</span></p>
+        <div class="center">
+            <input type="button" class="btn confirm" value="确定"><input type="button" class="btn cancel" value="取消">
         </div>
+        </div>
+        <!--删除提示 浮层结束-->
+
+        <!--没有选中 浮层开始-->
+        <div class="flt nullFlt">
+        <p><i class="icon06"></i><span>您什么都没有选择</span></p>
+        <div class="center">
+            <input type="button" class="btn close" value="关闭">
+        </div>
+        </div>
+        <!--没有选中 浮层结束-->
+
     </div>
 </template>
 <script>

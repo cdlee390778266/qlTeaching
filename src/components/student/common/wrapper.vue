@@ -24,7 +24,7 @@
 	                	<router-link to="/student/competition">我的竞赛</router-link>
 	                </li>
 	                <li>
-	                	<router-link to="/student/practice">我的练习</router-link>
+	                	<router-link to="/student/practice/">我的练习</router-link>
 	                </li>
 	                <li>
 	                	<router-link to="/student/rankinglist">龙虎榜</router-link>
@@ -33,7 +33,7 @@
 	                	<router-link to="/student/record">我的战绩</router-link>
 	                </li>
 	                <li>
-	                	<router-link to="/student/notice">我的通知</router-link>
+	                	<router-link to="/student/notices">我的通知</router-link>
 	                </li>
 	                <li>
 	                	<router-link to="/student/basicInfo">基本信息</router-link>
@@ -47,6 +47,8 @@
 	    <div class="main content clearfix">
 	    	<router-view/>
 	    </div>
+	    <div class="footer content">上海乾隆网络科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;www.ql18.com.cn</div>
+
 	</div>
 </template>
 <script>

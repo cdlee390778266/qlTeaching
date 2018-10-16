@@ -8,21 +8,26 @@
               <li><span class="span03">管理学生数：12</span></li>
             </ul>
           </div>
-          <ql-filter></ql-filter>
+          <ql-filter :filter="filterData"></ql-filter>
           <div class="row clearfix">
-            <div class="handleBtns fl"> <a href="javascript:void(0)" class="delete">删除</a><a href="javascript:void(0)" class="addSch" id="addSch">添加学校</a> </div>
-            <div class="selArea fl"> <span>
-              <label>类别</label>
-              <select id="item">
-                <option value="0">全部</option>
-                <option value="1">正常</option>
-                <option value="2">过期</option>
-                <option value="3">满额</option>
-              </select>
-              </span> </div>
+            <div class="handleBtns fl">
+            	<a href="javascript:void(0)" class="delete" @click="showDelDialog">删除</a>
+            	<a href="javascript:void(0)" class="addSch" @click="showAddSch">添加学校</a>
+            </div>
+            <div class="selArea fl">
+            	<span>
+	              <label>类别</label>
+	              <select id="item">
+	                <option value="0">全部</option>
+	                <option value="1">正常</option>
+	                <option value="2">过期</option>
+	                <option value="3">满额</option>
+	              </select>
+              </span>
+          	</div>
             <div class="search fr clearfix">
               <input type="text" placeholder="学校名称" id="searchTxt">
-              <a href="javascript:void(0)" class="btn_search"></a>
+              <a href="javascript:void(0)" class="btn_search" @click="search"></a>
             </div>
           </div>
           <div class="faculty">
@@ -67,8 +72,7 @@
         <!--浮层开始--> 
   
 		  <!--添加学校 start -->
-		  <div class="flt addSchFlt">
-		    <h3><span>添加学校</span><a href="javascript:void(0)" class="closed"></a></h3>
+		  <ql-dialog class="flt addSchFlt" title="添加学校" @confirm="addSch" confirmText="添加">
 		    <div class="details">
 		      <p class="clearfix">
 		      	<span class="fl">
@@ -87,13 +91,11 @@
 		      	<input type="text" class="txt" id="school" placeholder="请输入">
 		      </p>
 		    </div>
-		    <div class="btns"><a href="javascript:void(0)" class="btn addBtn">添加</a><a href="javascript:void(0)" class="btn cancel">取消</a></div>
-		  </div>
+		  </ql-dialog>
 		  <!--添加学校 end --> 
 
 		  <!--修改学校开始-->
-		  <div class="flt editFlt">
-		    <h3><span>修改学校</span><a href="javascript:void(0)" class="closed"></a></h3>
+		  <ql-dialog class="flt editFlt" title="修改学校" @confirm="addSch" confirmText="修改">
 		    <div class="details">
 		      <p class="clearfix">
 		      	<span class="fl">
@@ -112,15 +114,11 @@
 		      	<input type="text" class="txt" id="editSchool" placeholder="请输入" value="上海财经大学">
 		      </p>
 		    </div>
-		    <div class="btns"><a href="javascript:void(0)" class="btn editBtn">修改</a><a href="javascript:void(0)" class="btn cancel">取消</a></div>
-		  </div>
+		  </ql-dialog>
 		  <!--修改学校结束--> 
-		  
 
-		  
 		  <!--学校权限设置开始-->
-		  <div class="flt authorise">
-		    <h3><span>权限设置</span><a href="javascript:void(0)" class="closed"></a></h3>
+		  <ql-dialog class="flt eauthorise" title="权限设置" @confirm="addSch">
 		    <div class="details"> 
 		      <!--p><i class="remark">提示：*为必填项</i></p-->
 		      <p>
@@ -132,56 +130,155 @@
 		        <input type="text" class="Wdate fl txt" id="selWdate" placeholder="请选择日期"/>
 		      </p>
 		    </div>
-		    <div class="btns"><a href="javascript:void(0)" class="btn confirm">确定</a><a href="javascript:void(0)" class="btn cancel">取消</a></div>
-		  </div>
+		  </ql-dialog>
 		  <!--学校权限设置结束--> 
-		  <!--选择区域开始-->
-		  <div class="flt caseflt">
-		        <h3 class="clearfix">
-		            <span class="fl">选择大区</span><a href="javascript:void(0)" class="closed"></a></h3>
-		        <div class="top clearfix">
-		            <p>
-		                <i></i>
-		                <input type="checkbox" name="selectAll" value="全选" id="Checkbox1"><span>全选</span></p>
-		        </div>
-		        <div class="detail clearfix" id="slcBox">
-		            <p>
-		                <i></i>
-		                <input type="checkbox" name="district" value="0" data-type="华东地区"><span>华东地区</span></p>
-		            <p>
-		                <i></i>
-		                <input type="checkbox" name="district" value="1" data-type="华南地区"><span>华南地区</span></p>
-		            <p>
-		                <i></i>
-		                <input type="checkbox" name="district" value="2" data-type="华北地区"><span>华北地区</span></p>
-		            <p>
-		                <i></i>
-		                <input type="checkbox" name="district" value="11" data-type="华南地区33"><span>华南地区33</span></p>
-		        </div>
-		        <div class="btns">
-		            <a href="javascript:void(0)" class="btn btn-confirm">确定</a> <a href="javascript:void(0)"
-		                class="btn btn-cancel">取消</a>
-		        </div>
-		    </div>  
-		<!--选择区域结束--> 
-		  
-		<!--浮层结束-->
 
+		<!--浮层结束-->
+		<ql-confirm @confirm="del"></ql-confirm>
 	</div>
 </template>
 <script>
 	import qlFilter from './common/filter'
+	import qlConfirm from './common/confirm'
+	import qlDialog from './common/dialog.vue'
 	export default {
 		components: {
-			qlFilter
+			qlFilter,
+			qlConfirm,
+			qlDialog
 		},
 		data() {
 			return {
-				
+				filterData: [
+					{
+						txt: '大区',
+						value: '0',
+						children: [
+							{
+								txt: '华东',
+								value: '01'
+							},
+							{
+								txt: '华南',
+								value: '02'
+							},
+							{
+								txt: '华中',
+								value: '03'
+							},
+							{
+								txt: '华北',
+								value: '04'
+							},
+							{
+								txt: '西北',
+								value: '05'
+							},
+							{
+								txt: '西南',
+								value: '06'
+							},
+							{
+								txt: '东北',
+								value: '07'
+							},
+							{
+								txt: '港澳台',
+								value: '08'
+							}
+						]
+					},
+					{
+						txt: '省级',
+						value: '0',
+						children: [
+							{
+								txt: '安徽省',
+								value: '011'
+							},
+							{
+								txt: '澳门特别行政区',
+								value: '012'
+							},
+							{
+								txt: '北京市',
+								value: '013'
+							},
+							{
+								txt: '福建省',
+								value: '014'
+							},
+							{
+								txt: '甘肃省',
+								value: '015'
+							},
+							{
+								txt: '广东省',
+								value: '016'
+							},
+							{
+								txt: '广西壮族自治区',
+								value: '017'
+							},
+							{
+								txt: '贵州省',
+								value: '018'
+							}
+						]
+					},
+				]
 			}
+		},
+		methods: {
+			showDelDialog() {
+				if(true) {
+					this.$utils.showDialog({
+			            type: 1,
+			            title: false,
+						scrollbar: false,
+			            closeBtn: 0,
+			            area: ['320px', 'auto'],
+			            shadeClose: true,
+			            content: $('.promptFlt')
+			        })
+				}else {
+					this.$utils.showDialog({
+			            type: 1,
+			            title: false,
+						scrollbar: false,
+			            closeBtn: 0,
+			            area: ['280px', 'auto'],
+			            shadeClose: true,
+			            content: $('.nullFlt')
+			        })
+				}
+			},
+			del() {
+				alert("message");
+			},
+			showAddSch() {
+				this.$utils.showDialog({
+			        type: 1,
+			        title: false,
+					scrollbar: false,
+			        closeBtn: 0,
+			        area: ['380px', 'auto'],
+			        shadeClose: true,
+			        content: $('.addSchFlt')
+			    });
+			},
+			addSch() {
+				alert("add");
+			},
+			search() {
+
+			}
+		},
+		created() {
+			
 		}
 	}
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 	@import "../../assets/teacher/css/index.css";
 </style>

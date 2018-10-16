@@ -33,7 +33,7 @@
 .topicContent dl dd .btn-disc:hover,.topicContent dl dd .btn-fav:hover,.topicContent dl dd .btn-repost:hover,.topicContent dl dd .btn-reply:hover{ color:#3078bf;}
 .topicContent .nothing{ width:220px; height:50px; font-size:18px; color:#999; margin:50px auto; text-align:center;}
 .topicContent .nothing i,.topicContent .nothing span{ display:inline-block; height:50px; line-height:50px; float:left;}
-.topicContent .nothing i{ width:50px; background:url(../images/timg.png) no-repeat; }
+.topicContent .nothing i{ width:50px; }
 .topicContent .nothing span{ margin-left:10px;}
 .replays dl dd{ width:600px;}
 .replays .status-meta{ margin:5px 0;}

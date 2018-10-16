@@ -39,8 +39,22 @@ const Atme  = () => import(/* webpackChunkName: "student" */ '../components/stud
 const Friends  = () => import(/* webpackChunkName: "student" */ '../components/student/home/friends.vue')
 const Fans  = () => import(/* webpackChunkName: "student" */ '../components/student/home/fans.vue')
 const Competition  = () => import(/* webpackChunkName: "student" */ '../components/student/competition/competition.vue')
-const Practice  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/practice.vue')
+const Practice  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/wrapper.vue')
+const PracticeList  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/practice.vue')
 const Portfolio  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/portfolio.vue')
+const Security  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/securityWrapper.vue')
+const Buy  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/buy.vue')
+const Sell  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/sell.vue')
+const Withdrawing  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/withdrawing.vue')
+const HoldPos  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/holdPos.vue')
+const TodayWt  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/todayWt.vue')
+const HistoryWt  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/historyWt.vue')
+const TodayCj  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/todayCj.vue')
+const HistoryCj  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/historyCj.vue')
+const TodayLs  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/todayLs.vue')
+const HistoryLs  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/historyLs.vue')
+const DeliveryList  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/deliveryList.vue')
+const TransferAccounts  = () => import(/* webpackChunkName: "student" */ '../components/student/practice/transferAccounts.vue')
 const StuRankinglist  = () => import(/* webpackChunkName: "student" */ '../components/student/rankinglist/rankinglist.vue')
 const Record  = () => import(/* webpackChunkName: "student" */ '../components/student/record/record.vue')
 const StuNotices  = () => import(/* webpackChunkName: "student" */ '../components/student/notices/notices.vue')
@@ -263,13 +277,107 @@ const router = new Router({
           path: 'practice',
           name: 'practice',
           component: Practice,
-          meta: { title: '我的练习'}
-        },
-        {
-          path: 'portfolio',
-          name: 'portfolio',
-          component: Portfolio,
-          meta: { title: '我的练习'}
+          children: [
+            {
+              path: 'list',
+              name: 'list',
+              component: PracticeList,
+              meta: { title: '我的练习'}
+            },
+            {
+              path: 'portfolio',
+              name: 'portfolio',
+              component: Portfolio,
+              meta: { title: '我的练习'}
+            },
+            {
+              path: 'security',
+              name: 'security',
+              component: Security,
+              children: [
+                {
+                  path: 'buy',
+                  name: 'buy',
+                  component: Buy,
+                  meta: { title: '买入'}
+                },
+                {
+                  path: 'sell',
+                  name: 'sell',
+                  component: Sell,
+                  meta: { title: '卖出'}
+                },
+                {
+                  path: 'withdrawing',
+                  name: 'withdrawing',
+                  component: Withdrawing,
+                  meta: { title: '查撤委托'}
+                },
+                {
+                  path: 'holdPos',
+                  name: 'holdPos',
+                  component: HoldPos,
+                  meta: { title: '持仓明细'}
+                },
+                {
+                  path: 'todayWt',
+                  name: 'todayWt',
+                  component: TodayWt,
+                  meta: { title: '当日委托'}
+                },
+                {
+                  path: 'historyWt',
+                  name: 'historyWt',
+                  component: HistoryWt,
+                  meta: { title: '历史委托'}
+                },
+                {
+                  path: 'todayCj',
+                  name: 'todayCj',
+                  component: TodayCj,
+                  meta: { title: '当日成交'}
+                },
+                {
+                  path: 'historyCj',
+                  name: 'historyCj',
+                  component: HistoryCj,
+                  meta: { title: '历史成交'}
+                },
+                {
+                  path: 'todayLs',
+                  name: 'todayLs',
+                  component: TodayLs,
+                  meta: { title: '当日成交'}
+                },
+                {
+                  path: 'historyLs',
+                  name: 'historyLs',
+                  component: HistoryLs,
+                  meta: { title: '历史成交'}
+                },
+                {
+                  path: 'deliveryList',
+                  name: 'deliveryList',
+                  component: DeliveryList,
+                  meta: { title: '查询交割单'}
+                },
+                {
+                  path: 'transferAccounts',
+                  name: 'transferAccounts',
+                  component: TransferAccounts,
+                  meta: { title: '银行转账'}
+                },
+                {
+                  path: '**',
+                  redirect: '/student/practice/security/buy'
+                },
+              ]
+            },
+            {
+              path: '**',
+              redirect: '/student/practice/list'
+            },
+          ]
         },
         {
           path: 'rankinglist',
@@ -307,41 +415,6 @@ const router = new Router({
         },
       ]
     },
-    // {
-    //   path: '/admin',
-    //   name: 'admin',
-    //   component: AdminWrapper,
-    //   children: [
-    //     {
-    //       path: 'reply/:id',
-    //       name: 'reply',
-    //       component: Reply,
-    //       meta: { title: '教师点评'}
-    //     },
-    //     {
-    //       path: 'userinfo',
-    //       name: 'userinfo',
-    //       component: UserInfo,
-    //       meta: { title: '个人信息'}
-    //     },
-    //     {
-    //       path: 'setting',
-    //       name: 'setting',
-    //       component: Setting,
-    //       meta: { title: '个人设置'}
-    //     }
-    //   ]
-    // },
-    // {
-    //   path: '/admin/home',
-    //   name: 'adminHome',
-    //   component: AdminHome,
-    //   meta: { title: '个人中心'}
-    // },
-    // {
-    //   path: '**',
-    //   redirect: '/home'
-    // }
   ],
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

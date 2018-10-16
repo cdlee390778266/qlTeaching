@@ -1,0 +1,57 @@
+.atwho-view {
+    position:absolute;
+	font-size:12px;
+    top: 0;
+    left: 0;
+    display: none;
+    margin-top: 18px;
+    background: white;
+    color: #666;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    min-width: 156px;
+    max-height: 110px;
+    overflow: auto;
+    z-index: 11110 !important;
+}
+
+.atwho-view .cur {
+    background: #eee;
+    color: #333333;
+}
+.atwho-view .cur small {
+    color: white;
+}
+.atwho-view strong {
+    color: #3366FF;
+}
+.atwho-view .cur strong {
+    color: white;
+    font:bold;
+}
+.atwho-view ul {
+    /* width: 100px; */
+    list-style:none;
+    padding:0;
+    margin:auto;
+}
+.atwho-view ul li {
+    display: block;
+    padding: 5px 10px;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+    /* border-top: 1px solid #C8C8C8; */
+}
+.atwho-view small {
+    font-size: smaller;
+    color: #777;
+    font-weight: normal;
+}
+
+<!-- 隐藏编辑器工具栏，改表情选择样式 -->
+.edui-toolbar{height:0px;}
+.edui-toolbar .edui-btn-toolbar{margin:0px;padding:0px;height:0px;overflow:hidden;}
+.edui-popup .edui-popup-caret.up{display:none;}
+.issue_form{ margin-bottom:20px;}
+#myEditor{ max-height:140px; font-size:14px;}

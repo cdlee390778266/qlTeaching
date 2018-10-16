@@ -3,53 +3,121 @@
 		<div class="show_search clearfix">
             <div class="filter clearfix">
                 <ul class="fl" id="filterList">
-                    <li><a href="javascript:void(0)">大区</a>
-                        <div class="menu" id="pop大区">
-                            <span>全部</span></div>
+                    <li v-for="item in filter">
+                        <a href="javascript:void(0)">{{item.txt}}</a>
+                        <div class="menu">
+                            <template v-if="item.checkedArr && item.checkedArr.length">
+                                <span v-for="(a, index) in item.checkedArr" :key="index">{{a.txt}}</span>
+                            </template>
+                            <template v-else>
+                                <span>全部</span>
+                            </template>
+                        </div>
                     </li>
-                    <li><a href="javascript:void(0)">省级</a>
-                        <div class="menu" id="pop省级">
-                            <span>全部</span></div>
-                    </li>                        
                 </ul>
                 <div class="btns fl">
                     <a href="javascript:void(0)" class="filSearch">搜索</a> <a href="javascript:void(0)"
                         class="filReset">重置</a>
                 </div>
                 <div class="fr">
-                    <a href="javascript:void(0)" class="btn_show fr icon10">展开</a>
+                    <a href="javascript:void(0)" class="btn_show fr icon10" @click="toggle">{{isShowCaseBox ? '关闭' : '展开'}}</a>
                 </div>
             </div>
         </div>
-        <div class="case_box clearfix hide">
+        <div class="case_box clearfix" :class="{show: isShowCaseBox, hide: !isShowCaseBox}">
             <div class="select_scheme">
                 <ul class="scheme">
-                    <li>
-                        <div class="itemName" data-type="大区">
-                            <a href="javascript:void(0)">大区</a></div>
-                        <div class="items" id="大区">
-                            <span data-seq="0">全部</span></div>
+                    <li v-for="item in filter">
+                        <div class="itemName">
+                            <a href="javascript:void(0)" @click="showFilterDialog(item)">{{item.txt}}</a>
+                        </div>
+                        <div class="items">
+                            <template v-if="item.checkedArr && item.checkedArr.length">
+                                <span v-for="(a, index) in item.checkedArr" :key="index">{{a.txt}}</span>
+                            </template>
+                            <template v-else>
+                                <span>全部</span>
+                            </template>
+                        </div>
                     </li>
-                    <li>
-                        <div class="itemName" data-type="省级">
-                            <a href="javascript:void(0)">省级</a></div>
-                        <div class="items" id="省级">
-                            <span data-seq="0">全部</span></div>
-                    </li>                        
                 </ul>
             </div>
         </div>
+        <!--选择区域开始-->
+        <ql-dialog class="flt caseflt" :title="'选择'+ dialogItems.txt" @confirm="confirm">
+            <div class="top clearfix">
+                <p>
+                    <input type="checkbox" name="checkedArr" value="all" v-model="checkAllObj.isChecked">
+                    <i></i>
+                    <span>全选</span>
+                </p>
+            </div>
+            <div class="detail clearfix">
+                <p  v-for="(item, index) in dialogItems.children" :key="item.value">
+                    <input type="checkbox" name="checkedArr" :value="item" v-model="checkedArr">
+                    <i></i>
+                    <span>{{item.txt}}</span>
+                </p>
+            </div>
+        </ql-dialog>
+        <!--选择区域结束--> 
 	</div>
 </template>
 <script>
+    import qlDialog from './dialog'
 	export default {
+        props: ['filter'],
+        components: {
+            qlDialog
+        },
 		data() {
 			return {
-				
+				isShowCaseBox: true,
+                dialogItems: {},
+                checkAllObj: {
+                    isChecked: false,
+                    value: ''
+                },
+                checkedArr: []
 			}
-		}
+		},
+        methods: {
+            toggle() {
+                this.isShowCaseBox = !this.isShowCaseBox;
+            },
+            showFilterDialog(items) {
+                this.dialogItems = items;
+                this.checkedArr = items.checkedArr || [];
+                this.checkAllObj.isChecked = false;
+                console.log(this.checkedArr);
+                this.$utils.showDialog({
+                    type: 1,
+                    title: false,
+                    scrollbar: false,
+                    closeBtn: 0,
+                    area: ['710px', 'auto'],
+                    shadeClose: true,
+                    content: $('.caseflt')
+                })
+            },
+            confirm() {
+                this.$set(this.dialogItems, 'checkedArr', this.checkedArr.concat());
+            }
+        },
+        watch: {
+            checkAllObj: {
+                handler(newValue, oldValue) {
+                    if(newValue.isChecked) {
+                        this.checkedArr = this.dialogItems.children;
+                    }else {
+                        this.checkedArr = [];
+                    }
+                },
+                deep: true
+            }
+        }
 	}
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 	@import "../../../assets/teacher/css/filter.css";
 </style>

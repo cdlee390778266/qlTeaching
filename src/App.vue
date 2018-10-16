@@ -11,5 +11,6 @@ export default {
 </script>
  
 <style>
-	@import "./assets/common/css/reset.css";
+	@import './assets/common/css/reset.css';
+	@import './assets/common/js/layer/skin/layer.css'
 </style>

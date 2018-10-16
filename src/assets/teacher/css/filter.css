@@ -41,7 +41,7 @@
 .caseflt p i,.caseflt p span{ display:inline-block; float:left;}
 .caseflt span{ width:110px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-right:10px;}
 .caseflt i{ display:inline-block; width:24px; height:24px; background:url(../images/area_ckbox.png) no-repeat;}
-.caseflt i.selected{ background-position:0 bottom;}
+.caseflt p input[type="checkbox"]:checked + i{ background-position:0 bottom;}
 .caseflt p input{ position:absolute; display:inline-block; width:24px; height:24px; left:0; top:0; opacity:0;}
 .caseflt .detail{ height:270px; overflow-y:scroll; margin:0 25px 25px 25px; border:1px solid #DDD; padding:10px 5px; background:#FFF;}
 .caseflt .detail p{ margin:5px;}

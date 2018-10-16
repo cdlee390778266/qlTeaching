@@ -149,7 +149,7 @@ input[type=number]{box-shadow: none;}
 
 /*按钮*/
 .handleBtns a{ display:inline-block; margin-right:4px; height:30px; line-height:30px; padding:0 10px; background:#F0F0F0; color:#444; border:1px solid #CCC; border-radius:2px;}
-.handleBtns a:hover{ background:#2E77BF; border:1px solid #2E77BF; color:#fff;}
+.handleBtns a:hover{ background:#2E77BF !important; border:1px solid #2E77BF !important; color:#fff !important;}
 .tbBottom{ margin:15px 0;}
 .tbBottom .ck{ width:110px;}
 .tbBottom .fl a{ display:inline-block; width:60px; height:24px; line-height:24px; background:url(../images/delete.png) no-repeat; background-position:0 top; padding:0; padding-left:20px;}

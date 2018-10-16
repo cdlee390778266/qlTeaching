@@ -57,7 +57,7 @@
 .lhbTab li:hover{ background:#d9bf8d url(../images/rank_arrow.png) no-repeat; background-position:right center;}
 .lhbTab li a{ display:block; height:80px; line-height:120px; font-size:15px; text-align:center; border-bottom:1px dashed #7D98B3; color:#fff;}
 .lhbTab li:last-child a{ border-bottom:none;}
-.lhb_icon01,.lhb_icon02,.lhb_icon03,.lhb_icon04{ display:inline-block; background:url(../images/lhb_icon.png) no-repeat;}
+.lhb_icon01,.lhb_icon02,.lhb_icon03,.lhb_icon04{ display:inline-block; }
 .lhb_icon01{ background-position:center -22px;}
 .lhb_icon02{ background-position:center -122px;}
 .lhb_icon03{ background-position:center -222px;}

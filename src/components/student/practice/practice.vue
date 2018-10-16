@@ -32,13 +32,53 @@
         				<p>练习状态：进行中</p><p>包含市场：<span class="stock">深B股</span></p>
         			</div>
         			<div class="fr">
-        				<p><a href="practice/portfolio.aspx?AppID=53" class="btn02">进入练习</a></p>
+        				<p><router-link to="/student/practice/portfolio" class="btn02">进入练习</router-link></p>
         				<p><a href="javascript:void(0);" class="btn02 btn_remove" data-seq="53">删除练习</a></p>
         				<p><a href="javascript:void(0);" class="btn02 btn_set" data-seq="53">设置练习</a></p>
         			</div>
         		</div>
         	</div>
         </div>
+        <!--分页开始-->
+	    <div class="page clearfix">
+	        <div class="pageGro cb clearfix">
+	            <div class="pageTotal"><span>共0条记录，每页6条，共0页</span></div>
+	            <div class="pageUp" onclick="pageUp()">上一页</div>
+	            <div class="pageList">
+	                <ul></ul>
+	            </div>
+	            <div class="pageDown" onclick="pageDown()">下一页</div>
+	        </div>
+	    </div>
+	    <!--分页结束-->
+	    <div class="flt create_practice" data-seq="">
+	        <h3><span id="matchtitle">创建练习</span></h3>
+	        <p>
+	            <label>练习名称</label>
+	            <input id="matchname" type="text" class="practice_name" maxlength="20">
+	            <span>*名称长度为10个中文和英文的组合</span>
+	        </p>
+	        <p>
+	            <label>起始时间</label>
+	            <input id="starttime" class="Wdate" type="text" onclick="var endtime=$dp.$('endtime');WdatePicker({onpicked:function(){endtime.focus();},minDate:'#F{$dp.$D(\'endtime\')}',minDate:'%y-%M-%d'})" placeholder="起始时间"/>
+	            <label>截止时间</label>
+	            <input id="endtime" class="Wdate" type="text" onclick="WdatePicker({minDate:'#F{$dp.$D(\'starttime\')}'})" placeholder="截止时间"/>
+	            <span>*请选择时间</span>
+	        </p>
+	        <p>
+	            <label>包含市场</label>
+	            <select id="setmatchtype"></select>
+	        </p>
+	        <p>
+	            <label>银行资金</label>
+	            <input type="number" id="intialasset" class="initial_money" min="0" max="200000000" step="100" value="100000" style="width:105px;" />
+	            <b id="currency">人民币</b>
+	            <span>*银行资金不能为空</span>
+	        </p>
+	        <div class="center">
+	            <input type="button" value="确定" id="create_confirm" class="btn btn-confirm"/><input type="button" value="返回" class="btn btn-back"/>
+	        </div>
+	    </div>
     </div>
 </template>
 <script>
