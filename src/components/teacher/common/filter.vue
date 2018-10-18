@@ -16,8 +16,8 @@
                     </li>
                 </ul>
                 <div class="btns fl">
-                    <a href="javascript:void(0)" class="filSearch">搜索</a> <a href="javascript:void(0)"
-                        class="filReset">重置</a>
+                    <a href="javascript:void(0)" class="filSearch" @click="search">搜索</a>
+                    <a href="javascript:void(0)" class="filReset" @click="reset">重置</a>
                 </div>
                 <div class="fr">
                     <a href="javascript:void(0)" class="btn_show fr icon10" @click="toggle">{{isShowCaseBox ? '关闭' : '展开'}}</a>
@@ -60,19 +60,15 @@
                 </p>
             </div>
         </ql-dialog>
-        <!--选择区域结束--> 
+        <!--选择区域结束-->
 	</div>
 </template>
 <script>
-    import qlDialog from './dialog'
 	export default {
         props: ['filter'],
-        components: {
-            qlDialog
-        },
 		data() {
 			return {
-				isShowCaseBox: true,
+				isShowCaseBox: false,
                 dialogItems: {},
                 checkAllObj: {
                     isChecked: false,
@@ -102,6 +98,15 @@
             },
             confirm() {
                 this.$set(this.dialogItems, 'checkedArr', this.checkedArr.concat());
+                this.$utils.closeAllDialog();
+            },
+            search() {
+                this.$emit('filterSearch', 6);
+            },
+            reset() {
+                this.filter.forEach(function(item) {
+                    item.checkedArr = [];
+                })
             }
         },
         watch: {

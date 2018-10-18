@@ -1,20 +1,20 @@
 <template>
-	<div>
-		<div class="section">
-          <div class="total">
-            <ul class="inner clearfix">
-              <li><span class="span01">已添加学校数目：5</span></li>
-              <li><span class="span02">已添加班级数目：4</span></li>
-              <li><span class="span03">管理学生数：12</span></li>
-            </ul>
-          </div>
-          <ql-filter :filter="filterData"></ql-filter>
-          <div class="row clearfix">
-            <div class="handleBtns fl">
-            	<a href="javascript:void(0)" class="delete" @click="showDelDialog">删除</a>
-            	<a href="javascript:void(0)" class="addSch" @click="showAddSch">添加学校</a>
-            </div>
-            <div class="selArea fl">
+  <div>
+    <div class="section">
+      <div class="total">
+        <ul class="inner clearfix">
+          <li><span class="span01">已添加学校数目：5</span></li>
+          <li><span class="span02">已添加班级数目：4</span></li>
+          <li><span class="span03">管理学生数：12</span></li>
+        </ul>
+      </div>
+      <ql-filter :filter="filterData" @filterSearch="search"></ql-filter>
+      <div class="row clearfix">
+        <div class="handleBtns fl">
+          <a href="javascript:void(0)" class="delete" @click="showDelDialog">删除</a>
+          <a href="javascript:void(0)" class="addSch" @click="showAddSch">添加学校</a>
+        </div>
+        <div class="selArea fl">
             	<span>
 	              <label>类别</label>
 	              <select id="item">
@@ -31,124 +31,268 @@
             </div>
           </div>
           <div class="faculty">
-            <table cellpadding="0" cellspacing="0" width="100%" class="schoolTb tb">
-              <thead>
-                <tr>
-                  <th width="32"><p class="ck"><i></i><input type="checkbox" name="checkAll" id="checkAll"></p></th>
-                  <th width="50">序号</th>
-                  <th width="210">学校名称</th>
-                  <th width="50">学院</th>
-                  <th width="50">学系</th>
-                  <th width="50">专业</th>
-                  <th width="50">班级</th>
-                  <th width="90">上限人数</th>
-                  <th width="90">已注册人数</th>
-                  <th width="60">状态</th>
-                  <th>操作</th>
-                </tr>
-              </thead>
-              <tbody><tr data-seq="8" data-area="6" data-province="9" data-school="成都乾隆金融学校2" class=""> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>1</td>    <td class="college"><a href="college.aspx?AppID=8&amp;backUrl=index.aspx" title="成都乾隆金融学校2">成都乾隆金融学校2</a></td>    <td>1</td>    <td>1</td>    <td>1</td>    <td>1</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="2018-09-29">过期</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(8,10000,'2018-09-29')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(8,6,'9','成都乾隆金融学校2')"></a></td> </tr><tr data-seq="7" data-area="1" data-province="2" data-school="浙江大学" class="" style="background: rgb(242, 242, 242);"> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>2</td>    <td class="college"><a href="college.aspx?AppID=7&amp;backUrl=index.aspx" title="浙江大学">浙江大学</a></td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="2018-09-20">过期</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(7,10000,'2018-09-20')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(7,1,'2','浙江大学')"></a></td> </tr><tr data-seq="6" data-area="1" data-province="2" data-school="金华广播电视大学" class=""> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>3</td>    <td class="college"><a href="college.aspx?AppID=6&amp;backUrl=index.aspx" title="金华广播电视大学">金华广播电视大学</a></td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="">正常</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(6,10000,'')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(6,1,'2','金华广播电视大学')"></a></td> </tr><tr data-seq="5" data-area="1" data-province="10" data-school="上海乾隆财经大学" class="" style="background: rgb(242, 242, 242);"> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>4</td>    <td class="college"><a href="college.aspx?AppID=5&amp;backUrl=index.aspx" title="上海乾隆财经大学">上海乾隆财经大学</a></td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>0</td>    <td>10000</td>    <td>0</td>    <td class="status" data-date="">正常</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(5,10000,'')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(5,1,'10','上海乾隆财经大学')"></a></td> </tr><tr data-seq="4" data-area="6" data-province="9" data-school="成都乾隆财经大学" class=""> 	<td><p class="ck"><i></i><input name="checkbox" type="checkbox"></p></td>    <td>5</td>    <td class="college"><a href="college.aspx?AppID=4&amp;backUrl=index.aspx" title="成都乾隆财经大学">成都乾隆财经大学</a></td>    <td>2</td>    <td>3</td>    <td>3</td>    <td>3</td>    <td>10000</td>    <td>11</td>    <td class="status" data-date="">正常</td>    <td><a href="javascript:void(0)" class="setBtn" title="设置" onclick="OpenSetSchool(4,10000,'')"></a><a href="javascript:void(0)" title="修改" class="edit" onclick="OpenUpdateSchool(4,6,'9','成都乾隆财经大学')"></a></td> </tr></tbody>
-            </table>
+          	<el-table
+		    ref="table"
+		    :data="tableData"
+		    style="width: 100%"
+		   	border
+		    stripe
+		    v-loading="tableLoading"
+		    @selection-change="handleSelectionChange">
+			    <el-table-column
+			      type="selection"
+			      width="50">
+			    </el-table-column>
+			    <el-table-column
+			      label="序号"
+			      width="50"
+			      prop="index">
+			    </el-table-column>
+			    <el-table-column
+			      label="学校名称"
+			      width="150">
+			      <template slot-scope="scope">
+			      	<router-link :to="'/teacher/college/' + 1">{{scope.row.name}}</router-link>
+			      </template>
+			    </el-table-column>
+			    <el-table-column
+			      prop="xy"
+			      label="学院"
+			      width="50"
+			      show-overflow-tooltip>
+			    </el-table-column>
+			    <el-table-column
+			      prop="xx"
+			      label="学系"
+			      width="50"
+			      show-overflow-tooltip>
+			    </el-table-column>
+			    <el-table-column
+			      prop="zy"
+			      label="专业"
+			      width="50"
+			      show-overflow-tooltip>
+			    </el-table-column>
+			    <el-table-column
+			      prop="b"
+			      label="班级"
+			      width="50"
+			      show-overflow-tooltip>
+			    </el-table-column>
+			    <el-table-column
+			      prop="sr"
+			      label="上限人数"
+			      width="90"
+			      show-overflow-tooltip>
+			    </el-table-column>
+			    <el-table-column
+			      prop="zr"
+			      label="已注册人数"
+			      width="100"
+			      show-overflow-tooltip>
+			    </el-table-column>
+			    <el-table-column
+			      prop="status"
+			      label="状态"
+			      width="60"
+			      show-overflow-tooltip>
+			    </el-table-column>
+			    <el-table-column
+			      label="操作">
+			      <template slot-scope="scope">
+			      	<a href="javascript:void(0)" title="设置" class="setBtn" @click="showSetOpt(scope.row)"></a>
+			      	<a href="javascript:void(0)" title="修改" class="edit" @click="showEdit(scope.row)"><i>交易市场</i></a>
+			      </template>
+			    </el-table-column>
+		  	</el-table>
           </div>
           <div class="tbBottom clearfix">
-            <div class="fl"><p class="ck fl"><i></i><input type="checkbox" name="sdAccount" id="selectAll"><span>全选所有页</span></p><a href="javascript:void(0);" class="fl" id="deleteAll">删除</a></div>
+            <div class="fl">
+            	<p class="fl ql-ck"><el-checkbox class="fl" @change="toggleAllSelection" v-model="selectAll"></el-checkbox><span>全选所有页</span></p>
+            	<a href="javascript:void(0);" class="fl" @click="showDelDialog">删除</a>
+            </div>
             <!--分页开始-->
            <div class="page clearfix">
                 <div class="pageGro cb clearfix">
-                    <div class="pageTotal"><span>共5条记录，每页20条，共1页</span></div>
-                    <div class="pageUp" onclick="pageUp()">
-                        上一页</div>
-                    <div class="pageList">
-                        <ul><li class="on">1</li></ul>
+                    <div class="pageTotal">
+                    	<span>共{{page.total}}条记录，每页{{page.size}}条，共{{Math.ceil(page.total / page.size)}}页</span>
                     </div>
-                    <div class="pageDown" onclick="pageDown()">
-                        下一页</div>
+                    <el-pagination
+		              background
+		              layout="prev, pager, next"
+		              :page-size="page.size"
+		              :total="page.total"
+		              :pager-count="5"
+		              @current-change="goPage">
+		            </el-pagination>
                 </div>
             </div>
-            <!--分页结束--> 
-          </div>
-        </div>
+        <!--分页结束-->
+      </div>
+    </div>
 
-        <!--浮层开始--> 
-  
-		  <!--添加学校 start -->
-		  <ql-dialog class="flt addSchFlt" title="添加学校" @confirm="addSch" confirmText="添加">
-		    <div class="details">
-		      <p class="clearfix">
+    <!--浮层开始-->
+
+    <!--添加学校 start -->
+    <ql-dialog class="flt addSchFlt" title="添加学校" @confirm="addSch" confirmText="添加">
+      <div class="details">
+        <p class="clearfix">
 		      	<span class="fl">
 		            <label><i>*</i>区域</label>
-		            <select id="areaSlt">
+		            <select v-model="addSchFlt.area" :class="{'ql-error': !addSchFlt.area}">
+		            	<option value="-1">请选择</option>
+		            	<option value="1">华东</option>
+		            	<option value="2">华南</option>
+		            	<option value="3">华中</option>
+		            	<option value="4">华北</option>
+		            	<option value="5">西北</option>
+		            	<option value="6">西南</option>
+		            	<option value="7">东北</option>
+		            	<option value="8">港澳台</option>
 		            </select>
 		        </span>
-		        <span class="fr">
+          		<span class="fr">
 		            <label><i>*</i>省份</label>
-		            <select id="provinceSlt">
+		            <select v-model="addSchFlt.prov" :class="{'ql-error': !addSchFlt.prov}">
+		            	<option value="-1">请选择</option>
+		            	<option value="1">华东</option>
+		            	<option value="2">华南</option>
+		            	<option value="3">华中</option>
+		            	<option value="4">华北</option>
+		            	<option value="5">西北</option>
+		            	<option value="6">西南</option>
+		            	<option value="7">东北</option>
+		            	<option value="8">港澳台</option>
 		            </select>
 		        </span>
-		      </p>
-		      <p id="schTitle">
-		      	<label><i>*</i>学校名称</label><i class="remark">（必填项）</i><br>
-		      	<input type="text" class="txt" id="school" placeholder="请输入">
-		      </p>
-		    </div>
-		  </ql-dialog>
-		  <!--添加学校 end --> 
+        </p>
+        <p id="">
+          <label><i>*</i>学校名称</label><i class="remark" :class="{'ql-show': !addSchFlt.schoolName}">（必填项）</i><br>
+          <input type="text" class="txt" placeholder="请输入" v-model="addSchFlt.schoolName">
+        </p>
+      </div>
+    </ql-dialog>
+    <!--添加学校 end -->
 
-		  <!--修改学校开始-->
-		  <ql-dialog class="flt editFlt" title="修改学校" @confirm="addSch" confirmText="修改">
-		    <div class="details">
-		      <p class="clearfix">
+    <!--修改学校开始-->
+    <ql-dialog class="flt editFlt" title="修改学校" @confirm="edit" confirmText="修改">
+      <div class="details">
+        <p class="clearfix">
 		      	<span class="fl">
 		            <label><i>*</i>区域</label>
-		            <select id="editArea">
+		            <select v-model="editFlt.area" :class="{'ql-error': !editFlt.area}">
+		            	<option value="-1">请选择</option>
+		            	<option value="1">华东</option>
+		            	<option value="2">华南</option>
+		            	<option value="3">华中</option>
+		            	<option value="4">华北</option>
+		            	<option value="5">西北</option>
+		            	<option value="6">西南</option>
+		            	<option value="7">东北</option>
+		            	<option value="8">港澳台</option>
 		            </select>
 		        </span>
-		        <span class="fr">
+          		<span class="fr">
 		            <label><i>*</i>省份</label>
-		            <select id="editProv">
+		            <select v-model="editFlt.prov" :class="{'ql-error': !editFlt.prov}">
+		            	<option value="-1">请选择</option>
+		            	<option value="1">华东</option>
+		            	<option value="2">华南</option>
+		            	<option value="3">华中</option>
+		            	<option value="4">华北</option>
+		            	<option value="5">西北</option>
+		            	<option value="6">西南</option>
+		            	<option value="7">东北</option>
+		            	<option value="8">港澳台</option>
 		            </select>
 		        </span>
-		      </p>
-		      <p id="schTitle">
-		      	<label><i>*</i>学校名称</label><i class="remark">（必填项）</i><br>
-		      	<input type="text" class="txt" id="editSchool" placeholder="请输入" value="上海财经大学">
-		      </p>
-		    </div>
-		  </ql-dialog>
-		  <!--修改学校结束--> 
+        </p>
+        <p id="schTitle">
+          <label><i>*</i>学校名称</label><i class="remark" :class="{'ql-show': !editFlt.schoolName}">（必填项）</i><br>
+          <input type="text" class="txt" placeholder="请输入" v-model="editFlt.schoolName">
+        </p>
+      </div>
+    </ql-dialog>
+    <!--修改学校结束-->
 
-		  <!--学校权限设置开始-->
-		  <ql-dialog class="flt eauthorise" title="权限设置" @confirm="addSch">
-		    <div class="details"> 
-		      <!--p><i class="remark">提示：*为必填项</i></p-->
-		      <p>
-		      	<label><i>*</i>限制注册人数：</label>
-		        <input type="number" min="1" max="1000000" step="1" class="numInput txt" placeholder="请输入" id="regMaxNum"></p>
-		        <!--p><b>已注册人数：</b><span>1000人</span></p-->
-		      <p class="wdateBox clearfix">
-		      	<label class="fl"><i>*</i>登记到期日期：</label>
-		        <input type="text" class="Wdate fl txt" id="selWdate" placeholder="请选择日期"/>
-		      </p>
-		    </div>
-		  </ql-dialog>
-		  <!--学校权限设置结束--> 
+    <!--学校权限设置开始-->
+    <ql-dialog class="flt authorise" title="权限设置" @confirm="setOpt">
+      <div class="details">
+        <!--p><i class="remark">提示：*为必填项</i></p-->
+        <p>
+			<label><i>*</i>限制注册人数：</label>
+			<input type="number" min="1" max="1000000" step="1" class="numInput txt" placeholder="请输入" v-model="authorise.number" :class="{'ql-error': !authorise.number}">
+      	</p>
+        <!--p><b>已注册人数：</b><span>1000人</span></p-->
+		<p class="wdateBox clearfix">
+			<label class="fl"><i>*</i>登记到期日期：</label>
+			<el-date-picker
+			class="fl ql-date"
+			type="date"
+			v-model="authorise.date"
+			:class="{'ql-error': !authorise.date}"
+			:clearable="false"
+			placeholder="选择日期">
+			</el-date-picker>
+		</p>
+      </div>
+    </ql-dialog>
+    <!--学校权限设置结束-->
 
-		<!--浮层结束-->
-		<ql-confirm @confirm="del"></ql-confirm>
-	</div>
+    <!--浮层结束-->
+    <ql-confirm @confirm="del"></ql-confirm>
+  </div>
 </template>
 <script>
-	import qlFilter from './common/filter'
-	import qlConfirm from './common/confirm'
-	import qlDialog from './common/dialog.vue'
+	/*获取表格数据*/
+	var getTatbleData = function(that) {
+		that.$utils.getJson(that.$utils.CONFIG.api.testUrl, function(res) {
+			that.tableLoading = false;
+			that.tableData = res;
+		}, function() {
+
+		}, {}, false, {});
+	}
+	/*删除*/
+	var delData = function(that) {
+		that.$utils.getJson(that.$utils.CONFIG.api.testUrl, function(res) {
+			that.tableLoading = false;
+			that.tableData = res;
+		}, function() {
+
+		}, {}, false, {});
+	}
+	/*添加学校*/
+	var addSchool = function(that) {
+		that.$utils.getJson(that.$utils.CONFIG.api.testUrl, function(res) {
+			that.tableLoading = false;
+			that.tableData = res;
+		}, function() {
+
+		}, {}, false, {});
+	}
+	/*权限设置*/
+	var setAuthorise = function(that) {
+		that.$utils.getJson(that.$utils.CONFIG.api.testUrl, function(res) {
+			that.tableLoading = false;
+			that.tableData = res;
+		}, function() {
+
+		}, {}, false, {});
+	}
+	/*修改学校*/
+	var editSchool = function(that) {
+		that.$utils.getJson(that.$utils.CONFIG.api.testUrl, function(res) {
+			that.tableLoading = false;
+			that.tableData = res;
+		}, function() {
+
+		}, {}, false, {});
+	}
 	export default {
-		components: {
-			qlFilter,
-			qlConfirm,
-			qlDialog
-		},
 		data() {
 			return {
+				page: Object.assign({}, this.$utils.CONFIG.page),
 				filterData: [
 					{
 						txt: '大区',
@@ -225,13 +369,65 @@
 								value: '018'
 							}
 						]
-					},
-				]
+					}
+				],
+				addSchFlt: {	//添加学校
+		        	area: '',
+		        	prov: '',
+		        	schoolName: ''
+		        },
+		        authorise: {	//设置
+		        	number: '',
+		        	date: '2018-06-02'
+		        },
+		        editFlt: {	//修改学校
+		        	area: '',
+		        	prov: '',
+		        	schoolName: ''
+		        },
+		        tableLoading: false,
+		        selectAll: false,
+		        tableData: [	//模拟表格数据
+		        	{
+			          index: '0',
+			          name: '成都乾隆金融学校2',
+			          xy: '0',
+			          xx: '0',
+			          zy: '0',
+			          b: '0',
+			          sr: '1000',
+			          zr: '0',
+			          status: '过期'
+			        },
+			        {
+			          index: '0',
+			          name: '成都乾隆金融学校2',
+			          xy: '0',
+			          xx: '0',
+			          zy: '0',
+			          b: '0',
+			          sr: '1000',
+			          zr: '0',
+			          status: '过期'
+			        },
+			        {
+			          index: '0',
+			          name: '成都乾隆金融学校2',
+			          xy: '0',
+			          xx: '0',
+			          zy: '0',
+			          b: '0',
+			          sr: '1000',
+			          zr: '0',
+			          status: '过期'
+			        }
+		        ],
+		        selectedArr: []
 			}
 		},
 		methods: {
-			showDelDialog() {
-				if(true) {
+			showDelDialog() {	//显示删除弹框
+				if(this.selectedArr.length) {
 					this.$utils.showDialog({
 			            type: 1,
 			            title: false,
@@ -253,10 +449,10 @@
 			        })
 				}
 			},
-			del() {
-				alert("message");
+			del() {	//删除确认
+				delData(this);
 			},
-			showAddSch() {
+			showAddSch() {	//显示添加学校弹框
 				this.$utils.showDialog({
 			        type: 1,
 			        title: false,
@@ -267,18 +463,70 @@
 			        content: $('.addSchFlt')
 			    });
 			},
-			addSch() {
-				alert("add");
+			addSch() {	//添加学校确认
+				if(this.addSchFlt.area && this.addSchFlt.prov && this.addSchFlt.schoolName) {
+					addSchool(this);
+					this.$utils.closeAllDialog();
+				}
 			},
-			search() {
-
-			}
+			search(filter) {	//搜索
+				getTatbleData(this);
+			},
+			showSetOpt() {	//显示权限设置弹框
+				this.$utils.showDialog({
+					type: 1,
+			        title: false,
+					scrollbar: false,
+			        closeBtn: 0,
+			        area: ['330px', 'auto'],
+			        shadeClose: true,
+			        content: $('.authorise')
+				});
+			},
+			setOpt() {	//权限设置确认
+				if(this.authorise.number && this.authorise.date) {
+					setAuthorise(this);
+					this.$utils.closeAllDialog();
+				}
+			},
+			showEdit() {	//显示修改学校弹框
+				this.$utils.showDialog({
+			        type: 1,
+			        title: false,
+					scrollbar: false,
+			        closeBtn: 0,
+			        area: ['380px', 'auto'],
+			        shadeClose: true,
+			        content: $('.editFlt')
+			    });
+			},
+			edit() {	//修改学校确认
+				if(this.editFlt.area && this.editFlt.prov && this.editFlt.schoolName) {
+					editSchool(this);
+					this.$utils.closeAllDialog();
+				}
+			},
+			toggleAllSelection(val) {	//切换所有表格选中状态
+				if(val) {
+					this.tableData.forEach(item => {
+						this.$refs.table.toggleRowSelection(item, true);
+					})
+				}else {
+					this.$refs.table.clearSelection();
+				}
+			},
+			handleSelectionChange(val) {
+		        this.selectedArr = val;
+		    },
+		    goPage(currentPage) {	//翻页
+		    	getTatbleData(this);
+		    }
 		},
 		created() {
-			
-		}
-	}
+			getTatbleData(this)
+    	}
+  	}
 </script>
 <style lang="scss">
-	@import "../../assets/teacher/css/index.css";
+  @import "../../assets/teacher/css/index.css";
 </style>

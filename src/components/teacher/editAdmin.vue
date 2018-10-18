@@ -3,7 +3,7 @@
 		<div class="section">
             <div class="row clearfix">
                 <h2 class="tt">
-                    <b class="arrow_r"><a href="admins.aspx">二级管理员</a></b><i>账号权限</i></h2>
+                    <b class="arrow_r"><a href="admins.aspx">管理员信息</a></b><i>账号权限</i></h2>
             </div>
             <div class="faculty">
                 <div class="ckmd acc">

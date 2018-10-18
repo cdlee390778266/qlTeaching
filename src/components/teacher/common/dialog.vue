@@ -21,7 +21,6 @@
 				this.$utils.closeAllDialog();
 			},
 			confirm() {
-				this.$utils.closeAllDialog();
 				this.$emit('confirm');
 			}
 		}

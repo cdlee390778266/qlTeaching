@@ -3,6 +3,7 @@ import CONFIG from './config'
 import store from '../store/vuex'
 import $ from 'jquery'
 import layer from '../assets/common/js/layer/layer.js'
+import { Loading } from 'element-ui';
 
 var Utils = {}
 
@@ -78,16 +79,16 @@ Utils.closeAllDialog = function() {
  * @param      {Function}  error    失败回调
  * @param      {string}    params   参数
  */
-Utils.getJson = function(url, success, error, params = {}, isShowPop=true, urlParams) {
+Utils.getJson = function(url, success, error, params = {}, isShowPop=false, urlParams) {
 	if(!url) return;
 	var loadingInstance;
 	if(isShowPop) {
-		// loadingInstance = Loading.service({
-		// 	fullscreen: true,
-		// 	customClass: 'loading page-loading'
-		// });
+		loadingInstance = Loading.service({
+			fullscreen: true,
+			customClass: 'loading page-loading'
+		});
 	}
-	Utils.ajaxCount++;
+	//Utils.ajaxCount++;
 	Utils.$http({
 			method: 'post',
 			url: url,
@@ -100,12 +101,12 @@ Utils.getJson = function(url, success, error, params = {}, isShowPop=true, urlPa
 			// 	loadingInstance.close()
 			// }
 			if(isShowPop) {
-				//loadingInstance.close()
+				loadingInstance.close()
 			}
             if(typeof success == 'function') success(res.data)
         }, function(err){
         	if(isShowPop) {
-        		//loadingInstance.close();
+        		loadingInstance.close();
         	}
         	Utils.showTip('error', 'error', '-1');
             if(typeof error == 'function') error(err)

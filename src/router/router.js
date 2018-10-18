@@ -4,10 +4,12 @@ import Router from 'vue-router'
 
 const Login  = () => import(/* webpackChunkName: "common" */ '../components/common/login.vue')
 const Register  = () => import(/* webpackChunkName: "common" */ '../components/common/register.vue')
+const Handle  = () => import(/* webpackChunkName: "common" */ '../components/common/handle.vue')
 
 /*教师端*/
 const Teacher  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/common/wrapper.vue')
 const Home  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/home.vue')
+const College  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/college.vue')
 const Admins  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/admins.vue')
 const EditAdmin  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/editAdmin.vue')
 const SdAccounts  = () => import(/* webpackChunkName: "teacher" */ '../components/teacher/sdAccounts.vue')
@@ -79,6 +81,12 @@ const router = new Router({
       meta: { title: '欢迎注册'}
     },
     {
+      path: '/handle',
+      name: 'handle',
+      component: Handle,
+      meta: { title: '权限设置'}
+    },
+    {
       path: '/teacher',
       name: 'teacher',
       component: Teacher,
@@ -90,13 +98,19 @@ const router = new Router({
           meta: { title: '学校管理'}
         },
         {
+          path: 'college/:id',
+          name: 'college',
+          component: College,
+          meta: { title: '学校管理'}
+        },
+        {
           path: 'admins',
           name: 'admins',
           component: Admins,
           meta: { title: '二级管理员'}
         },
         {
-          path: 'editAdmin',
+          path: 'editAdmin/:id',
           name: 'editAdmin',
           component: EditAdmin,
           meta: { title: '创建管理员'}

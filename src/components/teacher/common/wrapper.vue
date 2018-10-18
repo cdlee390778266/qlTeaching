@@ -33,8 +33,7 @@
 	                    <dl id="menu1" style="">
 	                        <dt class="icon01">我是ADMIN</dt>
 	                        <router-link class="open" to="/teacher/home" tag="dd"><a>学校管理</a></router-link>
-	                        <router-link class="open" to="/teacher/admins" tag="dd"><a>二级管理员</a></router-link>
-	                      	<router-link class="open" to="/teacher/editAdmin" tag="dd"><a>创建管理员</a></router-link>
+	                        <router-link class="open" to="/teacher/admins" tag="dd"><a>管理员信息</a></router-link>
 	                    </dl>
 	                    <dl>
 	                        <dt class="icon02">学生管理</dt>
@@ -42,7 +41,7 @@
 	                        <router-link class="open" to="/teacher/turnover" tag="dd"><a>持仓成交</a></router-link>
 	                    </dl>
 	                    <dl>
-	                        <dt>比赛管理</dt>
+	                        <dt class="icon03">比赛管理</dt>
 	                        <router-link class="open" to="/teacher/compInfo" tag="dd"><a>比赛信息</a></router-link>
 	                        <router-link class="open" to="/teacher/createComp" tag="dd"><a>创建比赛</a></router-link>
 	                    </dl>
@@ -56,6 +55,7 @@
 	                            	<router-link class="open" to="/teacher/dividends" tag="li"><a>分红送配</a></router-link>
 	                            	<router-link class="open" to="/teacher/coerce" tag="li"><a>强制平仓</a></router-link>
 	                            	<router-link class="open" to="/teacher/fundsManage" tag="li"><a>资金管理</a></router-link>
+	                            	<router-link class="open" to="/teacher/fundsManage" tag="li"><a>费率设置</a></router-link>
 	                            </ul>
 	                        </dd>
 	                        <dd class="open">
@@ -77,22 +77,22 @@
 	                            </ul>
 	                        </dd>
 	                        <dd class="open">
-	                            <a href="javascrpt:void(0)">融资融券</a>
-	                        </dd>
-	                        <dd class="open">
-	                            <a href="javascrpt:void(0)">港股</a>
+	                            <a href="javascrpt:void(0)">商品期货</a>
 	                        </dd>
 	                        <dd class="open">
 	                            <a href="javascrpt:void(0)">金融期货</a>
 	                        </dd>
+	                        <dd>
+	                            <a>外汇</a>
+	                        </dd>
 	                        <dd class="open">
-	                            <a href="javascrpt:void(0)">商品期货</a>
+	                            <a href="javascrpt:void(0)">融资融券</a>
 	                        </dd>
 	                        <dd class="open">
 	                            <a href="javascrpt:void(0)">期权</a>
 	                        </dd>
-	                        <dd>
-	                            <a>外汇</a>
+	                        <dd class="open">
+	                            <a href="javascrpt:void(0)">港股</a>
 	                        </dd>
 	                    </dl>
 	                    <dl>
@@ -106,12 +106,24 @@
 	                        <router-link class="open" to="/teacher/rankinglist" tag="dd"><a>龙虎榜</a></router-link>
 	                    </dl>
 	                    <dl>
-	                        <dt class="icon07">个人中心</dt>
-	                        <router-link class="open" to="/teacher/perCenter" tag="dd"><a>个人信息</a></router-link>
+	                        <dt class="icon08">互动天地</dt>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>讨论话题</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>行业报告</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>公司</a></router-link>
 	                    </dl>
 	                    <dl>
-	                        <dt class="icon08">互动天地</dt>
-	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>互动天地</a></router-link>
+	                        <dt class="icon08">钱龙金融学院</dt>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>金融题库</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>赢家讲坛</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>一眼看市场</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>金典指标案例</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>金典行业案例</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>金典公司案例</a></router-link>
+	                    </dl>
+	                     <dl>
+	                        <dt class="icon08">统计分析</dt>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>新增用户</a></router-link>
+	                        <router-link class="open" to="/teacher/interaction" tag="dd"><a>活跃用户</a></router-link>
 	                    </dl>
 	                </div>
 				    <div class="artice fl">
