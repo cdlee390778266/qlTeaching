@@ -42,386 +42,449 @@
             <div class="range center clearfix" id="allAcc" v-show="nowIndex==0" style="display: inherit;">
               <p><i class="all"></i><span>允许全部账号接收</span></p>
             </div>
+
             <div class="range" id="macth" v-show="nowIndex==1" style="display: inherit;">
               <div class="compSelect clearfix">
-                <label>比赛名称</label><input type="text" class="fcInput" id="Drop_Match" readonly="">
+                <label>比赛名称</label>
+                <!--<input type="text" class="fcInput" id="Drop_Match" readonly="">-->
+                <el-select v-model="selectValue" placeholder="请选择" id="Drop_Match" class="fcInput" readonly="">
+                  <el-option
+                    v-for="item in selectData"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                    <span style="float: left">{{ item.label }}</span>
+                  </el-option>
+                </el-select>
               </div>
             </div>
+
+
             <div class="range" id="selTb" style="display: inherit;">
               <!--自定义班级-->
               <div v-show="nowIndex==2">
-                <div class="show_search clearfix">
-                  <div class="filter clearfix">
-                    <ul class="fl" id="">
-                      <li><a href="javascript:void(0)">大区</a>
-                        <div class="menu" id="pop大区">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">省级</a>
-                        <div class="menu" id="pop省级">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">学校</a>
-                        <div class="menu" id="pop学校">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">学院</a>
-                        <div class="menu" id="pop学院">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">学系</a>
-                        <div class="menu" id="pop学系">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">专业</a>
-                        <div class="menu" id="pop专业">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">班级</a>
-                        <div class="menu" id="pop班级">
-                          <span>全部</span></div>
-                      </li>
-                    </ul>
-                    <div class="btns fl">
-                      <a href="javascript:void(0)" class="filSearch" onclick="filSearch()">搜索</a> <a
-                      href="javascript:void(0)" class="filReset">重置</a></div>
-                    <div class="fr">
-                      <a href="javascript:void(0)" class="btn_show fr icon10" @click="showHide()" v-show="!isShow">展开</a>
-                      <a href="javascript:void(0)" class="btn_show fr icon10" @click="showHide()" v-show="isShow">关闭</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="case_box clearfix" v-show="isShow">
-                  <div class="select_scheme">
-                    <ul class="scheme">
-                      <li>
-                        <div class="itemName" data-type="大区">
-                          <a href="javascript:void(0)">大区</a></div>
-                        <div class="items" id="大区">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="省级">
-                          <a href="javascript:void(0)">省级</a></div>
-                        <div class="items" id="省级">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="学校">
-                          <a href="javascript:void(0)">学校</a></div>
-                        <div class="items" id="学校">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="学院">
-                          <a href="javascript:void(0)">学院</a></div>
-                        <div class="items" id="学院">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="学系">
-                          <a href="javascript:void(0)">学系</a></div>
-                        <div class="items" id="学系">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="专业">
-                          <a href="javascript:void(0)">专业</a></div>
-                        <div class="items" id="专业">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="班级">
-                          <a href="javascript:void(0)">班级</a></div>
-                        <div class="items" id="班级">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <ql-filter :filter="filterData" @filterSearch="search"></ql-filter>
                 <div class="row clearfix">
                   <div class="showSelected fl">
                     <p class="ck">
-                      <i></i>
-                      <input type="checkbox" name="showSel" id="selClass1" onclick="ShowSelected()"><span>显示已勾选</span></p>
+                      <el-checkbox v-model="selectAll1"><span>显示已勾选</span></el-checkbox>
+                    </p>
                   </div>
                   <div class="search fr clearfix">
-                    <input type="text" placeholder="请输入学校名称" id="searchTxt1"><a href="javascript:void(0)"
-                                                                               class="btn_search" id="searchSecurity1"
-                                                                               onclick="SearchList()"></a></div>
+                    <input type="text" placeholder="请输入学校名称">
+                    <a href="javascript:void(0)" class="btn_search" @click="search"></a>
+                  </div>
                 </div>
-                <table cellpadding="0" cellspacing="0" width="100%" class="tb" id="table_class">
-                  <thead>
-                  <tr>
-                    <th width="32">
-                      <p class="ck">
-                        <i></i>
-                        <input type="checkbox" name="checkAll" id="checkAll"></p>
-                    </th>
-                    <th width="40">
-                      序号
-                    </th>
-                    <th width="90">
-                      区域
-                    </th>
-                    <th width="160">
-                      学校名称
-                    </th>
-                    <th width="120">
-                      学院
-                    </th>
-                    <th width="120">
-                      学系
-                    </th>
-                    <th width="130">
-                      专业
-                    </th>
-                    <th>
-                      班级
-                    </th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </table>
-                <div class="tbBottom clearfix">
-                  <div class="fl">
-                    <p class="ck fl">
-                      <i></i>
-                      <input type="checkbox" name="sdAccount" id="selectAll1"><span>全选所有页</span></p>
-                  </div>
-                  <!--分页开始-->
-                  <div class="page clearfix">
-                    <div class="pageGro cb clearfix">
-                      <div class="pageTotal">
-                        <span>共0条记录，每页10条，共0页</span></div>
-                      <div class="pageUp" onclick="pageUp()">
-                        上一页
-                      </div>
-                      <div class="pageList">
-                        <ul>
-                        </ul>
-                      </div>
-                      <div class="pageDown" onclick="pageDown()">
-                        下一页
-                      </div>
-                    </div>
-                  </div>
-                  <!--分页结束-->
+                <div class="faculty">
+                  <el-table
+                    ref="table"
+                    :data="tableData"
+                    style="width: 100%"
+                    stripe
+                    v-loading="tableLoading"
+                    @selection-change="handleSelectionChange">
+                    <el-table-column
+                      type="selection"
+                      width="32">
+                    </el-table-column>
+                    <el-table-column
+                      label="序号"
+                      width="90"
+                      prop="index">
+                    </el-table-column>
+                    <el-table-column
+                      prop="qy"
+                      label="区域"
+                      width="90">
+                    </el-table-column>
+                    <el-table-column
+                      prop="xxmc"
+                      label="学校名称"
+                      width="160"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="xy"
+                      label="学院"
+                      width="120"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="xx"
+                      label="学系"
+                      width="120"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="zy"
+                      label="专业"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="bj"
+                      label="班级"
+                      width="130"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                  </el-table>
                 </div>
               </div>
               <!--手动添加账号-->
               <div v-show="nowIndex==3">
-                <div class="show_search clearfix">
-                  <div class="filter clearfix">
-                    <ul class="fl" id="filterList">
-                      <li><a href="javascript:void(0)">大区</a>
-                        <div class="menu" id="pop大区1">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">省级</a>
-                        <div class="menu" id="pop省级1">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">学校</a>
-                        <div class="menu" id="pop学校1">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">学院</a>
-                        <div class="menu" id="pop学院1">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">学系</a>
-                        <div class="menu" id="pop学系1">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">专业</a>
-                        <div class="menu" id="pop专业1">
-                          <span>全部</span></div>
-                      </li>
-                      <li><a href="javascript:void(0)">班级</a>
-                        <div class="menu" id="pop班级1">
-                          <span>全部</span></div>
-                      </li>
-                    </ul>
-                    <div class="btns fl">
-                      <a href="javascript:void(0)" class="filSearch" onclick="filSearch()">搜索</a> <a
-                      href="javascript:void(0)" class="filReset">重置</a></div>
-                    <div class="fr">
-                      <a href="javascript:void(0)" class="btn_show fr icon10" @click="showHide()" v-show="!isShow">展开</a>
-                      <a href="javascript:void(0)" class="btn_show fr icon10" @click="showHide()" v-show="isShow">关闭</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="case_box clearfix" v-show="isShow">
-                  <div class="select_scheme">
-                    <ul class="scheme">
-                      <li>
-                        <div class="itemName" data-type="大区">
-                          <a href="javascript:void(0)">大区</a></div>
-                        <div class="items" id="大区1">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="省级">
-                          <a href="javascript:void(0)">省级</a></div>
-                        <div class="items" id="省级1">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="学校">
-                          <a href="javascript:void(0)">学校</a></div>
-                        <div class="items" id="学校1">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="学院">
-                          <a href="javascript:void(0)">学院</a></div>
-                        <div class="items" id="学院1">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="学系">
-                          <a href="javascript:void(0)">学系</a></div>
-                        <div class="items" id="学系1">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="专业">
-                          <a href="javascript:void(0)">专业</a></div>
-                        <div class="items" id="专业1">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                      <li>
-                        <div class="itemName" data-type="班级">
-                          <a href="javascript:void(0)">班级</a></div>
-                        <div class="items" id="班级1">
-                          <span data-seq="0">全部</span></div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <ql-filter :filter="filterData" @filterSearch="search"></ql-filter>
                 <div class="row clearfix">
                   <div class="showSelected fl">
                     <p class="ck">
-                      <i></i>
-                      <input type="checkbox" name="showSel" id="selClass" onclick="ShowSelected()"><span>显示已勾选</span></p>
+                      <el-checkbox v-model="selectAll1"><span>显示已勾选</span></el-checkbox>
+                    </p>
                   </div>
                   <div class="search fr clearfix">
-                    <input type="text" placeholder="请输入学校名称" id="searchTxt"><a href="javascript:void(0)"
-                                                                               class="btn_search" id="searchSecurity"
-                                                                               onclick="SearchList()"></a></div>
+                    <input type="text" placeholder="请输入学校名称">
+                    <a href="javascript:void(0)" class="btn_search" @click="search"></a>
+                  </div>
                 </div>
-                <!--表格2 start -->
-                <table cellpadding="0" cellspacing="0" width="100%" class="tb stdTb" id="table_student">
-                  <thead>
-                  <tr>
-                    <th width="32">
-                      <p class="ck">
-                        <i></i>
-                        <input type="checkbox" name="checkAll" id="checkAll_1"></p>
-                    </th>
-                    <th width="46">
-                      序号
-                    </th>
-                    <th width="240">
-                      学校名称
-                    </th>
-                    <th width="180">
-                      班级
-                    </th>
-                    <th width="160">
-                      学生账号
-                    </th>
-                    <th>
-                      学生姓名
-                    </th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </table>
-                <!--表格2 end -->
-                <div class="tbBottom clearfix">
-                  <div class="fl">
-                    <p class="ck fl">
-                      <i></i>
-                      <input type="checkbox" name="sdAccount" id="selectAll"><span>全选所有页</span></p>
-                  </div>
-                  <!--分页开始-->
-                  <div class="page clearfix">
-                    <div class="pageGro cb clearfix">
-                      <div class="pageTotal">
-                        <span>共0条记录，每页10条，共0页</span></div>
-                      <div class="pageUp" onclick="pageUp()">
-                        上一页
-                      </div>
-                      <div class="pageList">
-                        <ul>
-                        </ul>
-                      </div>
-                      <div class="pageDown" onclick="pageDown()">
-                        下一页
-                      </div>
-                    </div>
-                  </div>
-                  <!--分页结束-->
+                <div class="faculty">
+                  <el-table
+                    ref="table1"
+                    :data="tableData1"
+                    style="width: 100%"
+                    stripe
+                    v-loading="tableLoading"
+                    @selection-change="handleSelectionChange">
+                    <el-table-column
+                      type="selection"
+                      width="32">
+                    </el-table-column>
+                    <el-table-column
+                      label="序号"
+                      width="90"
+                      prop="index">
+                    </el-table-column>
+                    <el-table-column
+                      prop="qy"
+                      label="区域"
+                      width="90">
+                    </el-table-column>
+                    <el-table-column
+                      prop="xxmc"
+                      label="学校名称"
+                      width="160"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="xy"
+                      label="学院"
+                      width="120"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="xx"
+                      label="学系"
+                      width="120"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="zy"
+                      label="专业"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                    <el-table-column
+                      prop="bj"
+                      label="班级"
+                      width="130"
+                      show-overflow-tooltip>
+                    </el-table-column>
+                  </el-table>
                 </div>
               </div>
-
             </div>
-
+            <div class="tbBottom clearfix" v-show="nowIndex==2">
+              <div class="fl">
+                <p class="fl ql-ck">
+                  <el-checkbox class="fl" @change="toggleAllSelection" v-model="selectAll"></el-checkbox>
+                  <span class="allSelect">全选所有页</span></p>
+                <a href="javascript:void(0);" class="fl" @click="DeleteNotice">删除</a>
+              </div>
+              <!--分页开始-->
+              <div class="page clearfix">
+                <div class="pageGro cb clearfix">
+                  <div class="pageTotal">
+                    <span>共{{page.total}}条记录，每页{{page.size}}条，共{{Math.ceil(page.total / page.size)}}页</span>
+                  </div>
+                  <el-pagination
+                    background
+                    layout="prev, pager, next"
+                    :page-size="page.size"
+                    :total="page.total"
+                    :pager-count="5"
+                    @current-change="goPage">
+                  </el-pagination>
+                </div>
+              </div>
+              <!--分页结束-->
+            </div>
+            <div class="tbBottom clearfix" v-show="nowIndex==3">
+              <div class="fl">
+                <p class="fl ql-ck">
+                  <el-checkbox class="fl" @change="toggleAllSelection1" v-model="selectAll2"></el-checkbox>
+                  <span class="allSelect">全选所有页</span></p>
+                <a href="javascript:void(0);" class="fl" @click="DeleteNotice">删除</a>
+              </div>
+              <!--分页开始-->
+              <div class="page clearfix">
+                <div class="pageGro cb clearfix">
+                  <div class="pageTotal">
+                    <span>共{{page.total}}条记录，每页{{page.size}}条，共{{Math.ceil(page.total / page.size)}}页</span>
+                  </div>
+                  <el-pagination
+                    background
+                    layout="prev, pager, next"
+                    :page-size="page.size"
+                    :total="page.total"
+                    :pager-count="5"
+                    @current-change="goPage">
+                  </el-pagination>
+                </div>
+              </div>
+              <!--分页结束-->
+            </div>
           </div>
           <div class="creatBtns">
             <p>
-              <a href="javascript:void(0)" id="crtNotice" onclick="SendNotice()">发布通知</a><a href="javascript:void(0)"
-                                                                                            id="saveNotice"
-                                                                                            onclick="SaveNotice()">保存草稿</a><a
-              href="javascript:void(0)" id="cancel" onclick="CancelNotice()">取消</a></p>
+              <a href="javascript:void(0)" id="crtNotice" onclick="SendNotice()">发布通知</a>
+              <a href="javascript:void(0)" id="saveNotice" onclick="SaveNotice()">保存草稿</a>
+              <a href="javascript:void(0)" id="cancel" onclick="CancelNotice()">取消</a></p>
           </div>
         </div>
       </form>
     </div>
-    <!--浮层开始-->
-    <!--选择区域开始-->
-    <div class="flt caseflt">
-      <h3 class="clearfix">
-        <span class="fl">选择大区</span><a href="javascript:void(0)" class="closed"></a></h3>
-      <div class="top clearfix">
-        <p>
-          <i></i>
-          <input type="checkbox" name="selectAll" value="全选" id="Checkbox1"><span>全选</span></p>
-      </div>
-      <div class="detail clearfix" id="slcBox">
-        <p>
-          <i></i>
-          <input type="checkbox" name="district" value="0" data-type="华东地区"><span>华东地区</span></p>
-        <p>
-          <i></i>
-          <input type="checkbox" name="district" value="1" data-type="华南地区"><span>华南地区</span></p>
-        <p>
-          <i></i>
-          <input type="checkbox" name="district" value="2" data-type="华北地区"><span>华北地区</span></p>
-        <p>
-          <i></i>
-          <input type="checkbox" name="district" value="11" data-type="华南地区33"><span>华南地区33</span></p>
-      </div>
-      <div class="btns">
-        <a href="javascript:void(0)" class="btn btn-confirm">确定</a> <a href="javascript:void(0)"
-                                                                       class="btn btn-cancel">取消</a>
-      </div>
-    </div>
-    <!--选择区域结束-->
-    <!--浮层结束-->
+    <!--删除弹出框开始-->
+    <ql-confirm @confirm="confirm"></ql-confirm>
   </div>
 </template>
 <script>
-  import qlUeditor from './common/ueditor'
+  /*获取表格数据*/
+  var getTatbleData = function (that) {
+    that.$utils.getJson(that.$utils.CONFIG.api.testUrl, function (res) {
+      that.tableLoading = false;
+      that.tableData = res;
+    }, function () {
 
+    }, {}, false, {});
+  }
+  /*删除*/
+  var delData = function (that) {
+    that.$utils.getJson(that.$utils.CONFIG.api.testUrl, function (res) {
+      that.tableLoading = false;
+      that.tableData = res;
+    }, function () {
+
+    }, {}, false, {});
+  }
+  import qlUeditor from './common/ueditor'
+  import qlFilter from './common/filter'
+  import qlConfirm from './common/confirm'
   export default {
-    components: {qlUeditor},
+    components: {
+      qlUeditor,
+      qlFilter,
+      qlConfirm
+    },
     data() {
       return {
+        page: Object.assign({}, this.$utils.CONFIG.page),
+        filterData: [
+          {
+            txt: '大区',
+            value: '0',
+            children: [
+              {
+                txt: '华东',
+                value: '01'
+              },
+              {
+                txt: '华南',
+                value: '02'
+              },
+              {
+                txt: '华中',
+                value: '03'
+              },
+              {
+                txt: '华北',
+                value: '04'
+              },
+              {
+                txt: '西北',
+                value: '05'
+              },
+              {
+                txt: '西南',
+                value: '06'
+              },
+              {
+                txt: '东北',
+                value: '07'
+              },
+              {
+                txt: '港澳台',
+                value: '08'
+              }
+            ]
+          },
+          {
+            txt: '省级',
+            value: '0',
+            children: [
+              {
+                txt: '安徽省',
+                value: '011'
+              },
+              {
+                txt: '澳门特别行政区',
+                value: '012'
+              },
+              {
+                txt: '北京市',
+                value: '013'
+              },
+              {
+                txt: '福建省',
+                value: '014'
+              },
+              {
+                txt: '甘肃省',
+                value: '015'
+              },
+              {
+                txt: '广东省',
+                value: '016'
+              },
+              {
+                txt: '广西壮族自治区',
+                value: '017'
+              },
+              {
+                txt: '贵州省',
+                value: '018'
+              }
+            ]
+          },
+          {
+            txt: '学校',
+            value: '0',
+            children: [
+              {
+                txt: '上海乾隆财经大学',
+                value: '0111'
+              },
+              {
+                txt: '广西大学',
+                value: '0112'
+              },
+              {
+                txt: '北京市',
+                value: '0113'
+              }
+            ]
+          },
+          {
+            txt: '学院',
+            value: '0',
+            children: [
+              {
+                txt: '理工学院',
+                value: '01111'
+              },
+              {
+                txt: '政法学院',
+                value: '01112'
+              }
+            ]
+          },
+          {
+            txt: '学系',
+            value: '0',
+            children: [
+              {
+                txt: '计算机科学与技术',
+                value: '011111'
+              },
+              {
+                txt: '软件工程',
+                value: '011112'
+              }
+            ]
+          },
+          {
+            txt: '专业',
+            value: '0',
+            children: [
+              {
+                txt: '计算机科学与技术',
+                value: '0111111'
+              },
+              {
+                txt: '软件工程',
+                value: '0111112'
+              }
+            ]
+          },
+          {
+            txt: '班级',
+            value: '0',
+            children: [
+              {
+                txt: '1441班',
+                value: '01111111'
+              },
+              {
+                txt: '1442班',
+                value: '01111112'
+              }
+            ]
+          }
+        ],
+        tableData: [	//模拟表格数据
+          {
+            index: 1,
+            qy: '四川省',
+            xxmc: '四川大学',
+            xy: '理工学院',
+            xx: '计算机系',
+            zy: '软件工程',
+            bj: '1441班'
+          },
+          {
+            index: 2,
+            qy: '四川省',
+            xxmc: '四川大学',
+            xy: '金融学院',
+            xx: '金融系',
+            zy: '金融专业',
+            bj: '1442班'
+          }
+        ],
+        tableData1: [	//模拟表格数据
+          {
+            index: 1,
+            qy: '四川省',
+            xxmc: '四川大学',
+            xy: '理工学院',
+            xx: '计算机系',
+            zy: '软件工程',
+            bj: '1441班'
+          },
+          {
+            index: 2,
+            qy: '四川省',
+            xxmc: '四川大学',
+            xy: '金融学院',
+            xx: '金融系',
+            zy: '金融专业',
+            bj: '1442班'
+          }
+        ],
         config: {
           elementPathEnabled: false,//底部路径显示
           wordCount: false,//底部字数统计
@@ -435,18 +498,87 @@
           UEDITOR_HOME_URL: 'static/ueditor/'
         },
         addFormVisible: false,
-        createTab:['全部账号','按比赛名称','自定义班级','手动添加账号'],
-        nowIndex:0,
-        isShow:false
+        createTab: ['全部账号', '按比赛名称', '自定义班级', '手动添加账号'],
+        nowIndex: 0,
+        tableLoading: false,
+        isShow: false,
+        selectAll: false,
+        selectAll1: false,
+        selectAll2: false,
+        //  按比赛名称 下拉框数据
+        selectData: [{
+          label: '测试竞赛1',
+          value: '1'
+        }, {
+          label: '测试竞赛2',
+          value: '2'
+        }],
+        selectValue: ''
+
+
       }
     },
     methods: {
+      //删除
+      DeleteNotice() {
+        if (true) {
+          this.$utils.showDialog({
+            type: 1,
+            title: false,
+            scrollbar: false,
+            closeBtn: 0,
+            area: ['320px', 'auto'],
+            shadeClose: true,
+            content: $('.delflt')
+          })
+        } else {
+          this.$utils.showDialog({
+            type: 1,
+            title: false,
+            scrollbar: false,
+            closeBtn: 0,
+            area: ['280px', 'auto'],
+            shadeClose: true,
+            content: $('.nullFlt')
+          })
+        }
+      },
+      confirm() {//确定回调
+        alert("confirm");
+      },
       ChangeTab(index) {//tab切换
         this.nowIndex = index;
       },
-      showHide() {
-        this.isShow = !this.isShow;
+      search(filter) {	//搜索
+        getTatbleData(this);
+      },
+      toggleAllSelection(val) {	//切换所有表格选中状态
+        if(val) {
+          this.tableData.forEach(item => {
+            this.$refs.table.toggleRowSelection(item, true);
+          })
+        }else {
+          this.$refs.table.clearSelection();
+        }
+      },
+      toggleAllSelection1(val) {	//切换所有表格选中状态
+        if(val) {
+          this.tableData1.forEach(item => {
+            this.$refs.table1.toggleRowSelection(item, true);
+          })
+        }else {
+          this.$refs.table1.clearSelection();
+        }
+      },
+      handleSelectionChange(val) {
+        this.selectedArr = val;
+      },
+      goPage(currentPage) {	//翻页
+        getTatbleData(that);
       }
+    },
+    created() {
+      getTatbleData(this)
     }
   }
 </script>
@@ -454,4 +586,12 @@
   @import "../../assets/teacher/css/createNotices.css";
   @import "../../assets/teacher/css/pulldownList.css";
   @import "../../assets/teacher/css/filter.css";
+  .showSelected .ck{
+    padding: 0 2px;
+  }
+  .showSelected .ck span{
+    margin-left: -8px;
+    font-weight: normal;
+    color: #444;
+  }
 </style>
